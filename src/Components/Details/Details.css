@@ -1,0 +1,11 @@
+.project-demo{
+    max-width: 100%;
+    width: 400px;
+    object-fit: cover;
+    object-position: top;
+
+}
+.details-row{
+    width: 100%;
+    margin: 0;
+}

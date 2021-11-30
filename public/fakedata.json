@@ -1,0 +1,32 @@
+[
+    {
+        "project_img": "https://i.ibb.co/51CXx37/project1.png",
+        "project_demo_1": "https://i.ibb.co/ryvjR8m/project1-demo1.png",
+        "project_demo_2": "https://i.ibb.co/LYRhwSV/project1-demo2.png",
+        "project_demo_3": "https://i.ibb.co/4sX2CBG/project1-demo3.png",
+        "title": "Camera Essentials",
+        "github_repo": "https://github.com/MunnaAhmed130/camera-essentials-website-client-side",
+        "live_link": "https://camera-essentials.web.app/",
+        "description": "It is a niche camera selling website with users and admin dashboard, CRUD operation, and user Authentication System. Users can place orders, purchase or delete orders, and review when logged in.Admin can manage all orders, add a new product, or delete products from the database and add a new admin."
+    },
+    {
+        "project_img": "https://i.ibb.co/jvdSLm9/project2.png",
+        "project_demo_1": "https://i.ibb.co/vhNjzpx/project2-demo2.png",
+        "project_demo_2": "https://i.ibb.co/HgBBbCV/project2-demo3.png",
+        "project_demo_3": "https://i.ibb.co/Tw402bD/project2-demo1.png",
+        "title": "Travio",
+        "github_repo": "https://github.com/MunnaAhmed130/travio-tourism-website-client-side",
+        "live_link": "https://travel-agency-e968e.web.app/",
+        "description": "It is a niche camera selling website with users and admin dashboard, CRUD operation, and user Authentication System. Users can place orders, purchase or delete orders, and review when logged in.Admin can manage all orders, add a new product, or delete products from the database and add a new admin."
+    },
+    {
+        "project_img": "https://i.ibb.co/cCHWDMj/projects3.png",
+        "project_demo_1": "https://i.ibb.co/rtHxSxW/project3-demo1.png",
+        "project_demo_2": "https://i.ibb.co/cCG9nwp/project3-demo2.png",
+        "project_demo_3": "https://i.ibb.co/J3QQyZd/project3-demo3.png",
+        "title": "Dental Care",
+        "github_repo": "https://github.com/MunnaAhmed130/dental-care-website",
+        "live_link": "https://dental-care-65bd8.web.app/",
+        "description": "It is a niche camera selling website with users and admin dashboard, CRUD operation, and user Authentication System. Users can place orders, purchase or delete orders, and review when logged in.Admin can manage all orders, add a new product, or delete products from the database and add a new admin."
+    }
+]

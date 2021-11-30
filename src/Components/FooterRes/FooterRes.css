@@ -1,0 +1,13 @@
+.footer{
+    color: white;
+    background-color: black;
+    font-size: 1rem;
+    font-weight: 500;
+    height: 70px;
+    display: grid;
+    place-content: center;
+}
+
+.footer p{
+    margin: 0;
+}
