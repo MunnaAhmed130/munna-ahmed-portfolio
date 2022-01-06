@@ -8,6 +8,19 @@
     border-radius: 2px;
 }
 
+/* .skeleton{
+    animation: skeleton-loading 1s linear infinite alternate;
+}
+
+@keyframes skeleton-loading{
+    0%{
+        background-color: rgba(0, 0, 0, 0.368);
+    }
+    100%{
+        background-color: rgba(0, 0, 0, 0.606);
+    }
+} */
+
 .project-container-col{
     padding-block: 10px;
     margin: auto;

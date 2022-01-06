@@ -5,7 +5,8 @@ import Project from '../Project/Project';
 import './Projects.css'
 
 const Projects = () => {
-    const [project, setProject] = useState([]);
+    const [project, setProject] = useState(null);
+    const [success, setSuccess] = useState(false)
     useEffect(() => {
         const Url = `https://munna-ahmed-porfolio-server.herokuapp.com/portfolio`;
         fetch(Url)
@@ -16,13 +17,18 @@ const Projects = () => {
 
     return (
         <div id="projects" >
-            <div className="projects-container">
+            <div className="projects-container ">
+
                 <h2>Projects</h2>
-                <Row className="projects">
+                {/* <Spinner animation="border" /> */}
+                {project && <Row className="projects">
                     {
                         project.map(project => <Project project={project} key={project._id}></Project>)
                     }
-                </Row>
+                </Row>}
+                {
+                    !project && <div className='spin' > <Spinner animation="border" /></div>
+                }
             </div>
             <Footer2 />
         </div>
