@@ -26,7 +26,7 @@ const Contact = () => {
     };
     return (
         <div id="contact">
-            <h3>Contact us</h3>
+            <h3>Contact Me</h3>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <input {...register("name", { required: true, maxLength: 20 })} placeholder="Your name" required="required" /> <br />
                 <input {...register("email")} placeholder="Your email" required="required" /> <br />

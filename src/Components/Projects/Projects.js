@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Row, Col, Spinner } from 'react-bootstrap';
+import SkeletonElement from '../../Skeletons/SkeletonElement';
+import SkeletonProjects from '../../Skeletons/SkeletonProjects';
 import Footer2 from '../Footer2/Footer2';
 import Project from '../Project/Project';
 import './Projects.css'
@@ -20,15 +22,17 @@ const Projects = () => {
             <div className="projects-container ">
 
                 <h2>Projects</h2>
+                {/* <SkeletonElement type="avatar" /> */}
                 {/* <Spinner animation="border" /> */}
                 {project && <Row className="projects">
                     {
                         project.map(project => <Project project={project} key={project._id}></Project>)
                     }
                 </Row>}
-                {
+                {/* {
                     !project && <div className='spin' > <Spinner animation="border" /></div>
-                }
+                } */}
+                {!project && <Row lg={3} md={3} sm={1} className="projects">{[1, 2, 3].map((n) => <SkeletonProjects key={n} />)}</Row>}
             </div>
             <Footer2 />
         </div>

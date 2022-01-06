@@ -1,8 +1,48 @@
 
 .skeleton{
     animation: skeleton-loading 1s linear infinite alternate;
+    margin: 10px 0;
+    border-radius: 4px;
 }
 
+.skeleton.project-img{
+    margin-top: 20px;
+    height: 300px;
+    width: 400px;
+    margin: auto;
+}
+.skeleton.text {
+    width: 70%;
+    height: 12px;
+    margin: auto;
+    margin-block: 10px;
+}
+
+
+.skeleton.title {
+    width: 50%;
+    height: 30px;
+    margin-inline: 15px;
+    margin-inline: auto;
+    
+}
+
+
+.skeleton.btn{
+    height: 40px;
+    width: 30%;
+}
+
+.skeleton.avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.skeleton.thumbnail{
+    width: 100px;
+    height: 100px;
+}
 @keyframes skeleton-loading{
     0%{
         background-color: rgba(0, 0, 0, 0.368);
