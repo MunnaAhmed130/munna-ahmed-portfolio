@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
 import './Intro.css';
 import { Button } from '@mui/material';
+import { Fade } from 'react-reveal';
 
 const Intro = () => {
     return (
@@ -11,7 +12,9 @@ const Intro = () => {
             <Row style={{ width: '100%' }} className="intro-row">
                 <Col lg={5} md={12} className="left">
                     <div className="profile-img-container">
-                        <img className="profile-img" src="https://i.ibb.co/yhFgYJ9/received-641280323297589.jpg" alt="" />
+                        <Fade left>
+                            <img className="profile-img" src="https://i.ibb.co/yhFgYJ9/received-641280323297589.jpg" alt="" />
+                        </Fade>
                     </div></Col>
                 <Col lg={7} md={12} className="right">
                     <div className="profile-info">

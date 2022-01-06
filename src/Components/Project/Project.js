@@ -5,11 +5,12 @@ import Button from '@mui/material/Button';
 import SkeletonElement from '../../Skeletons/SkeletonElement';
 import SkeletonProjects from '../../Skeletons/SkeletonProjects';
 import './Project.css'
+import { Fade } from 'react-reveal';
 
 const Project = ({ project }) => {
     const { description, project_img, title, _id } = project;
     return (
-        <>
+
             <Col xl={4} lg={6} className="project-container-col">
             <div className="project-container">
                 <img className="project-img " src={project_img} alt="" />
@@ -17,10 +18,7 @@ const Project = ({ project }) => {
                     <p className='description' >{description}</p>
                     <Link to={`/details/${_id}`}><Button variant='contained' className="mb-3">Explore</Button></Link>
             </div>
-            </Col>
-
-
-        </>
+        </Col >
     );
 };
 
