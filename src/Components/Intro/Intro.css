@@ -29,10 +29,12 @@
 .left{
     display: grid;
     place-content: center;
+    padding: 0;
 }
 
 .header{
     width: 100%;
+    padding-block:100px ;
 }
 
 @media screen and (max-width:980px) {
@@ -48,6 +50,7 @@
     }
     .profile-info{
         text-align: center;
+        padding-bottom: 100px;
     }
     .left{
         display: grid;
@@ -62,5 +65,9 @@
         display: grid;
         place-content: center;
         margin: 0px;
+    }
+
+    .header{
+        padding-bottom: 50px;
     }
 }

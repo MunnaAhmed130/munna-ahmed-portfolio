@@ -5,19 +5,27 @@
         "project_demo_2": "https://i.ibb.co/LYRhwSV/project1-demo2.png",
         "project_demo_3": "https://i.ibb.co/4sX2CBG/project1-demo3.png",
         "title": "Camera Essentials",
-        "github_repo": "https://github.com/MunnaAhmed130/camera-essentials-website-client-side",
+        "github_client_repo": "https://github.com/MunnaAhmed130/camera-essentials-website-client-side",
+        "github_server_repo": "https://github.com/MunnaAhmed130/camera-essentials-website-server-side",
         "live_link": "https://camera-essentials.web.app/",
-        "description": "It is a niche camera selling website with users and admin dashboard, CRUD operation, and user Authentication System. Users can place orders, purchase or delete orders, and review when logged in.Admin can manage all orders, add a new product, or delete products from the database and add a new admin."
+        "p_1": "It is a niche camera selling website with users and admin dashboard, CRUD operation, and user  Authentication System.",
+        "p_2": "Users can place orders, purchase or delete orders, and review when logged in.",
+        "p_3": "Admin can manage all orders, add a new product, or delete products from the database and add a  new admin.",
+        "description": "It is a niche camera selling website where they sell all kinds of camera .From analog to digital, compact , stylish, colorful , polaroid etc. you will find all kind of cameras that fit your need.This website helps the user to buy or order camera ."
     },
     {
         "project_img": "https://i.ibb.co/jvdSLm9/project2.png",
-        "project_demo_1": "https://i.ibb.co/vhNjzpx/project2-demo2.png",
-        "project_demo_2": "https://i.ibb.co/HgBBbCV/project2-demo3.png",
-        "project_demo_3": "https://i.ibb.co/Tw402bD/project2-demo1.png",
+        "project_demo_1": "https://i.ibb.co/Tw402bD/project2-demo1.png",
+        "project_demo_2": "https://i.ibb.co/vhNjzpx/project2-demo2.png",
+        "project_demo_3": "https://i.ibb.co/HgBBbCV/project2-demo3.png",
         "title": "Travio",
-        "github_repo": "https://github.com/MunnaAhmed130/travio-tourism-website-client-side",
+        "github_client_repo": "https://github.com/MunnaAhmed130/travio-tourism-website-client-side",
+        "github_server_repo": "https://github.com/MunnaAhmed130/travio-tourism-website-server-side",
         "live_link": "https://travel-agency-e968e.web.app/",
-        "description": "It is a niche camera selling website with users and admin dashboard, CRUD operation, and user Authentication System. Users can place orders, purchase or delete orders, and review when logged in.Admin can manage all orders, add a new product, or delete products from the database and add a new admin."
+        "p_1": "It is a tourism-related website that makes travel safer and more fun. ",
+        "p_2": "Users can log in using the Google login system. Users cannot place orders until they log in.",
+        "p_3": "After login users can place an order by clicking on the buy now button and delete orders by clicking  the delete button on the My Order page.",
+        "description": " It is a tourism-related website that makes travel safer and more fun. Users need to log in to receive various services or plans. user can place order and delete their order if they want to. some pages dont show until the user log in with their account"
     },
     {
         "project_img": "https://i.ibb.co/cCHWDMj/projects3.png",
@@ -25,8 +33,11 @@
         "project_demo_2": "https://i.ibb.co/cCG9nwp/project3-demo2.png",
         "project_demo_3": "https://i.ibb.co/J3QQyZd/project3-demo3.png",
         "title": "Dental Care",
-        "github_repo": "https://github.com/MunnaAhmed130/dental-care-website",
+        "github_client_repo": "https://github.com/MunnaAhmed130/dental-care-website",
         "live_link": "https://dental-care-65bd8.web.app/",
-        "description": "It is a niche camera selling website with users and admin dashboard, CRUD operation, and user Authentication System. Users can place orders, purchase or delete orders, and review when logged in.Admin can manage all orders, add a new product, or delete products from the database and add a new admin."
+        "p_1": "Dental Care is a website fully responsive website that helps in providing dental health care.",
+        "p_2": "User can log in using two different login method.",
+        "p_3": "It is a simple website using firebase authentication and simple design",
+        "description": " Dental Care is a website that helps in providing dental health care. It provides various health services such as teeth whitening, wisdom teeth removal and dental emergency . User can contact via mail also."
     }
 ]

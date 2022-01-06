@@ -1,11 +1,64 @@
 .project-demo{
     max-width: 100%;
+    max-height: 240px;
     width: 400px;
     object-fit: cover;
     object-position: top;
+    padding: 5px;
+}
+
+.list{
+    width: 40%;
+    text-align: left;
+    margin:auto;
+    margin-bottom: 20px;
+}
+.project-demo-col{
+    display: grid;
+    place-content: center;
+}
+.project-demo-container{
+    max-height: 300px;
+    display: grid;
+    place-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    margin-inline: 5px;
+
+}
+
+.link-btn{
 
 }
 .details-row{
     width: 100%;
     margin: 0;
+
+}
+
+.details a{
+    color: white;
+    display: inline-block;
+    text-decoration: none;
+}
+@media screen and (max-width:500px) {
+    .link-btn{
+        width: 80%;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+}
+@media screen and (min-width:501px) {
+    .link-btn{
+        margin: 10px;
+    }
+}
+@media screen and (max-width:600px) {
+    .list{
+        width: 80%;
+    }
+}
+@media screen and (max-width:800px) and (min-width:601px) {
+    .list{
+        width: 60%;
+    }
 }

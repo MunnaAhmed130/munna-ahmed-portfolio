@@ -1,11 +1,11 @@
 import React from 'react';
-import FooterRes from '../FooterRes/FooterRes';
+import Footer from '../Footer/Footer';
 
 const Blogs = () => {
     return (
         <div >
             <h1 className="p-5 m-5">Coming soon</h1>
-            <FooterRes />
+            <Footer />
         </div>
     );
 };

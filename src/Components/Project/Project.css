@@ -1,5 +1,6 @@
 .project-img{
     /* max-width: 100%; */
+    padding-top: 10px;
     height: 300px;
     width: 400px;
     object-fit: cover;
@@ -7,7 +8,14 @@
     border-radius: 2px;
 }
 
-.project-img-container{
+.project-container-col{
     padding-block: 10px;
     margin: auto;
+    /* padding-bottom: 150px; */
+}
+
+.project-container{
+    border: 1px solid rgba(0, 0, 0, 0.32);
+    margin: 10px;
+    border-radius: 5px;
 }

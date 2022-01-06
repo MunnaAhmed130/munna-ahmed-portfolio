@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { Button } from 'react-bootstrap';
 import emailjs from 'emailjs-com';
 import "./Contact.css"
+import Footer from '../Footer/Footer';
 
 const Contact = () => {
     const { register, handleSubmit, reset } = useForm();
@@ -31,8 +32,9 @@ const Contact = () => {
                 <input {...register("email")} placeholder="Your email" required="required" /> <br />
                 <input {...register("subject")} placeholder="Subject" required="required" /> <br />
                 <textarea {...register("message")} placeholder="Write your message" style={{ height: '100px' }} required="required" /> <br />
-                <Button type="submit">Send</Button>
+                <Button type="submit" className="py-2 px-4">Send</Button>
             </form>
+            <Footer />
         </div>
     );
 };

@@ -1,15 +1,15 @@
 import React from 'react';
 
-import './FooterRes.css'
+import './Footer2.css'
 
-const Footer = () => {
+const Footer2 = () => {
     return (
         <div>
-            <div className="footer fixed-bottom">
+            <div className="footer">
                 <p>&copy; All Rights reserved by Munna Ahmed @2021</p>
             </div>
         </div>
     );
 };
 
-export default Footer;
+export default Footer2;
