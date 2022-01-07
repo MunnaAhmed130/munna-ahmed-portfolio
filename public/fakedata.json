@@ -28,16 +28,17 @@
         "description": " It is a tourism-related website that makes travel safer and more fun. Users need to log in to receive various services or plans. user can place order and delete their order if they want to. some pages dont show until the user log in with their account"
     },
     {
-        "project_img": "https://i.ibb.co/cCHWDMj/projects3.png",
-        "project_demo_1": "https://i.ibb.co/rtHxSxW/project3-demo1.png",
-        "project_demo_2": "https://i.ibb.co/cCG9nwp/project3-demo2.png",
-        "project_demo_3": "https://i.ibb.co/J3QQyZd/project3-demo3.png",
+        "project_img": "https://i.ibb.co/2j8qfYL/project3-1.png",
+        "project_demo_1": "https://i.ibb.co/5GgVdLH/project-3-demo-1.png",
+        "project_demo_2": "https://i.ibb.co/3TvzJfm/project-3-dashboard.png",
+        "project_demo_3": "https://i.ibb.co/D9TX7Rt/project-3-demo-3.png",
         "title": "Dental Care",
-        "github_client_repo": "https://github.com/MunnaAhmed130/dental-care-website",
-        "live_link": "https://dental-care-65bd8.web.app/",
-        "p_1": "Dental Care is a website fully responsive website that helps in providing dental health care.",
+        "github_client_repo": "https://github.com/MunnaAhmed130/Bicycle-store-client-side",
+        "github_server_repo": "https://github.com/MunnaAhmed130/Bicycle-store-server-side",
+        "live_link": "https://bicycle-store-41d3e.web.app/",
+        "p_1": "Bicycle store is a website fully responsive website that helps its clients to choose and buy cycles.",
         "p_2": "User can log in using two different login method.",
-        "p_3": "It is a simple website using firebase authentication and simple design",
+        "p_3": "It is a simple website using firebase authentication and dashboard",
         "description": " Dental Care is a website that helps in providing dental health care. It provides various health services such as teeth whitening, wisdom teeth removal and dental emergency . User can contact via mail also."
     }
 ]

@@ -9,7 +9,7 @@ import './Projects.css'
 
 const Projects = () => {
     const [project, setProject] = useState(null);
-    const [success, setSuccess] = useState(false)
+    // const [success, setSuccess] = useState(false)
     useEffect(() => {
         const Url = `https://munna-ahmed-porfolio-server.herokuapp.com/portfolio`;
         fetch(Url)

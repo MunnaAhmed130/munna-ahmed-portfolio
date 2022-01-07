@@ -20,7 +20,7 @@ const Details = () => {
         <div className="details">
             <Row className="details-row">
                 <Col lg={4} className="project-demo-col" >
-                    <div className="project-demo-container"><img src={details.project_demo_1} className="project-demo skeleton" alt="" /></div></Col>
+                    <div className="project-demo-container"><img src={details.project_demo_1} className="project-demo " alt="" /></div></Col>
                 <Col lg={4} className="project-demo-col" >
                     <div className="project-demo-container"><img src={details.project_demo_2} className="project-demo" alt="" /></div></Col>
                 <Col lg={4} className="project-demo-col" >
