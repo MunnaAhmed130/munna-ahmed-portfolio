@@ -24,6 +24,10 @@
     font-weight: 500;
     text-decoration: none;
 }
+
+.download-btn:hover{
+    color: white;
+}
 .profile-info{
     text-align: left;
 }
