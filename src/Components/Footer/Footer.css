@@ -11,3 +11,8 @@
 .footer p{
     margin: 0;
 }
+
+.icon-row a{
+    display: inline-block;
+    color: white;
+}

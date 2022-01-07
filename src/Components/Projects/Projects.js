@@ -3,7 +3,7 @@ import { Row, Col, Spinner } from 'react-bootstrap';
 import { Fade, Zoom } from 'react-reveal';
 import SkeletonElement from '../../Skeletons/SkeletonElement';
 import SkeletonProjects from '../../Skeletons/SkeletonProjects';
-import Footer2 from '../Footer2/Footer2';
+import Footer from '../Footer/Footer';
 import Project from '../Project/Project';
 import './Projects.css'
 
@@ -35,7 +35,7 @@ const Projects = () => {
                 } */}
                 {!project && <Row lg={3} md={3} sm={1} className="projects">{[1, 2, 3].map((n) => <SkeletonProjects key={n} />)}</Row>}
             </div>
-            <Footer2 />
+            <Footer />
         </div>
     );
 };

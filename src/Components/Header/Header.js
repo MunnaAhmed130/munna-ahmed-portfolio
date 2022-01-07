@@ -14,7 +14,7 @@ const Header = () => {
                     <Navbar.Brand href=""></Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav" >
-                    <Nav className="m-auto">
+                    <Nav className="m-auto nav">
 
                         {/* <Nav.Link to='/home'>Home</Nav.Link>
                         <Nav.Link to='/projects'>Projects</Nav.Link>
@@ -22,12 +22,11 @@ const Header = () => {
                         <Nav.Link to='/contact'>Contact</Nav.Link>
                         <Nav.Link to='/aboutMe'>About Me</Nav.Link> */}
                         <Link to='/home'>Home</Link>
-                        <Link to='/projects'>Projects</Link>
+                        <Link to='/projects'>Portfolio</Link>
                         <Link to="/blogs">Blogs</Link>
                         <Link to='/contact'>Contact</Link>
                         <Link to='/aboutMe'>About Me</Link>
                         <a href="https://drive.google.com/file/d/1RhVvtP6IrrtuftlTtwQZAvgmQVRizMcy/view?usp=sharing" target="_blank" rel='noreferrer noopener'>Resume</a>
-
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

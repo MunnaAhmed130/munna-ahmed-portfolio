@@ -21,7 +21,7 @@ const Intro = () => {
                         <div>
                             <h1>Munna Ahmed</h1>
                             <h3 className="title">Junior web developer</h3>
-                            <p>Junior Web Developer with one year of experience in web development, designing and developing user  interfaces, testing, and debugging. Experienced in developing dynamic and responsive web applications  using web technologies like Html, CSS, Bootstrap, and Javascript. </p>
+                            <p>Junior Web Developer with one year of experience in web development, designing and developing user  interfaces, and debugging. Experienced in developing dynamic and responsive web applications  using web technologies like Html, CSS, Bootstrap, and Javascript. </p>
                             <Button variant='contained' className="download-btn" href="https://drive.google.com/u/0/uc?id=1RhVvtP6IrrtuftlTtwQZAvgmQVRizMcy&export=download" ><FontAwesomeIcon icon={faDownload} className="me-2" /> Download Resume</Button>
                         </div>
                     </div>

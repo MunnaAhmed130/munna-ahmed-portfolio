@@ -10,6 +10,7 @@ const SkeletonProjects = () => {
                 <SkeletonElement type="text" />
                 <SkeletonElement type="text" />
                 <SkeletonElement type="text" />
+                <SkeletonElement type="text" />
                 <SkeletonElement type="btn" />
 
             </div>
