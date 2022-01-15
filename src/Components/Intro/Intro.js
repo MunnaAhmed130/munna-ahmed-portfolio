@@ -8,19 +8,31 @@ import { Button } from '@mui/material';
 import { Fade } from 'react-reveal';
 
 const Intro = () => {
+    const particlesInit = (main) => {
+        console.log(main);
+
+        // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
+    };
+
+    const particlesLoaded = (container) => {
+        console.log(container);
+    };
     return (
         <div className="header">
             <Particles
                 id="tsparticles"
-                // init={particlesInit}
-                // loaded={particlesLoaded}
+                className='particles'
+                init={particlesInit}
+                loaded={particlesLoaded}
                 options={{
-                    // background: {
-                    //     color: {
-                    //         value: "#0d47a1",
-                    //     },
-                    // },
-                    fpsLimit: 60,
+                    background: {
+                        color: {
+                            // value: "#000",
+                            // value: "none"
+                        },
+                    },
+                    fpsLimit: 160,
+                    // fullScreen: false,
                     interactivity: {
                         events: {
                             onClick: {
@@ -50,14 +62,15 @@ const Intro = () => {
                         },
                     },
                     particles: {
+                        // fullScreen: false,
                         color: {
                             value: "#ffffff",
                         },
                         links: {
                             color: "#ffffff",
-                            distance: 150,
+                            distance: 110,
                             enable: true,
-                            opacity: 0.5,
+                            opacity: 1,
                             width: 1,
                         },
                         collisions: {
@@ -76,22 +89,50 @@ const Intro = () => {
                                 enable: true,
                                 area: 800,
                             },
-                            value: 50,
+                            value: 70,
                         },
                         opacity: {
                             value: 0.5,
+                            random: true,
+                            anim: {
+                                enable: true,
+                                speed: 10
+                            }
                         },
+                        // line_linked: {
+                        //     enable: true,
+                        //     distance: 120
+                        // },
                         shape: {
                             type: "circle",
-                        },
+                        }
+                        ,
                         size: {
                             random: true,
                             value: 5,
                         },
                     },
                     detectRetina: true,
-                }}
-            />
+                }} />
+            {/* <Row style={{ width: '100%' }} className="intro-row">
+                    <Col lg={5} md={12} className="left">
+                        <div className="profile-img-container">
+                            <Fade left>
+                                <img className="profile-img" src="https://i.ibb.co/yhFgYJ9/received-641280323297589.jpg" alt="" />
+                            </Fade>
+                        </div></Col>
+                    <Col lg={7} md={12} className="right">
+                        <div className="profile-info">
+                            <div>
+                                <h1>Munna Ahmed</h1>
+                                <h3 className="title">Junior web developer</h3>
+                                <p>Junior Web Developer with one year of experience in web development, designing and developing user  interfaces, and debugging. Experienced in developing dynamic and responsive web applications  using web technologies like Html, CSS, Bootstrap, and Javascript. </p>
+                                <Button variant='contained' className="download-btn" href="https://drive.google.com/u/0/uc?id=1RhVvtP6IrrtuftlTtwQZAvgmQVRizMcy&export=download" ><FontAwesomeIcon icon={faDownload} className="me-2" /> Download Resume</Button>
+                            </div>
+                        </div>
+                    </Col>
+                </Row> */}
+            {/* </Particles> */}
             <Row style={{ width: '100%' }} className="intro-row">
                 <Col lg={5} md={12} className="left">
                     <div className="profile-img-container">

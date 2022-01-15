@@ -10,7 +10,7 @@ const navStyle = {
 const Header = () => {
     return (
             <Navbar collapseOnSelect expand="lg">
-                <Container>
+            <Container className='header-container'>
                     <Navbar.Brand href=""></Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav" >

@@ -1,11 +1,32 @@
+.particles{
+    /* max-height: 200px !important; */
+    /* height: 850px !important; */
+    /* z-index: -1; */
+    width: 100%;
 
+    position: absolute !important;
+    z-index: 0;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
+}
+/* .tsparticles-canvas-el {
+    width: 100%;
 
+    position: absolute !important;
+    z-index: 0;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
+  } */
 .profile-img{
     height: 300px;
     width: 300px;
     object-fit: cover;
     object-position: center;
     border-radius: 50%;
+    color: black;
+    /* mix-blend-mode: color-burn; */
 }
 
 /* .intro-row{
@@ -18,6 +39,7 @@
 
 .profile-info p{
     max-width: 80%;
+    margin: auto;
 }
 
 .download-btn{
@@ -30,6 +52,7 @@
 }
 .profile-info{
     text-align: left;
+    color: white;
 }
 .right{
     display: flex;
@@ -45,8 +68,10 @@
 
 .header{
     width: 100%;
+    /* height: 500px; */
     padding-block:100px ;
-    background-color: rgba(0, 0, 0, 0.096);
+    /* background-color: rgba(0, 0, 0, 0.096); */
+    background-color: rgb(17, 15, 15);
     overflow: hidden;
 }
 
