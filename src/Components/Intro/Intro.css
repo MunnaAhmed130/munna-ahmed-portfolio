@@ -1,7 +1,9 @@
 .particles{
-    /* max-height: 200px !important; */
-    /* height: 850px !important; */
+margin-top: 72px;
+    /* max-height: 500px !important; */
+    height: 500px !important;
     /* z-index: -1; */
+    overflow: hidden;
     width: 100%;
 
     position: absolute !important;
@@ -39,12 +41,13 @@
 
 .profile-info p{
     max-width: 80%;
-    margin: auto;
+    /* margin: auto; */
 }
 
-.download-btn{
-    font-weight: 500;
+.profile-info .download-btn{
+    /* font-weight: 500; */
     text-decoration: none;
+ margin-top: 20px;
 }
 
 .download-btn:hover{
@@ -66,16 +69,25 @@
     padding: 0;
 }
 
+.intro-row{
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
 .header{
     width: 100%;
     /* height: 500px; */
     padding-block:100px ;
     /* background-color: rgba(0, 0, 0, 0.096); */
     background-color: rgb(17, 15, 15);
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
-@media screen and (max-width:980px) {
+@media screen and (max-width:994px) {
+    .particles{
+        height: 650px !important;
+    }
     .profile-img-container{
         display: grid;
         place-content: center;
@@ -85,10 +97,14 @@
         justify-content: center;
         align-items: center;
         padding: 1em;
+        margin: auto;
     }
     .profile-info{
         text-align: center;
-        padding-bottom: 100px;
+        /* padding-bottom: 50px; */
+    }
+    .profile-info p{
+        margin: auto;
     }
     .left{
         display: grid;
@@ -99,6 +115,7 @@
         display: grid;
         place-content: center;
     }
+
     .intro-row{
         display: grid;
         place-content: center;
@@ -106,7 +123,12 @@
     }
 
     .header{
-        padding-bottom: 50px;
+        padding-block: 50px;
+    }
+
+    .download-btn{
+        margin-top: 20px;
+        display: inline-block;
     }
 }
 

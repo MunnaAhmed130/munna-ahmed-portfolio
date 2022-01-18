@@ -28,11 +28,14 @@ const Intro = () => {
                     background: {
                         color: {
                             // value: "#000",
-                            // value: "none"
+                            value: "none"
                         },
                     },
                     fpsLimit: 160,
-                    // fullScreen: false,
+                    fullScreen: {
+                        enable: false,
+                        zIndex: -1
+                    },
                     interactivity: {
                         events: {
                             onClick: {
@@ -139,7 +142,8 @@ const Intro = () => {
                         <Fade left>
                             <img className="profile-img" src="https://i.ibb.co/yhFgYJ9/received-641280323297589.jpg" alt="" />
                         </Fade>
-                    </div></Col>
+                    </div>
+                </Col>
                 <Col lg={7} md={12} className="right">
                     <div className="profile-info">
                         <div>
