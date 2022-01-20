@@ -1,3 +1,7 @@
+.details{
+    margin-bottom: 100px;
+}
+
 .project-demo{
     max-width: 100%;
     max-height: 240px;
@@ -28,19 +32,19 @@
 
 }
 
-.link-btn{
 
-}
 .details-row{
     width: 100%;
     margin: 0;
-
+    margin-top: 50px;
+    margin-bottom: 20px;
 }
 
 .details a{
-    color: white;
+    /* color: white; */
     display: inline-block;
-    text-decoration: none;
+    margin: 0px;
+    /* text-decoration: none; */
 }
 @media screen and (max-width:500px) {
     .link-btn{

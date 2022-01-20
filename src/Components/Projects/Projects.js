@@ -33,7 +33,7 @@ const Projects = () => {
                 {/* {
                     !project && <div className='spin' > <Spinner animation="border" /></div>
                 } */}
-                {!project && <Row lg={3} md={3} sm={1} className="projects">{[1, 2, 3].map((n) => <SkeletonProjects key={n} />)}</Row>}
+                {!project && <Row xl={3} lg={2} md={1} sm={1} className="projects">{[1, 2, 3].map((n) => <SkeletonProjects key={n} />)}</Row>}
             </div>
             <Footer />
         </div>

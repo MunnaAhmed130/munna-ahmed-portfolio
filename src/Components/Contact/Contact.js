@@ -25,6 +25,7 @@ const Contact = () => {
         }
     };
     return (
+        <div>
         <div id="contact">
             <h3>Contact Me</h3>
             <form onSubmit={handleSubmit(onSubmit)}>
@@ -33,8 +34,10 @@ const Contact = () => {
                 <input {...register("subject")} placeholder="Subject" required="required" /> <br />
                 <textarea {...register("message")} placeholder="Write your message" style={{ height: '100px' }} required="required" /> <br />
                 <Button type="submit" variant='contained' className="py-2 px-4">Send</Button>
-            </form>
+                </form>
+            </div>
             <Footer />
+
         </div>
     );
 };
