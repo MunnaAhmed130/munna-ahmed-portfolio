@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { Row, Col, Spinner } from 'react-bootstrap';
-import { Fade, Zoom } from 'react-reveal';
-import SkeletonElement from '../../Skeletons/SkeletonElement';
 import SkeletonProjects from '../../Skeletons/SkeletonProjects';
 import Footer from '../Footer/Footer';
 import Project from '../Project/Project';
