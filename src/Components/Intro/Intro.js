@@ -28,8 +28,8 @@ const Intro = () => {
                 options={{
                     background: {
                         color: {
-                            // value: "#000",
-                            value: "none"
+                            value: "#1D1C1C",
+                            // value: "none"
                         },
                     },
                     fpsLimit: 160,

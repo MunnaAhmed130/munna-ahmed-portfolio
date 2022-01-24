@@ -1,6 +1,25 @@
 .about{
     max-width: 550px;
     margin: auto;
-    margin-top: 160px;
-    margin-bottom: 260px;
+    padding-top: 180px;
+    padding-bottom: 180px;
+    position: relative;
+    top: 0;
+    left: 0;
+    color: rgba(255, 255, 255, 0.83);
+}
+
+.particles-about{
+    margin-top: 72px;
+    /* max-height: 500px !important; */
+    height: 560px !important;
+    /* z-index: -1; */
+    overflow: hidden;
+    width: 100%;
+
+    position: absolute !important;
+    z-index: 0;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
 }
