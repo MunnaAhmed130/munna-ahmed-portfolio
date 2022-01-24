@@ -27,7 +27,7 @@ margin-top: 72px;
     object-fit: cover;
     object-position: center;
     border-radius: 50%;
-    color: black;
+    /* color: black; */
     /* mix-blend-mode: color-burn; */
 }
 
@@ -53,6 +53,9 @@ margin-top: 72px;
  margin-top: 20px;
 }
 
+.download-btn{
+    
+}
 .download-btn:hover{
     color: white;
 }
@@ -83,7 +86,7 @@ margin-top: 72px;
     /* height: 500px; */
     padding-block:100px ;
     /* background-color: rgba(0, 0, 0, 0.096); */
-    background-color: rgb(17, 15, 15);
+    background-color: #1D1C1C;
     /* overflow: hidden; */
 }
 
@@ -126,7 +129,7 @@ margin-top: 72px;
     }
 
     .header{
-        padding-block: 50px;
+        padding-block: 40px;
     }
 
     .download-btn{
@@ -140,4 +143,18 @@ margin-top: 72px;
         height: 200px;
         width: 200px;
     }
+    .particles{
+        margin-top: 60px;
+            /* max-height: 500px !important; */
+            height: 500px !important;
+            /* z-index: -1; */
+            overflow: hidden;
+            width: 100%;
+        
+            position: absolute !important;
+            z-index: 0;
+            top: 0px;
+            left: 0px;
+            pointer-events: none;
+        }
 }
