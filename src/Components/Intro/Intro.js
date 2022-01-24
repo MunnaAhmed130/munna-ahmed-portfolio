@@ -6,6 +6,7 @@ import { faDownload } from '@fortawesome/free-solid-svg-icons';
 import './Intro.css';
 import { Button } from '@mui/material';
 import { Fade } from 'react-reveal';
+import Typewriter from 'typewriter-effect';
 
 const Intro = () => {
     const particlesInit = (main) => {
@@ -148,7 +149,31 @@ const Intro = () => {
                     <div className="profile-info">
                         <div>
                             <h1>Munna Ahmed</h1>
-                            <h3 className="title">Junior web developer</h3>
+                            <div className="title">
+                                <Typewriter
+                                    options={{ autoStart: true, loop: true }}
+                                    onInit={(typewriter) => {
+                                        typewriter
+                                            .typeString('Junior Web Developer')
+                                            // .callFunction(() => {
+                                            //     console.log('String typed out!');
+                                            // })
+                                            .pauseFor(2000)
+                                            .deleteAll()
+                                            // .callFunction(() => {
+                                            //     console.log('All strings were deleted');
+                                            // })
+                                            .typeString('Junior React Developer')
+                                            .pauseFor(2000)
+                                            .deleteAll()
+                                            .typeString('Front End Developer')
+                                            .pauseFor(2000)
+                                            .deleteAll()
+                                            .start()
+                                    }}
+                                />
+                            </div>
+                            {/* <h3 className="title">Junior web developer</h3> */}
                             <p>Junior Web Developer with one year of experience in web development, designing and developing user  interfaces, and debugging. Experienced in developing dynamic and responsive web applications  using web technologies like Html, CSS, Bootstrap, and Javascript. </p>
                             <Button variant='contained' className="download-btn" href="https://drive.google.com/u/0/uc?id=1RhVvtP6IrrtuftlTtwQZAvgmQVRizMcy&export=download" ><FontAwesomeIcon icon={faDownload} className="me-2" /> Download Resume</Button>
                         </div>

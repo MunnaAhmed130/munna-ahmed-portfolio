@@ -3,16 +3,38 @@
     background-color: rgb(29, 28, 28);
     font-size: 1rem;
     font-weight: 500;
-    height: 50px;
+    height: 150px;
     display: grid;
     place-content: center;
 }
 
 .footer p{
     margin: 0;
+    font-size:.8rem;
+    font-weight: normal;
 }
 
-.icon-row a{
+.icon-col{
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.icon-col .icon-container{
     display: inline-block;
-    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: white;
+}
+.icon-row a{
+    display: grid;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    color: black;
+    place-items: center;
+}
+
+.footer-icon{
+    place-items: center;
 }
