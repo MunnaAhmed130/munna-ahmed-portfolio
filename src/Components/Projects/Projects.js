@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Row, Col, Spinner } from "react-bootstrap";
+import { Row } from "react-bootstrap";
 import SkeletonProjects from "../../Skeletons/SkeletonProjects";
 import Footer from "../Footer/Footer";
 import Project from "../Project/Project";
