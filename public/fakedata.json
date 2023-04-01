@@ -1,5 +1,6 @@
 [
     {
+        "_id": 1,
         "project_img": "https://i.ibb.co/51CXx37/project1.png",
         "project_demo_1": "https://i.ibb.co/ryvjR8m/project1-demo1.png",
         "project_demo_2": "https://i.ibb.co/LYRhwSV/project1-demo2.png",
@@ -14,6 +15,7 @@
         "description": "It is a niche camera selling website where they sell all kinds of camera .From analog to digital, compact , stylish, colorful , polaroid etc. you will find all kind of cameras that fit your need.This website helps the user to buy or order camera ."
     },
     {
+        "_id": 2,
         "project_img": "https://i.ibb.co/jvdSLm9/project2.png",
         "project_demo_1": "https://i.ibb.co/Tw402bD/project2-demo1.png",
         "project_demo_2": "https://i.ibb.co/vhNjzpx/project2-demo2.png",
@@ -28,6 +30,7 @@
         "description": " It is a tourism-related website that makes travel safer and more fun. Users need to log in to receive various services or plans. user can place order and delete their order if they want to. some pages dont show until the user log in with their account"
     },
     {
+        "_id": 3,
         "project_img": "https://i.ibb.co/2j8qfYL/project3-1.png",
         "project_demo_1": "https://i.ibb.co/5GgVdLH/project-3-demo-1.png",
         "project_demo_2": "https://i.ibb.co/3TvzJfm/project-3-dashboard.png",
