@@ -1,6 +1,6 @@
 import React from "react";
 // import Particles from "react-tsparticles";
-import { Row, Col } from "react-bootstrap";
+// import { Row, Col } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import "./Intro.css";
@@ -119,8 +119,8 @@ const Intro = () => {
                 }}
             /> */}
 
-      <Row style={{ width: "100%" }} className="intro-row">
-        <Col lg={5} md={12} className="left">
+      <div style={{ width: "100%" }} className="intro-row">
+        <div lg={5} md={12} className="left">
           <div className="profile-img-container">
             {/* <Fade left> */}
             <img
@@ -130,8 +130,8 @@ const Intro = () => {
             />
             {/* </Fade> */}
           </div>
-        </Col>
-        <Col lg={7} md={12} className="right">
+        </div>
+        <div lg={7} md={12} className="right">
           <div className="profile-info">
             <div>
               <h1>Munna Ahmed</h1>
@@ -177,8 +177,8 @@ const Intro = () => {
               </button>
             </div>
           </div>
-        </Col>
-      </Row>
+        </div>
+      </div>
     </div>
   );
 };

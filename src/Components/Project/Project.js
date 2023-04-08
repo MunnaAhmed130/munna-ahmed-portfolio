@@ -1,5 +1,4 @@
 import React from "react";
-import { Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 // import Button from '@mui/material/Button';
 import SkeletonElement from "../../Skeletons/SkeletonElement";
@@ -11,7 +10,7 @@ const Project = ({ project }) => {
   const { description, project_img, title, _id } = project;
   const info = description.slice(0, 170);
   return (
-    <Col xl={4} lg={6} className="project-container-col">
+    <div xl={4} lg={6} className="project-container-col">
       <div className="project-container">
         <img className="project-img " src={project_img} alt="" />
         <h4 className="p-2 pt-3">{title}</h4>
@@ -22,7 +21,7 @@ const Project = ({ project }) => {
           </button>
         </Link>
       </div>
-    </Col>
+    </div>
   );
 };
 
