@@ -10,11 +10,11 @@ import AboutMe from "./Components/AboutMe/AboutMe";
 import Home from "./Pages/Home/Home";
 
 function App() {
-    return (
-        <div className="App">
-            <BrowserRouter>
-                <Header />
-                <Routes>
+  return (
+    <div className="App">
+      <BrowserRouter>
+        <Header />
+        {/* <Routes>
                     <Route exact path="/" element={<Home />} />
                     <Route path="/home" element={<Home />} />
                     <Route path="/blogs" element={<Blogs />} />
@@ -22,10 +22,10 @@ function App() {
                     <Route path="/aboutMe" element={<AboutMe />} />
                     <Route path="/projects" element={<Projects />} />
                     <Route path="/contact" element={<Contact />} />
-                </Routes>
-            </BrowserRouter>
-        </div>
-    );
+                </Routes> */}
+      </BrowserRouter>
+    </div>
+  );
 }
 
 export default App;
