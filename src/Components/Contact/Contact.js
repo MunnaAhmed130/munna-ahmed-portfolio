@@ -64,7 +64,7 @@ const Contact = () => {
           </button>
         </form>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

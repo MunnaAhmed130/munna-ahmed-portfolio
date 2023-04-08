@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import Button from '@mui/material/Button';
-import SkeletonElement from "../../Skeletons/SkeletonElement";
-import SkeletonProjects from "../../Skeletons/SkeletonProjects";
+// // import Button from '@mui/material/Button';
+// import SkeletonElement from "../../Skeletons/SkeletonElement";
+// import SkeletonProjects from "../../Skeletons/SkeletonProjects";
 import "./Project.css";
 // import { Fade } from 'react-reveal';
 

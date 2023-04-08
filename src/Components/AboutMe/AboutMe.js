@@ -1,6 +1,5 @@
 import React from "react";
 import Particles from "react-tsparticles";
-import Footer from "../Footer/Footer";
 import "./AboutMe.css";
 
 const AboutMe = () => {
@@ -14,7 +13,7 @@ const AboutMe = () => {
     console.log(container);
   };
   return (
-    <div>
+    <section className="about-section">
       <Particles
         id="tsparticles"
         className="particles-about"
@@ -113,7 +112,7 @@ const AboutMe = () => {
           detectRetina: true,
         }}
       />
-      <div className="about">
+      <div className="about-info--container">
         <h2>HI</h2>
         <h2>I'm Munna Ahmed</h2>
         <p>
@@ -123,8 +122,7 @@ const AboutMe = () => {
           and Design is my passion.
         </p>
       </div>
-      <Footer />
-    </div>
+    </section>
   );
 };
 

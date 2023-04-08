@@ -1,10 +1,10 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faCoffee,
-  faFacebookF,
+  //   faCoffee,
+  //   faFacebookF,
   faEnvelope,
-  faMailBulk,
+  //   faMailBulk,
 } from "@fortawesome/free-solid-svg-icons";
 import "./Footer.css";
 
