@@ -1,5 +1,5 @@
 import React from "react";
-import Particles from "react-tsparticles";
+// import Particles from "react-tsparticles";
 import { Row, Col } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
@@ -9,15 +9,15 @@ import "./Intro.css";
 import Typewriter from "typewriter-effect";
 
 const Intro = () => {
-  const particlesInit = (main) => {
-    console.log(main);
+  //   const particlesInit = (main) => {
+  //     console.log(main);
 
-    // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
-  };
+  // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
+  //   };
 
-  const particlesLoaded = (container) => {
-    console.log(container);
-  };
+  //   const particlesLoaded = (container) => {
+  // console.log(container);
+  //   };
   return (
     <div className="header">
       {/* <Particles
