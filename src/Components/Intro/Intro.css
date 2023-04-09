@@ -1,5 +1,156 @@
-.particles{
-margin-top: 72px;
+.particles {
+  margin-top: 72px;
+  /* max-height: 500px !important; */
+  height: 500px !important;
+  /* z-index: -1; */
+  overflow: hidden;
+  width: 100%;
+
+  position: absolute !important;
+  z-index: 0;
+  top: 0px;
+  left: 0px;
+  pointer-events: none;
+}
+/* .tsparticles-canvas-el {
+    width: 100%;
+
+    position: absolute !important;
+    z-index: 0;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
+  } */
+.profile-img {
+  --box: 150px;
+  height: var(--box);
+  width: var(--box);
+  object-fit: cover;
+  /* scale: 1.2; */
+  object-position: center;
+  border-radius: 50%;
+  background: linear-gradient(
+    360deg,
+    rgb(139, 96, 255) 20%,
+    rgb(122, 82, 216) 40%,
+    rgb(68, 42, 129) 100%
+  );
+  /* color: black; */
+  /* mix-blend-mode: color-burn; */
+}
+
+/* .intro-row{
+    padding-block: 100px;
+} */
+
+.title {
+  font-size: 1.2rem;
+  font-weight: 400;
+  padding-bottom: 5px;
+}
+
+.profile-info p {
+  max-width: 80%;
+  /* margin: auto; */
+}
+
+.profile-info .download-btn {
+  /* font-weight: 500; */
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+.download-btn {
+}
+.download-btn:hover {
+  color: white;
+}
+.profile-info {
+  text-align: left;
+  color: white;
+}
+.right {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.left {
+  display: grid;
+  place-content: center;
+  padding: 0;
+}
+
+.intro-row {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.intro {
+  width: 100%;
+  /* height: 500px; */
+  padding-block: 100px;
+  /* background-color: rgba(0, 0, 0, 0.096); */
+  background-color: #1d1c1c;
+  /* overflow: hidden; */
+}
+
+@media screen and (max-width: 994px) {
+  .particles {
+    height: 650px !important;
+  }
+  .profile-img-container {
+    display: grid;
+    place-content: center;
+  }
+  .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    margin: auto;
+  }
+  .profile-info {
+    text-align: center;
+    /* padding-bottom: 50px; */
+  }
+  .profile-info p {
+    margin: auto;
+  }
+  .left {
+    display: grid;
+    place-content: center;
+    margin: auto;
+  }
+  .profile-img {
+    display: grid;
+    place-content: center;
+  }
+
+  .intro-row {
+    display: grid;
+    place-content: center;
+    margin: 0px;
+  }
+
+  .header {
+    padding-block: 40px;
+  }
+
+  .download-btn {
+    margin-top: 20px;
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .profile-img {
+    height: 200px;
+    width: 200px;
+  }
+  .particles {
+    margin-top: 60px;
     /* max-height: 500px !important; */
     height: 500px !important;
     /* z-index: -1; */
@@ -11,150 +162,5 @@ margin-top: 72px;
     top: 0px;
     left: 0px;
     pointer-events: none;
-}
-/* .tsparticles-canvas-el {
-    width: 100%;
-
-    position: absolute !important;
-    z-index: 0;
-    top: 0px;
-    left: 0px;
-    pointer-events: none;
-  } */
-.profile-img{
-    height: 300px;
-    width: 300px;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 50%;
-    /* color: black; */
-    /* mix-blend-mode: color-burn; */
-}
-
-/* .intro-row{
-    padding-block: 100px;
-} */
-
-.title{
-    font-size: 1.2rem;
-    font-weight: 400;
-    padding-bottom: 5px;
-    
-}
-
-.profile-info p{
-    max-width: 80%;
-    /* margin: auto; */
-}
-
-.profile-info .download-btn{
-    /* font-weight: 500; */
-    text-decoration: none;
- margin-top: 20px;
-}
-
-.download-btn{
-    
-}
-.download-btn:hover{
-    color: white;
-}
-.profile-info{
-    text-align: left;
-    color: white;
-}
-.right{
-    display: flex;
-    justify-content: left;
-    align-items: center;
-}
-
-.left{
-    display: grid;
-    place-content: center;
-    padding: 0;
-}
-
-.intro-row{
-    position: relative;
-    top: 0;
-    left: 0;
-}
-
-.header{
-    width: 100%;
-    /* height: 500px; */
-    padding-block:100px ;
-    /* background-color: rgba(0, 0, 0, 0.096); */
-    background-color: #1D1C1C;
-    /* overflow: hidden; */
-}
-
-@media screen and (max-width:994px) {
-    .particles{
-        height: 650px !important;
-    }
-    .profile-img-container{
-        display: grid;
-        place-content: center;
-    }
-    .right{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 1em;
-        margin: auto;
-    }
-    .profile-info{
-        text-align: center;
-        /* padding-bottom: 50px; */
-    }
-    .profile-info p{
-        margin: auto;
-    }
-    .left{
-        display: grid;
-        place-content: center;
-        margin: auto;
-    }
-    .profile-img{
-        display: grid;
-        place-content: center;
-    }
-
-    .intro-row{
-        display: grid;
-        place-content: center;
-        margin: 0px;
-    }
-
-    .header{
-        padding-block: 40px;
-    }
-
-    .download-btn{
-        margin-top: 20px;
-        display: inline-block;
-    }
-}
-
-@media screen and (max-width:425px) {
-    .profile-img{
-        height: 200px;
-        width: 200px;
-    }
-    .particles{
-        margin-top: 60px;
-            /* max-height: 500px !important; */
-            height: 500px !important;
-            /* z-index: -1; */
-            overflow: hidden;
-            width: 100%;
-        
-            position: absolute !important;
-            z-index: 0;
-            top: 0px;
-            left: 0px;
-            pointer-events: none;
-        }
+  }
 }

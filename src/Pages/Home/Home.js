@@ -7,12 +7,12 @@ import AboutMe from "../../Components/AboutMe/AboutMe";
 
 const Home = () => {
   return (
-    <div className="home">
+    <>
       <Intro />
       <Projects />
       <AboutMe />
       <Contact />
-    </div>
+    </>
   );
 };
 

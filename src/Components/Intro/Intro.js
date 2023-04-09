@@ -7,6 +7,7 @@ import "./Intro.css";
 // import { Button } from "@mui/material";
 // import { Fade } from "react-reveal";
 import Typewriter from "typewriter-effect";
+import { profilePic } from "../../assets";
 
 const Intro = () => {
   //   const particlesInit = (main) => {
@@ -19,7 +20,7 @@ const Intro = () => {
   // console.log(container);
   //   };
   return (
-    <div className="header">
+    <div className="intro">
       {/* <Particles
                 id="tsparticles"
                 className="particles"
@@ -125,7 +126,8 @@ const Intro = () => {
             {/* <Fade left> */}
             <img
               className="profile-img"
-              src="https://i.ibb.co/yhFgYJ9/received-641280323297589.jpg"
+              // src="https://i.ibb.co/yhFgYJ9/received-641280323297589.jpg"
+              src={profilePic}
               alt=""
             />
             {/* </Fade> */}
