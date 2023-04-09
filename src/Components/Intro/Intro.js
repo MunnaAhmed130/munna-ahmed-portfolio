@@ -1,32 +1,19 @@
 import React from "react";
-// import Particles from "react-tsparticles";
-// import { Row, Col } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import "./Intro.css";
-// import { Button } from "@mui/material";
-// import { Fade } from "react-reveal";
 import Typewriter from "typewriter-effect";
 import { profilePic } from "../../assets";
 
 const Intro = () => {
-  //   const particlesInit = (main) => {
-  //     console.log(main);
-
-  // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
-  //   };
-
-  //   const particlesLoaded = (container) => {
-  // console.log(container);
-  //   };
   return (
-    <div className="intro">
-      <div style={{ width: "100%" }} className="intro-row">
-        <div lg={5} md={12} className="left">
+    <div className="py-40 bg-[#222222] w-full">
+      <div className="flex flex-row max-w-7xl w-full mx-auto gap-10">
+        <div className="">
           <div className="profile-img-container">
             {/* <Fade left> */}
             <img
-              className="profile-img"
+              className="bg-gradient-to-t from-slate-500 to-slate-300 grayscale w-40 h-40 object-cover rounded-full"
               // src="https://i.ibb.co/yhFgYJ9/received-641280323297589.jpg"
               src={profilePic}
               alt=""
@@ -34,16 +21,18 @@ const Intro = () => {
             {/* </Fade> */}
           </div>
         </div>
-        <div lg={7} md={12} className="right">
+        <div className="right">
           <div className="profile-info">
             <div>
               <h1>Munna Ahmed</h1>
-              <div className="title">
+              <div className="h-6 flex items-center justify-center">
                 <Typewriter
-                  options={{ autoStart: true, loop: true }}
+                  options={{ autoStart: true, loop: true, delay: 100 }}
                   onInit={(typewriter) => {
                     typewriter
-                      .typeString("Junior Web Developer")
+                      .typeString(
+                        "<span class='text-gradient font-semibold text-xl'>Junior Web Developer<span/>"
+                      )
                       // .callFunction(() => {
                       //     console.log('String typed out!');
                       // })
@@ -52,10 +41,14 @@ const Intro = () => {
                       // .callFunction(() => {
                       //     console.log('All strings were deleted');
                       // })
-                      .typeString("Junior React Developer")
+                      .typeString(
+                        "<span class='text-gradient font-semibold text-xl'>Junior React Developer<span/>"
+                      )
                       .pauseFor(2000)
                       .deleteAll()
-                      .typeString("Front End Developer")
+                      .typeString(
+                        "<span class='text-gradient font-semibold text-xl'>Front End Developer<span/>"
+                      )
                       .pauseFor(2000)
                       .deleteAll()
                       .start();
@@ -63,7 +56,7 @@ const Intro = () => {
                 />
               </div>
               {/* <h3 className="title">Junior web developer</h3> */}
-              <p>
+              <p className="">
                 I'm Junior Web Developer with one year of experience in web
                 development, designing and developing user interfaces, and
                 debugging. Experienced in developing dynamic and responsive web
