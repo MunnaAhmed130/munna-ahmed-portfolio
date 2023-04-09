@@ -164,10 +164,3 @@
     pointer-events: none;
   }
 }
-
-.intro h1 {
-  font-size: 72px;
-  background: -webkit-linear-gradient(45deg, #eee 0%, #000000 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
