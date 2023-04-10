@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { navLinks } from "../constant";
 import { IoMenuOutline, IoCloseOutline } from "react-icons/io5";
 import { motion } from "framer-motion";
@@ -9,8 +9,12 @@ const Header = () => {
   const { activeSection, setActiveSection } = useContext(OBSERVER_CONTEXT);
   const [toggle, setToggle] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
+  console.log(location);
 
   useEffect(() => {
+    activeSection === "intro" && navigate("/");
+    // activeSection === "projects" && location.hash "#projects";
     activeSection === "intro" && navigate("/");
   }, [activeSection, navigate]);
 

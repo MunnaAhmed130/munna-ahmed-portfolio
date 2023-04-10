@@ -1,4 +1,3 @@
-import { useEffect, useRef, useState } from "react";
 import Contact from "../../Components/Contact/Contact";
 import Intro from "../../Components/Intro/Intro";
 import Projects from "../../Components/Projects/Projects";
@@ -9,10 +8,10 @@ const Home = () => {
   return (
     <div className="">
       <Intro />
-      <Projects />
+      {/* <Projects />
       <AboutMe />
       <Contact />
-      <Footer />
+      <Footer /> */}
     </div>
   );
 };
