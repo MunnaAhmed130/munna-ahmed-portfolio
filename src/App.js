@@ -7,7 +7,7 @@ export const OBSERVER_CONTEXT = createContext();
 const App = () => {
   const observerRef = useRef();
   const [activeSection, setActiveSection] = useState("");
-
+  console.log(activeSection);
   useEffect(() => {
     observerRef.current = new IntersectionObserver((entries) => {
       const visibleSection = entries.find(
@@ -17,15 +17,14 @@ const App = () => {
       // Update state with the visible section ID
       if (visibleSection) {
         setActiveSection(visibleSection.id);
-        console.log(visibleSection);
       }
     });
     //Get custom attribute data-section from all sections
     const sections = document.querySelectorAll("[data-section]");
-
     sections.forEach((section) => {
       observerRef.current.observe(section);
     });
+    // activeSection !== "" ? "":""
     // Cleanup function to remove observer
     return () => {
       sections.forEach((section) => {

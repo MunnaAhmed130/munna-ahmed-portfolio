@@ -6,14 +6,19 @@ import Typewriter from "typewriter-effect";
 import { profilePic } from "../../assets";
 
 const Intro = () => {
+  const writerStyle = "text-gray-300";
   return (
-    <div id="intro" data-section className="py-40 bg-[#222222] w-full">
-      <div className="flex flex-row max-w-7xl w-full mx-auto gap-10">
+    <div
+      id="intro"
+      data-section
+      className="h-screen flex items-center mb-5 bg-[#222222] w-full"
+    >
+      <div className="flex flex-col max-w-7xl w-full mx-auto gap-10">
         <div className="">
-          <div className="profile-img-container">
+          <div className="">
             {/* <Fade left> */}
             <img
-              className="bg-gradient-to-t from-slate-500 to-slate-300 grayscale w-40 h-40 object-cover rounded-full"
+              className="bg-gradient-to-t from-blue-500 to-purple-400 mx-auto w-40 h-40 object-cover rounded-full"
               // src="https://i.ibb.co/yhFgYJ9/received-641280323297589.jpg"
               src={profilePic}
               alt=""
@@ -21,33 +26,29 @@ const Intro = () => {
             {/* </Fade> */}
           </div>
         </div>
-        <div className="right">
+        <div className="">
           <div className="profile-info">
-            <div>
-              <h1>Munna Ahmed</h1>
+            <div className="text-center">
+              <p className="text-slate-500 font-semibold">
+                Hi, I'm Munna Ahmed
+              </p>
               <div className="h-6 flex items-center justify-center">
                 <Typewriter
                   options={{ autoStart: true, loop: true, delay: 100 }}
                   onInit={(typewriter) => {
                     typewriter
                       .typeString(
-                        "<span class='text-gradient font-semibold text-xl'>Junior Web Developer<span/>"
-                      )
-                      // .callFunction(() => {
-                      //     console.log('String typed out!');
-                      // })
-                      .pauseFor(2000)
-                      .deleteAll()
-                      // .callFunction(() => {
-                      //     console.log('All strings were deleted');
-                      // })
-                      .typeString(
-                        "<span class='text-gradient font-semibold text-xl'>Junior React Developer<span/>"
+                        "<span class='text-white' >Junior Web Developer<span/>"
                       )
                       .pauseFor(2000)
                       .deleteAll()
                       .typeString(
-                        "<span class='text-gradient font-semibold text-xl'>Front End Developer<span/>"
+                        "<span class='text-gray-gradient font-semibold text-xl'>Junior React Developer<span/>"
+                      )
+                      .pauseFor(2000)
+                      .deleteAll()
+                      .typeString(
+                        "<span class='text-gray-gradient font-semibold text-xl'>Front End Developer<span/>"
                       )
                       .pauseFor(2000)
                       .deleteAll()
@@ -56,7 +57,7 @@ const Intro = () => {
                 />
               </div>
               {/* <h3 className="title">Junior web developer</h3> */}
-              <p className="">
+              <p className="text-gray-500">
                 I'm Junior Web Developer with one year of experience in web
                 development, designing and developing user interfaces, and
                 debugging. Experienced in developing dynamic and responsive web

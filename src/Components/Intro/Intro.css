@@ -24,7 +24,7 @@
     padding-block: 100px;
 } */
 
-.download-btn:hover {
+/* .download-btn:hover {
   color: white;
 }
 .profile-info {
@@ -47,9 +47,9 @@
   position: relative;
   top: 0;
   left: 0;
-}
+} */
 
-@media screen and (max-width: 994px) {
+/* @media screen and (max-width: 994px) {
   .particles {
     height: 650px !important;
   }
@@ -66,7 +66,7 @@
   }
   .profile-info {
     text-align: center;
-    /* padding-bottom: 50px; */
+    /* padding-bottom: 50px; 
   }
   .profile-info p {
     margin: auto;
@@ -104,9 +104,9 @@
   }
   .particles {
     margin-top: 60px;
-    /* max-height: 500px !important; */
+    /* max-height: 500px !important; 
     height: 500px !important;
-    /* z-index: -1; */
+    /* z-index: -1; 
     overflow: hidden;
     width: 100%;
 
@@ -116,4 +116,4 @@
     left: 0px;
     pointer-events: none;
   }
-}
+} */

@@ -1,14 +1,18 @@
-import React, { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useContext, useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { navLinks } from "../constant";
 import { IoMenuOutline, IoCloseOutline } from "react-icons/io5";
 import { motion } from "framer-motion";
 import { OBSERVER_CONTEXT } from "../App";
 
 const Header = () => {
-  const { setActiveSection } = useContext(OBSERVER_CONTEXT);
+  const { activeSection, setActiveSection } = useContext(OBSERVER_CONTEXT);
   const [toggle, setToggle] = useState(false);
-  const [active, setActive] = useState("");
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    activeSection === "intro" && navigate("/");
+  }, [activeSection, navigate]);
 
   const variants = {
     open: {
@@ -23,26 +27,24 @@ const Header = () => {
   // bg-[#1d1c1c]/95
   const handleToTop = () => {
     window.scrollTo(0, 0);
-    setActive("");
+    setActiveSection("");
+    navigate("/");
   };
 
   return (
-    <nav className="w-full  sm:px-20 px-10 py-4 text-center  fixed top-0  font-poppins  z-10">
+    <nav className="w-full bg-[#222222]  sm:px-20 px-10 py-4 text-center  fixed top-0  font-poppins  z-10">
       <div className="max-w-7xl w-full  mx-auto flex justify-between items-center">
         <Link
           to="/"
-          className="bg-clip-text bg-gradient-to-r from-gray-300 to-gray-600 text-fill-transparent  text-2xl font-semibold"
-          onClick={() => {
-            handleToTop();
-            setActiveSection("");
-          }}
+          className="text-gray-gradient text-2xl font-semibold"
+          onClick={() => handleToTop()}
         >
           Munna
           <span className="w-1 h-1 bg-gray-500 inline-block rounded-full" />
         </Link>
         {/* list of links  */}
         <ul className="hidden sm:flex flex-row  gap-10">
-          <NavList active={active} setActive={setActive} />
+          <NavList />
         </ul>
 
         <div className="sm:hidden relative flex items-center justify-end">
@@ -60,7 +62,7 @@ const Header = () => {
           >
             {/* list of links  */}
             <ul className="   flex flex-col items-center justify-end gap-2">
-              <NavList active={active} setActive={setActive} />
+              <NavList />
             </ul>
           </motion.div>
         </div>
@@ -72,7 +74,7 @@ const Header = () => {
 const navStyle =
   "tracking-widest hover:text-slate-300 transition-colors duration-100";
 
-const NavList = ({ setActive }) => {
+const NavList = () => {
   const { activeSection, setActiveSection } = useContext(OBSERVER_CONTEXT);
 
   return (
@@ -85,7 +87,7 @@ const NavList = ({ setActive }) => {
               activeSection === link.id ? "text-gray-300" : "text-gray-400"
             } `}
             onClick={() => {
-              setActive(link.id);
+              // setActive(link.id);
               setActiveSection(link.id);
             }}
           >

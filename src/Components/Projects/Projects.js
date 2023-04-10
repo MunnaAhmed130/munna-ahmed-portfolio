@@ -19,7 +19,7 @@ const Projects = () => {
   // console.log(project);
 
   return (
-    <div data-section id="projects" ref={observerRef}>
+    <section data-section id="projects" ref={observerRef}>
       <div className="projects-container mb-28">
         <h2>Projects</h2>
         {/* <SkeletonElement type="avatar" /> */}
@@ -43,7 +43,7 @@ const Projects = () => {
         )}
       </div>
       {/* <Footer /> */}
-    </div>
+    </section>
   );
 };
 
