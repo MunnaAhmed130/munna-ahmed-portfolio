@@ -7,25 +7,23 @@
     border-radius: 2px;
 } */
 
-.projects-container{
-    padding-block: 10px;
+.projects-container {
+  padding-block: 10px;
+  /* margin: auto; */
+}
+
+.spin {
+  padding-block: 200px;
+}
+
+.projects {
+  width: 100%;
+  margin: auto;
+}
+
+@media screen and (max-width: 990px) and (min-width: 550px) {
+  .projects {
+    width: 70%;
     margin: auto;
-}
-
-
-.spin{
-    padding-block: 200px;
-}
-
-
-.projects{
-    width: 100%;
-    margin: auto;
-}
-
-@media screen and (max-width:990px) and (min-width:550px) {
-    .projects{
-        width: 70%;
-        margin: auto;
-    }
+  }
 }

@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import SkeletonProjects from "../../Skeletons/SkeletonProjects";
 import Footer from "../Footer/Footer";
 import Project from "../Project/Project";
 import "./Projects.css";
+import { OBSERVER_CONTEXT } from "../../App";
 
-const Projects = ({ observerRef }) => {
+const Projects = () => {
+  const { observerRef } = useContext(OBSERVER_CONTEXT);
   // console.log(observerRef);
   const [project, setProject] = useState(null);
   // const [success, setSuccess] = useState(false)
@@ -17,8 +19,8 @@ const Projects = ({ observerRef }) => {
   // console.log(project);
 
   return (
-    <div id="projects" ref={observerRef}>
-      <div className="projects-container ">
+    <div data-section id="projects" ref={observerRef}>
+      <div className="projects-container mb-28">
         <h2>Projects</h2>
         {/* <SkeletonElement type="avatar" /> */}
         {/* <Spinner animation="border" /> */}

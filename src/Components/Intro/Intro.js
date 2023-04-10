@@ -7,7 +7,7 @@ import { profilePic } from "../../assets";
 
 const Intro = () => {
   return (
-    <div className="py-40 bg-[#222222] w-full">
+    <div id="intro" data-section className="py-40 bg-[#222222] w-full">
       <div className="flex flex-row max-w-7xl w-full mx-auto gap-10">
         <div className="">
           <div className="profile-img-container">

@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 import "./Contact.css";
 import Footer from "../Footer/Footer";
+import { OBSERVER_CONTEXT } from "../../App";
 // import { Button } from "@mui/material";
 
-const Contact = ({ observerRef }) => {
+const Contact = () => {
+  const { observerRef } = useContext(OBSERVER_CONTEXT);
+
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = async (data) => {
     console.log(data);
@@ -31,7 +34,7 @@ const Contact = ({ observerRef }) => {
   };
   return (
     <div>
-      <div id="contact">
+      <div data-section ref={observerRef} id="contact">
         <h3>Contact Me</h3>
         <form onSubmit={handleSubmit(onSubmit)}>
           <input

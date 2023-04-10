@@ -1,10 +1,12 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { navLinks } from "../constant";
 import { IoMenuOutline, IoCloseOutline } from "react-icons/io5";
 import { motion } from "framer-motion";
+import { OBSERVER_CONTEXT } from "../App";
 
 const Header = () => {
+  const { setActiveSection } = useContext(OBSERVER_CONTEXT);
   const [toggle, setToggle] = useState(false);
   const [active, setActive] = useState("");
 
@@ -23,6 +25,7 @@ const Header = () => {
     window.scrollTo(0, 0);
     setActive("");
   };
+
   return (
     <nav className="w-full  sm:px-20 px-10 py-4 text-center  fixed top-0  font-poppins  z-10">
       <div className="max-w-7xl w-full  mx-auto flex justify-between items-center">
@@ -31,6 +34,7 @@ const Header = () => {
           className="bg-clip-text bg-gradient-to-r from-gray-300 to-gray-600 text-fill-transparent  text-2xl font-semibold"
           onClick={() => {
             handleToTop();
+            setActiveSection("");
           }}
         >
           Munna
@@ -68,7 +72,9 @@ const Header = () => {
 const navStyle =
   "tracking-widest hover:text-slate-300 transition-colors duration-100";
 
-const NavList = ({ setActive, active }) => {
+const NavList = ({ setActive }) => {
+  const { activeSection, setActiveSection } = useContext(OBSERVER_CONTEXT);
+
   return (
     <>
       {navLinks.map((link) => (
@@ -76,9 +82,12 @@ const NavList = ({ setActive, active }) => {
           <a
             href={`#${link.id}`}
             className={` ${navStyle} ${
-              active === link.id ? "text-gray-300" : "text-gray-400"
+              activeSection === link.id ? "text-gray-300" : "text-gray-400"
             } `}
-            onClick={() => setActive(link.id)}
+            onClick={() => {
+              setActive(link.id);
+              setActiveSection(link.id);
+            }}
           >
             {link.title}
           </a>
