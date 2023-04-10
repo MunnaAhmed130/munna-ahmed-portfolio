@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { navLinks } from "../constant";
 import { IoMenuOutline, IoCloseOutline } from "react-icons/io5";
@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 
 const Header = () => {
   const [toggle, setToggle] = useState(false);
+  const [active, setActive] = useState("");
 
   const variants = {
     open: {
@@ -18,24 +19,33 @@ const Header = () => {
     closed: { opacity: 0, y: "-20%" },
   };
   // bg-[#1d1c1c]/95
+  const handleToTop = () => {
+    window.scrollTo(0, 0);
+    setActive("");
+  };
   return (
     <nav className="w-full  sm:px-20 px-10 py-4 text-center  fixed top-0  font-poppins  z-10">
       <div className="max-w-7xl w-full  mx-auto flex justify-between items-center">
         <Link
           to="/"
-          className="text-gradient text-2xl font-semibold"
-          onClick={() => window.scrollTo(0, 0)}
+          className="bg-clip-text bg-gradient-to-r from-gray-300 to-gray-600 text-fill-transparent  text-2xl font-semibold"
+          onClick={() => {
+            handleToTop();
+          }}
         >
           Munna
-          <span className="w-1 h-1 bg-slate-500 inline-block rounded-full" />
+          <span className="w-1 h-1 bg-gray-500 inline-block rounded-full" />
         </Link>
         {/* list of links  */}
         <ul className="hidden sm:flex flex-row  gap-10">
-          <NavList />
+          <NavList active={active} setActive={setActive} />
         </ul>
 
         <div className="sm:hidden relative flex items-center justify-end">
-          <button onClick={() => setToggle(!toggle)} className="text-3xl">
+          <button
+            onClick={() => setToggle(!toggle)}
+            className="text-3xl text-slate-400"
+          >
             {toggle ? <IoCloseOutline /> : <IoMenuOutline />}
           </button>
 
@@ -46,7 +56,7 @@ const Header = () => {
           >
             {/* list of links  */}
             <ul className="   flex flex-col items-center justify-end gap-2">
-              <NavList />
+              <NavList active={active} setActive={setActive} />
             </ul>
           </motion.div>
         </div>
@@ -55,11 +65,10 @@ const Header = () => {
   );
 };
 
-const navStyle = "tracking-widest hover:text-slate-300 transition-colors";
+const navStyle =
+  "tracking-widest hover:text-slate-300 transition-colors duration-100";
 
-const NavList = () => {
-  const [active, setActive] = useState("");
-  console.log(active);
+const NavList = ({ setActive, active }) => {
   return (
     <>
       {navLinks.map((link) => (
@@ -67,7 +76,7 @@ const NavList = () => {
           <a
             href={`#${link.id}`}
             className={` ${navStyle} ${
-              active === link.id ? "text-slate-300" : "text-slate-400"
+              active === link.id ? "text-gray-300" : "text-gray-400"
             } `}
             onClick={() => setActive(link.id)}
           >
@@ -80,7 +89,7 @@ const NavList = () => {
           href="https://drive.google.com/file/d/1RhVvtP6IrrtuftlTtwQZAvgmQVRizMcy/view?usp=sharing"
           target="_blank"
           rel="noreferrer noopener"
-          className={`${navStyle} hover:text-slate-300 text-slate-400`}
+          className={`${navStyle} hover:text-slate-300 text-gray-400`}
         >
           Resume
         </a>

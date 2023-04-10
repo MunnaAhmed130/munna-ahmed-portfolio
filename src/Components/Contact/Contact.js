@@ -5,7 +5,7 @@ import "./Contact.css";
 import Footer from "../Footer/Footer";
 // import { Button } from "@mui/material";
 
-const Contact = () => {
+const Contact = ({ observerRef }) => {
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = async (data) => {
     console.log(data);

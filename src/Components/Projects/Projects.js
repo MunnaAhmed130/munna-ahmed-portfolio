@@ -4,7 +4,8 @@ import Footer from "../Footer/Footer";
 import Project from "../Project/Project";
 import "./Projects.css";
 
-const Projects = () => {
+const Projects = ({ observerRef }) => {
+  // console.log(observerRef);
   const [project, setProject] = useState(null);
   // const [success, setSuccess] = useState(false)
   useEffect(() => {
@@ -13,10 +14,10 @@ const Projects = () => {
       .then((res) => res.json())
       .then((data) => setProject(data));
   }, []);
-  console.log(project);
+  // console.log(project);
 
   return (
-    <div id="projects">
+    <div id="projects" ref={observerRef}>
       <div className="projects-container ">
         <h2>Projects</h2>
         {/* <SkeletonElement type="avatar" /> */}

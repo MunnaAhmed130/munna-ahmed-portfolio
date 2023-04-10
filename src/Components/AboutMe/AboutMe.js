@@ -14,7 +14,7 @@ const AboutMe = () => {
   };
   return (
     <section className="about-section">
-      <Particles
+      {/* <Particles
         id="tsparticles"
         className="particles-about"
         init={particlesInit}
@@ -97,10 +97,6 @@ const AboutMe = () => {
                 speed: 10,
               },
             },
-            // line_linked: {
-            //     enable: true,
-            //     distance: 120
-            // },
             shape: {
               type: "circle",
             },
@@ -111,7 +107,7 @@ const AboutMe = () => {
           },
           detectRetina: true,
         }}
-      />
+      /> */}
       <div className="about-info--container">
         <h2>HI</h2>
         <h2>I'm Munna Ahmed</h2>
