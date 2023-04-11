@@ -1,9 +1,8 @@
 import { createContext, useEffect, useRef, useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
 import { RouterProvider } from "react-router-dom";
-import routes from "./routes/Routes";
+import routes from "./routes/routes";
+// import routes from "./routes/routes";
+// import routes from "./routes/Routes";
 
 export const OBSERVER_CONTEXT = createContext();
 
@@ -38,6 +37,7 @@ const App = () => {
   }, [observerRef]);
 
   const value = { observerRef, activeSection, setActiveSection };
+
   return (
     <OBSERVER_CONTEXT.Provider value={value}>
       <RouterProvider router={routes} />

@@ -1,7 +1,7 @@
-import Contact from "../../Components/Contact/Contact";
-import Projects from "../../Components/Projects/Projects";
-import AboutMe from "../../Components/AboutMe/AboutMe";
-import Footer from "../../Components/Footer/Footer";
+// import Contact from "../../Components/Contact/Contact";
+// import Projects from "../../Components/Projects/Projects";
+// import AboutMe from "../../Components/AboutMe/AboutMe";
+// import Footer from "../../Components/Footer/Footer";
 import Intro from "../components/Intro/Intro";
 
 const Home = () => {

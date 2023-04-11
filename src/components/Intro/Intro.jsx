@@ -1,6 +1,6 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDownload } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import "./Intro.css";
 import Typewriter from "typewriter-effect";
 import { profilePic } from "../../assets";
@@ -69,8 +69,8 @@ const Intro = () => {
                 className="download-btn"
                 href="https://drive.google.com/u/0/uc?id=1RhVvtP6IrrtuftlTtwQZAvgmQVRizMcy&export=download"
               >
-                <FontAwesomeIcon icon={faDownload} className="me-2" /> Download
-                Resume
+                {/* <FontAwesomeIcon icon={faDownload} className="me-2" /> */}
+                Download Resume
               </button>
             </div>
           </div>

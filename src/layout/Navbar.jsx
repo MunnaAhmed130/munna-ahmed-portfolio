@@ -9,8 +9,8 @@ const Navbar = () => {
   const { activeSection, setActiveSection } = useContext(OBSERVER_CONTEXT);
   const [toggle, setToggle] = useState(false);
   const navigate = useNavigate();
-  const location = useLocation();
-  console.log(location);
+  // const location = useLocation();
+  // console.log(location);
 
   useEffect(() => {
     activeSection === "intro" && navigate("/");
