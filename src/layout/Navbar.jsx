@@ -3,10 +3,11 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { navLinks } from "../constant";
 import { IoMenuOutline, IoCloseOutline } from "react-icons/io5";
 import { motion } from "framer-motion";
-import { OBSERVER_CONTEXT } from "../App";
+// import { OBSERVER_CONTEXT } from "../App";
+import useObserver from "../hooks/useObserver";
 
 const Navbar = () => {
-  const { activeSection, setActiveSection } = useContext(OBSERVER_CONTEXT);
+  const { activeSection, setActiveSection } = useObserver();
   const [toggle, setToggle] = useState(false);
   const navigate = useNavigate();
   // const location = useLocation();
@@ -79,7 +80,7 @@ const navStyle =
   "tracking-widest hover:text-slate-300 transition-colors duration-100";
 
 const NavList = () => {
-  const { activeSection, setActiveSection } = useContext(OBSERVER_CONTEXT);
+  const { activeSection, setActiveSection } = useObserver();
 
   return (
     <>

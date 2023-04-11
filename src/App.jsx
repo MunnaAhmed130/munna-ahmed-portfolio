@@ -1,47 +1,12 @@
-import { createContext, useEffect, useRef, useState } from "react";
 import { RouterProvider } from "react-router-dom";
+import ObserverProvider from "./context/ObserverProvider";
 import routes from "./routes/routes";
-// import routes from "./routes/routes";
-// import routes from "./routes/Routes";
-
-export const OBSERVER_CONTEXT = createContext();
 
 const App = () => {
-  const observerRef = useRef();
-  const [activeSection, setActiveSection] = useState("");
-  // console.log(activeSection);
-  useEffect(() => {
-    observerRef.current = new IntersectionObserver((entries) => {
-      const visibleSection = entries.find(
-        (entry) => entry.isIntersecting
-      )?.target;
-
-      // Update state with the visible section ID
-      if (visibleSection) {
-        setActiveSection(visibleSection.id);
-      }
-    });
-
-    //Get custom attribute data-section from all sections
-    const sections = document.querySelectorAll("[data-section]");
-    sections.forEach((section) => {
-      observerRef.current.observe(section);
-    });
-
-    // Cleanup function to remove observer
-    return () => {
-      sections.forEach((section) => {
-        observerRef.current.unobserve(section);
-      });
-    };
-  }, [observerRef]);
-
-  const value = { observerRef, activeSection, setActiveSection };
-
   return (
-    <OBSERVER_CONTEXT.Provider value={value}>
+    <ObserverProvider>
       <RouterProvider router={routes} />
-    </OBSERVER_CONTEXT.Provider>
+    </ObserverProvider>
   );
 };
 
