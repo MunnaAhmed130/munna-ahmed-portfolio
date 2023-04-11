@@ -2,7 +2,7 @@
 // import Projects from "../../Components/Projects/Projects";
 // import AboutMe from "../../Components/AboutMe/AboutMe";
 // import Footer from "../../Components/Footer/Footer";
-import Intro from "../components/Intro/Intro";
+import Intro from "../components/Intro";
 
 const Home = () => {
   return (

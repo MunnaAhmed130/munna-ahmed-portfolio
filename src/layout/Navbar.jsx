@@ -9,6 +9,7 @@ import useObserver from "../hooks/useObserver";
 const Navbar = () => {
   const { activeSection, setActiveSection } = useObserver();
   const [toggle, setToggle] = useState(false);
+
   const navigate = useNavigate();
   // const location = useLocation();
   // console.log(location);
@@ -42,7 +43,7 @@ const Navbar = () => {
       <div className="max-w-7xl w-full  mx-auto flex justify-between items-center">
         <Link
           to="/"
-          className="text-gray-gradient text-2xl font-semibold"
+          className="text-gray-gradient text-2xl font-bold"
           onClick={() => handleToTop()}
         >
           Munna

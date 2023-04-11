@@ -1,9 +1,8 @@
 import React from "react";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faDownload } from "@fortawesome/free-solid-svg-icons";
-import "./Intro.css";
 import Typewriter from "typewriter-effect";
-import { profilePic } from "../../assets";
+import { profilePic } from "../assets";
 
 const Intro = () => {
   const writerStyle = "text-gray-100";
