@@ -5,7 +5,7 @@ import { IoMenuOutline, IoCloseOutline } from "react-icons/io5";
 import { motion } from "framer-motion";
 import { OBSERVER_CONTEXT } from "../App";
 
-const Header = () => {
+const Navbar = () => {
   const { activeSection, setActiveSection } = useContext(OBSERVER_CONTEXT);
   const [toggle, setToggle] = useState(false);
   const navigate = useNavigate();
@@ -113,4 +113,4 @@ const NavList = () => {
   );
 };
 
-export default Header;
+export default Navbar;
