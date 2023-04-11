@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { navLinks } from "../constant";
 import { IoMenuOutline, IoCloseOutline } from "react-icons/io5";
@@ -29,6 +29,7 @@ const Navbar = () => {
     },
     closed: { opacity: 0, y: "-20%" },
   };
+
   // bg-[#1d1c1c]/95
   const handleToTop = () => {
     window.scrollTo(0, 0);
@@ -76,9 +77,6 @@ const Navbar = () => {
   );
 };
 
-const navStyle =
-  "tracking-widest hover:text-slate-300 transition-colors duration-100";
-
 const NavList = () => {
   const { activeSection, setActiveSection } = useObserver();
 
@@ -88,9 +86,9 @@ const NavList = () => {
         <li key={link.id}>
           <a
             href={`#${link.id}`}
-            className={` ${navStyle} ${
+            className={` ${
               activeSection === link.id ? "text-gray-300" : "text-gray-400"
-            } `}
+            } nav-link`}
             onClick={() => {
               // setActive(link.id);
               setActiveSection(link.id);
@@ -105,7 +103,7 @@ const NavList = () => {
           href="https://drive.google.com/file/d/1RhVvtP6IrrtuftlTtwQZAvgmQVRizMcy/view?usp=sharing"
           target="_blank"
           rel="noreferrer noopener"
-          className={`${navStyle} hover:text-slate-300 text-gray-400`}
+          className={`nav-link hover:text-slate-300 text-gray-400`}
         >
           Resume
         </a>
