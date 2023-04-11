@@ -43,11 +43,11 @@ const Navbar = () => {
       <div className="max-w-7xl w-full  mx-auto flex justify-between items-center">
         <Link
           to="/"
-          className="text-gray-gradient text-2xl font-bold"
+          className=" text-slate-100 text-2xl font-bold"
           onClick={() => handleToTop()}
         >
           Munna
-          <span className="w-1 h-1 bg-gray-500 inline-block rounded-full" />
+          <span className="w-1 h-1 bg-white inline-block rounded-full" />
         </Link>
         {/* list of links  */}
         <ul className="hidden sm:flex flex-row  gap-10">
