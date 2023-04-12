@@ -7,7 +7,6 @@ import useAll from "../hooks/useAll";
 
 const Navbar = () => {
   const { setFast } = useAll();
-  const [active, setActive] = useState(false);
   const [toggle, setToggle] = useState(false);
 
   const navigate = useNavigate();
@@ -67,7 +66,11 @@ const Navbar = () => {
 };
 
 const NavList = () => {
-  const { activeSection, setActiveSection } = useAll();
+  // const { activeSection, setActiveSection } = useAll();
+  const [active, setActive] = useState(false);
+  const location = useLocation();
+  console.log(location);
+  location.pathname.includes("projects") && console.log("includes project");
 
   return (
     <>
@@ -76,14 +79,15 @@ const NavList = () => {
           <a
             href={`${link.id}`}
             className={` ${
-              activeSection === link.id ? "text-gray-300" : "text-gray-400"
+              active === link.id ? "text-gray-300" : "text-gray-400"
             } nav-link`}
             onClick={() => {
               setActive(link.id);
               // setActiveSection(link.id);
             }}
           >
-            {link.title}
+            {location.pathname.includes(link.title) && "Home"}
+            {/* {link.title} */}
           </a>
         </li>
       ))}
