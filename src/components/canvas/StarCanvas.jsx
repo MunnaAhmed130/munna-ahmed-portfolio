@@ -2,7 +2,6 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import React, { Suspense, useRef } from "react";
 import * as random from "maath/random/dist/maath-random.esm";
 import { PointMaterial, Points, Preload } from "@react-three/drei";
-import useAll from "../../hooks/useAll";
 
 const StarCanvas = () => {
   return (

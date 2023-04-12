@@ -7,16 +7,10 @@ import useAll from "../hooks/useAll";
 
 const Navbar = () => {
   const { setFast } = useAll();
+  const [active, setActive] = useState(false);
   const [toggle, setToggle] = useState(false);
 
   const navigate = useNavigate();
-  // const location = useLocation();
-  // console.log(location);
-
-  // useEffect(() => {
-  //   activeSection === "intro" && navigate("/");
-  //   activeSection === "intro" && navigate("/");
-  // }, [activeSection, navigate]);
 
   const variants = {
     open: {
@@ -30,22 +24,18 @@ const Navbar = () => {
   };
 
   // bg-[#1d1c1c]/95
-  const handleToTop = () => {
-    window.scrollTo(0, 0);
-    setActiveSection("");
-    navigate("/");
-  };
+  // const handleToTop = () => {
+  //   window.scrollTo(0, 0);
+  //   setActiveSection("");
+  //   navigate("/");
+  // };
 
   return (
     <nav className="w-full  sm:px-20 px-10 py-4 text-center  fixed top-0  font-poppins  z-10">
       <div className="max-w-7xl w-full  mx-auto flex justify-between items-center">
-        <Link
-          to="/"
-          className=" text-slate-100 text-2xl font-bold"
-          onClick={() => handleToTop()}
-        >
+        <Link to="/" className=" text-white text-2xl font-bold">
           Munna
-          <span className="w-1 h-1 bg-white inline-block rounded-full" />
+          <span className="w-1 h-1 bg-gray-400 inline-block rounded-full" />
         </Link>
         {/* list of links  */}
         <ul className="hidden sm:flex flex-row  gap-10">
@@ -84,13 +74,13 @@ const NavList = () => {
       {navLinks.map((link) => (
         <li key={link.id}>
           <a
-            href={`#${link.id}`}
+            href={`${link.id}`}
             className={` ${
               activeSection === link.id ? "text-gray-300" : "text-gray-400"
             } nav-link`}
             onClick={() => {
-              // setActive(link.id);
-              setActiveSection(link.id);
+              setActive(link.id);
+              // setActiveSection(link.id);
             }}
           >
             {link.title}
