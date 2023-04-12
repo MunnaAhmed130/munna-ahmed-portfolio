@@ -2,29 +2,34 @@ import React, { useContext, useEffect, useState } from "react";
 // import SkeletonProjects from "../../Skeletons/SkeletonProjects";
 import { projects } from "../constant";
 import { Link } from "react-router-dom";
+import StarCanvas from "./canvas/StarCanvas";
 
 const Projects = () => {
   const [project, setProject] = useState(null);
 
   return (
-    <section data-section id="projects" className="bg-[#222222]">
-      <div className="">
-        <h2>Projects</h2>
-        <div className="">
-          {projects.map((project) => (
-            <Project project={project} key={project._id}></Project>
-          ))}
-        </div>
+    <section data-section id="projects" className=" relative z-0 font-poppins">
+      <div className="flex items-center justify-center  h-screen">
+        <div className="max-w-7xl">
+          <h2 className="text-white text-3xl font-extrabold uppercase text-center mb-5 ">
+            Projects
+          </h2>
+          <div className="grid sm:grid-cols-3 ">
+            {projects.map((project) => (
+              <Project project={project} key={project._id}></Project>
+            ))}
+          </div>
 
-        {/* {!projects && (
+          {/* {!projects && (
           <div xl={3} lg={2} md={1} sm={1} className="">
             {[1, 2, 3].map((n) => (
               <SkeletonProjects key={n} />
-            ))}
-          </div>
-        )} */}
+              ))}
+              </div>
+            )} */}
+        </div>
       </div>
-      {/* <Footer /> */}
+      {/* <StarCanvas /> */}
     </section>
   );
 };
@@ -33,16 +38,18 @@ const Project = ({ project }) => {
   const { description, project_img, title, _id } = project;
   const info = description.slice(0, 170);
   return (
-    <div xl={4} lg={6} className="">
-      <div className="">
-        <img className="" src={project_img} alt="" />
-        <h4 className="">{title}</h4>
-        <p className="description">{info}...</p>
-        <Link to={`/details/${_id}`}>
-          <button variant="contained" className="mb-3">
-            Explore
-          </button>
-        </Link>
+    <div className="m-2">
+      <div className="border border-white/50 rounded-sm px-5 pb-5 pt-3">
+        <div className="w-full h-56 overflow-hidden">
+          <img className="w-full " src={project_img} alt="" />
+        </div>
+        <div className="mt-3">
+          <h4 className="text-white font-semibold text-lg">{title}</h4>
+          <p className="text-slate-200">{info}...</p>
+          {/* <Link to={`/details/${_id}`}>
+            <button className="mb-3 text-white">Explore</button>
+          </Link> */}
+        </div>
       </div>
     </div>
   );

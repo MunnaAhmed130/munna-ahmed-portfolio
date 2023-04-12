@@ -66,8 +66,7 @@ const Navbar = () => {
 };
 
 const NavList = () => {
-  // const { activeSection, setActiveSection } = useAll();
-  const [active, setActive] = useState(false);
+  const [active, setActive] = useState("");
   const location = useLocation();
   console.log(location);
   location.pathname.includes("projects") && console.log("includes project");
@@ -79,9 +78,8 @@ const NavList = () => {
           {location.pathname.includes(link.id) ? (
             <Link
               to="/"
-              className={` ${
-                active === link.id ? "text-gray-300" : "text-gray-400"
-              } nav-link`}
+              className={` text-gray-400
+               nav-link`}
               onClick={() => {
                 setActive(link.id);
               }}
@@ -91,9 +89,8 @@ const NavList = () => {
           ) : (
             <Link
               to={`${link.id}`}
-              className={` ${
-                active === link.id ? "text-gray-300" : "text-gray-400"
-              } nav-link`}
+              className={` text-gray-400
+               nav-link`}
               onClick={() => {
                 setActive(link.id);
               }}
