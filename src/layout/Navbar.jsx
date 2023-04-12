@@ -3,7 +3,6 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { navLinks } from "../constant";
 import { IoMenuOutline, IoCloseOutline } from "react-icons/io5";
 import { motion } from "framer-motion";
-// import { OBSERVER_CONTEXT } from "../App";
 import useObserver from "../hooks/useObserver";
 
 const Navbar = () => {

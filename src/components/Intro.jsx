@@ -6,7 +6,6 @@ import { profilePic } from "../assets";
 import { HiCheckBadge } from "react-icons/hi2";
 
 const Intro = () => {
-  const writerStyle = "text-gray-100";
   return (
     <section
       id="intro"
@@ -80,7 +79,6 @@ const Intro = () => {
             className="text-white "
             href="https://drive.google.com/u/0/uc?id=1RhVvtP6IrrtuftlTtwQZAvgmQVRizMcy&export=download"
           >
-            {/* <FontAwesomeIcon icon={faDownload} className="me-2" /> */}
             Download Resume
           </button>
         </div>
