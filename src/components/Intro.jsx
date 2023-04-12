@@ -10,18 +10,19 @@ const Intro = () => {
     <section
       id="intro"
       data-section
-      className="h-screen flex items-center  bg-[#222222] w-full"
+      className="h-screen flex items-center   w-full z-[1]"
     >
       <div className="max-w-7xl w-full mx-auto ">
         {/* profile image  */}
         <div
           className="h-72 w-72 mx-auto
-          flex items-center"
+          flex items-center "
         >
           <div className=" hover:w-64 hover:h-64 mx-auto w-[210px] h-[210px] object-cover border-unique flex items-center duration-[400ms] transition-all  border-[white] border-2 p-2 hover:p-0">
             <img
               className="bg-gradient-to-t to-[#77a1fd]  from-[#4b52e4] transition-all mx-auto w-full h-full object-cover border-unique    "
               src={profilePic}
+              onMouseOver={() => console.log("fast")}
               alt="Profile-photo"
             />
           </div>
@@ -32,51 +33,33 @@ const Intro = () => {
             <span>Hi, I'm Munna Ahmed</span> &nbsp;
             <HiCheckBadge className="text-blue-500 " />
           </div>
-          {/* <div className="h-6 flex items-center justify-center  text-lg mx-auto">
-            <span className="text-white">I am a</span>&nbsp;
-            <Typewriter
-              options={{ autoStart: true, loop: true, delay: 100 }}
-              onInit={(typewriter) => {
-                typewriter
-                  .typeString("<span class='typewriter '>Web Developer<span/>")
-                  .pauseFor(2000)
-                  .deleteAll()
-                  .typeString("<span class='typewriter'>React Developer<span/>")
-                  .pauseFor(2000)
-                  .deleteAll()
-                  .typeString(
-                    "<span class='typewriter '>Front End Developer<span/>"
-                  )
-                  .pauseFor(2000)
-                  .deleteAll()
-                  .start();
-              }}
-            />
-          </div> */}
-          {/* <h3 className="title">Junior web developer</h3> */}
-          <p className="text-gray-200 w-full max-w-lg mx-auto text-sm leading-5 mb-5">
-            {/* I'm Junior Web Developer with one year of experience in web
-            development, designing and developing user interfaces, and
-            debugging. Experienced in developing dynamic and responsive web
-            applications using web technologies like Html, CSS, Bootstrap, and
-            Javascript. */}
-            {/* &nbsp;
-            <span className="bg-white px-2 rounded-lg leading-[1]">
-              <span className="text-green-500">M</span>
-              <span className="text-black">E</span>
-              <span className="text-blue-500">R</span>
-              <span>N</span>
+          <span className="text-gray-200 w-full max-w-lg mx-auto block text-sm leading-5 mb-5 ">
+            I'm a &nbsp;
+            <span className="w-[5.625rem] inline-block text-center ">
+              <Typewriter
+                options={{ autoStart: true, loop: true, delay: 100 }}
+                onInit={(typewriter) => {
+                  typewriter
+                    .typeString("<span class='typewriter '>MERN Stack<span/>")
+                    .pauseFor(2000)
+                    .deleteAll()
+                    .typeString("<span class='typewriter'>Front-End<span/>")
+                    .pauseFor(2000)
+                    .deleteAll()
+                    .typeString("<span class='typewriter '>React<span/>")
+                    .pauseFor(2000)
+                    .deleteAll()
+                    .start();
+                }}
+              />
             </span>
-            &nbsp;
-             */}
-            I'm a MERN stack developer with one year of experience in web
-            development, designing and developing user interfaces, and
-            debugging. Experienced in developing dynamic and responsive web
-            applications using web technologies like Html, CSS, Bootstrap, and
-            Javascript.
-          </p>
+            &nbsp; Developer with one year of experience in web development,
+            designing and developing user interfaces, and debugging. Experienced
+            in developing dynamic and responsive web applications using web
+            technologies like Html, CSS, Bootstrap, and Javascript.
+          </span>
           <button
-            className="text-white "
+            className="text-white opacity-90 hover:opacity-100 transition-all "
             href="https://drive.google.com/u/0/uc?id=1RhVvtP6IrrtuftlTtwQZAvgmQVRizMcy&export=download"
           >
             Download Resume

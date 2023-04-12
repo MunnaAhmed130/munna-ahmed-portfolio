@@ -1,12 +1,13 @@
 import { RouterProvider } from "react-router-dom";
-import ObserverProvider from "./context/ObserverProvider";
+import ObserverProvider from "./context/AllProvider";
 import routes from "./routes/routes";
+import AllProvider from "./context/AllProvider";
 
 const App = () => {
   return (
-    <ObserverProvider>
+    <AllProvider>
       <RouterProvider router={routes} />
-    </ObserverProvider>
+    </AllProvider>
   );
 };
 

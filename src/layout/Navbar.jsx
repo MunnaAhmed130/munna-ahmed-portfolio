@@ -3,21 +3,20 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { navLinks } from "../constant";
 import { IoMenuOutline, IoCloseOutline } from "react-icons/io5";
 import { motion } from "framer-motion";
-import useObserver from "../hooks/useObserver";
+import useAll from "../hooks/useAll";
 
 const Navbar = () => {
-  const { activeSection, setActiveSection } = useObserver();
+  const { activeSection, setActiveSection } = useAll();
   const [toggle, setToggle] = useState(false);
 
   const navigate = useNavigate();
   // const location = useLocation();
   // console.log(location);
 
-  useEffect(() => {
-    activeSection === "intro" && navigate("/");
-    // activeSection === "projects" && location.hash "#projects";
-    activeSection === "intro" && navigate("/");
-  }, [activeSection, navigate]);
+  // useEffect(() => {
+  //   activeSection === "intro" && navigate("/");
+  //   activeSection === "intro" && navigate("/");
+  // }, [activeSection, navigate]);
 
   const variants = {
     open: {
@@ -38,7 +37,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="w-full bg-[#222222]  sm:px-20 px-10 py-4 text-center  fixed top-0  font-poppins  z-10">
+    <nav className="w-full  sm:px-20 px-10 py-4 text-center  fixed top-0  font-poppins  z-10">
       <div className="max-w-7xl w-full  mx-auto flex justify-between items-center">
         <Link
           to="/"
@@ -78,7 +77,7 @@ const Navbar = () => {
 };
 
 const NavList = () => {
-  const { activeSection, setActiveSection } = useObserver();
+  const { activeSection, setActiveSection } = useAll();
 
   return (
     <>

@@ -66,5 +66,5 @@ code {
 }
 
 .typewriter {
-  @apply font-bold text-lg text-slate-400;
+  @apply text-sm;
 }
