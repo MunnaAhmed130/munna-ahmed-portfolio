@@ -4,13 +4,15 @@ import React from "react";
 import Typewriter from "typewriter-effect";
 import { profilePic } from "../assets";
 import { HiCheckBadge } from "react-icons/hi2";
+import useAll from "../hooks/useAll";
 
 const Intro = () => {
+  const { setFast } = useAll();
   return (
     <section
       id="intro"
       data-section
-      className="h-screen flex items-center   w-full z-[1]"
+      className="h-screen flex items-center   w-full"
     >
       <div className="max-w-7xl w-full mx-auto ">
         {/* profile image  */}
@@ -22,7 +24,8 @@ const Intro = () => {
             <img
               className="bg-gradient-to-t to-[#77a1fd]  from-[#4b52e4] transition-all mx-auto w-full h-full object-cover border-unique    "
               src={profilePic}
-              onMouseOver={() => console.log("fast")}
+              // onMouseOver={() => setFast(true)}
+              // onMouseLeave={() => setFast(false)}
               alt="Profile-photo"
             />
           </div>

@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import useAll from "../hooks/useAll";
 
 const Navbar = () => {
-  const { activeSection, setActiveSection } = useAll();
+  const { setFast } = useAll();
   const [toggle, setToggle] = useState(false);
 
   const navigate = useNavigate();
