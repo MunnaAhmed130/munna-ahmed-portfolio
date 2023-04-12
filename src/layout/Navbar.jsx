@@ -76,19 +76,31 @@ const NavList = () => {
     <>
       {navLinks.map((link) => (
         <li key={link.id}>
-          <a
-            href={`${link.id}`}
-            className={` ${
-              active === link.id ? "text-gray-300" : "text-gray-400"
-            } nav-link`}
-            onClick={() => {
-              setActive(link.id);
-              // setActiveSection(link.id);
-            }}
-          >
-            {location.pathname.includes(link.title) && "Home"}
-            {/* {link.title} */}
-          </a>
+          {location.pathname.includes(link.id) ? (
+            <Link
+              to="/"
+              className={` ${
+                active === link.id ? "text-gray-300" : "text-gray-400"
+              } nav-link`}
+              onClick={() => {
+                setActive(link.id);
+              }}
+            >
+              Home
+            </Link>
+          ) : (
+            <Link
+              to={`${link.id}`}
+              className={` ${
+                active === link.id ? "text-gray-300" : "text-gray-400"
+              } nav-link`}
+              onClick={() => {
+                setActive(link.id);
+              }}
+            >
+              {link.title}
+            </Link>
+          )}
         </li>
       ))}
       <li>
