@@ -1,6 +1,5 @@
 import Footer from "../components/Footer";
 import Intro from "../components/Intro";
-import StarCanvas from "../components/canvas/StarCanvas";
 
 const Home = () => {
   return (

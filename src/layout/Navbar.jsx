@@ -68,8 +68,8 @@ const Navbar = () => {
 const NavList = () => {
   const [active, setActive] = useState("");
   const location = useLocation();
-  console.log(location);
-  location.pathname.includes("projects") && console.log("includes project");
+  // console.log(location);
+  // location.pathname.includes("projects") && console.log("includes project");
 
   return (
     <>

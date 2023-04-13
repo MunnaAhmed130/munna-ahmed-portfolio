@@ -2,6 +2,7 @@ import React from "react";
 import Typewriter from "typewriter-effect";
 import { profilePic } from "../assets";
 import { HiCheckBadge } from "react-icons/hi2";
+import Ripple from "./button/Ripple";
 
 const Intro = () => {
   return (
@@ -55,14 +56,12 @@ const Intro = () => {
             in developing dynamic and responsive web applications using web
             technologies like Html, CSS, Bootstrap, and Javascript.
           </span>
-          <button
-            className="text-white opacity-90 hover:opacity-100 transition-all border-white border py-2 px-3 rounded-sm"
-            href="https://drive.google.com/u/0/uc?id=1RhVvtP6IrrtuftlTtwQZAvgmQVRizMcy&export=download"
-          >
-            Download Resume
-          </button>
+          <a href="https://drive.google.com/u/0/uc?id=1RhVvtP6IrrtuftlTtwQZAvgmQVRizMcy&export=download">
+            <Ripple className="text-white opacity-90 hover:opacity-100 transition-all border-white border py-2 px-3 rounded-sm">
+              Download Resume
+            </Ripple>
+          </a>
         </div>
-        {/* </div> */}
       </div>
     </section>
   );
