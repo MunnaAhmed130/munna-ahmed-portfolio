@@ -1,13 +1,9 @@
 import React from "react";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import Typewriter from "typewriter-effect";
 import { profilePic } from "../assets";
 import { HiCheckBadge } from "react-icons/hi2";
-import useAll from "../hooks/useAll";
 
 const Intro = () => {
-  const { setFast } = useAll();
   return (
     <section
       id="intro"
@@ -24,8 +20,6 @@ const Intro = () => {
             <img
               className="bg-gradient-to-t to-[#77a1fd]  from-[#4b52e4] transition-all mx-auto w-full h-full object-cover border-unique    "
               src={profilePic}
-              // onMouseOver={() => setFast(true)}
-              // onMouseLeave={() => setFast(false)}
               alt="Profile-photo"
             />
           </div>
@@ -62,7 +56,7 @@ const Intro = () => {
             technologies like Html, CSS, Bootstrap, and Javascript.
           </span>
           <button
-            className="text-white opacity-90 hover:opacity-100 transition-all "
+            className="text-white opacity-90 hover:opacity-100 transition-all border-white border py-2 px-3 rounded-sm"
             href="https://drive.google.com/u/0/uc?id=1RhVvtP6IrrtuftlTtwQZAvgmQVRizMcy&export=download"
           >
             Download Resume

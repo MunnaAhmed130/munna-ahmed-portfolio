@@ -1,3 +1,4 @@
+import { travelAgency } from "../assets";
 const navLinks = [
   {
     id: "projects",
@@ -30,7 +31,7 @@ const projects = [
   },
   {
     _id: 2,
-    project_img: "https://i.ibb.co/jvdSLm9/project2.png",
+    project_img: travelAgency,
     project_demo_1: "https://i.ibb.co/Tw402bD/project2-demo1.png",
     project_demo_2: "https://i.ibb.co/vhNjzpx/project2-demo2.png",
     project_demo_3: "https://i.ibb.co/HgBBbCV/project2-demo3.png",

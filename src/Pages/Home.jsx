@@ -6,7 +6,6 @@ const Home = () => {
   return (
     <div className="font-poppins relative z-0 ">
       <Intro />
-      {/* <StarCanvas /> */}
     </div>
   );
 };

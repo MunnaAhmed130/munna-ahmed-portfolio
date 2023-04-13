@@ -5,8 +5,6 @@ import { Link } from "react-router-dom";
 import StarCanvas from "./canvas/StarCanvas";
 
 const Projects = () => {
-  const [project, setProject] = useState(null);
-
   return (
     <section data-section id="projects" className=" relative z-0 font-poppins">
       <div className="flex items-center justify-center  h-screen">
@@ -40,7 +38,7 @@ const Project = ({ project }) => {
   return (
     <div className="m-2">
       <div className="border border-white/50 rounded-sm px-5 pb-5 pt-3">
-        <div className="w-full h-56 overflow-hidden">
+        <div className="w-full h-56 overflow-clip">
           <img className="w-full " src={project_img} alt="" />
         </div>
         <div className="mt-3">
