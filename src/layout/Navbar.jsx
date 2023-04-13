@@ -6,8 +6,7 @@ import { motion } from "framer-motion";
 import useAll from "../hooks/useAll";
 
 const Navbar = () => {
-  const { setFast } = useAll();
-  const [toggle, setToggle] = useState(false);
+  const { toggle, setToggle } = useAll();
 
   const navigate = useNavigate();
 
@@ -22,13 +21,6 @@ const Navbar = () => {
     closed: { opacity: 0, y: "-20%" },
   };
 
-  // bg-[#1d1c1c]/95
-  // const handleToTop = () => {
-  //   window.scrollTo(0, 0);
-  //   setActiveSection("");
-  //   navigate("/");
-  // };
-
   return (
     <nav className="w-full  sm:px-20 px-5 py-4 text-center  fixed top-0  font-poppins  z-10">
       <div className="max-w-7xl w-full  mx-auto flex justify-between items-center">
@@ -37,11 +29,11 @@ const Navbar = () => {
           <span className="w-1 h-1 bg-gray-400 inline-block rounded-full" />
         </Link>
         {/* list of links  */}
-        <ul className="hidden sm:flex flex-row  gap-10">
+        <ul className="hidden md:flex flex-row  gap-10">
           <NavList />
         </ul>
 
-        <div className="sm:hidden relative flex items-center justify-end">
+        <div className="md:hidden relative flex items-center justify-end">
           <button
             onClick={() => setToggle(!toggle)}
             className="text-3xl text-slate-400"
@@ -66,22 +58,22 @@ const Navbar = () => {
 };
 
 const NavList = () => {
+  const { toggle, setToggle } = useAll();
   const [active, setActive] = useState("");
   const location = useLocation();
-  // console.log(location);
-  // location.pathname.includes("projects") && console.log("includes project");
-
+  const path = location.pathname;
   return (
     <>
       {navLinks.map((link) => (
         <li key={link.id}>
-          {location.pathname.includes(link.id) ? (
+          {path.includes(link.id) ? (
             <Link
               to="/"
               className={` text-gray-400
                nav-link`}
               onClick={() => {
                 setActive(link.id);
+                setToggle(!toggle);
               }}
             >
               Home
@@ -93,6 +85,7 @@ const NavList = () => {
                nav-link`}
               onClick={() => {
                 setActive(link.id);
+                setToggle(!toggle);
               }}
             >
               {link.title}

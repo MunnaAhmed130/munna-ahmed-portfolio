@@ -11,7 +11,7 @@ const Footer = () => {
   return (
     <footer
       className={`${
-        footerStyle ? "lg:fixed static lg:bottom-0 " : "fixed bottom-0"
+        footerStyle ? "lg:fixed static lg:bottom-0 " : "xs:fixed xs:bottom-0"
       } text-white    text-center w-full mb-2 font-poppins z-10`}
     >
       <p className="sm:text-sm text-[13px]">
