@@ -1,8 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
-// import SkeletonProjects from "../../Skeletons/SkeletonProjects";
 import { projects } from "../constant";
-import { Link } from "react-router-dom";
-import StarCanvas from "./canvas/StarCanvas";
 
 const Projects = () => {
   return (
@@ -27,7 +23,6 @@ const Projects = () => {
             )} */}
         </div>
       </div>
-      {/* <StarCanvas /> */}
     </section>
   );
 };

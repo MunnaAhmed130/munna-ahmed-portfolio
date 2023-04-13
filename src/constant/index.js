@@ -1,4 +1,4 @@
-import { travelAgency } from "../assets";
+import { cameraEssential, travelAgency } from "../assets";
 const navLinks = [
   {
     id: "projects",
@@ -13,7 +13,7 @@ const navLinks = [
 const projects = [
   {
     _id: 1,
-    project_img: "https://i.ibb.co/51CXx37/project1.png",
+    project_img: cameraEssential,
     project_demo_1: "https://i.ibb.co/ryvjR8m/project1-demo1.png",
     project_demo_2: "https://i.ibb.co/LYRhwSV/project1-demo2.png",
     project_demo_3: "https://i.ibb.co/4sX2CBG/project1-demo3.png",
