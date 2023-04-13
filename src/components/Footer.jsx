@@ -1,9 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 
 const Footer = () => {
+  const [footerStyle, setFooterStyle] = useState(false);
+  const location = useLocation();
+  useEffect(() => {
+    location.pathname.includes("projects") && setFooterStyle(true);
+  }, [location, setFooterStyle]);
   return (
-    <footer className="text-white  fixed bottom-0 text-center w-full mb-2 font-poppins z-10">
-      <p className="text-[13px]">&copy;Copyrights 2023 by Munna Ahmed</p>
+    <footer
+      className={`${
+        footerStyle ? "lg:fixed static lg:bottom-0 " : "fixed bottom-0"
+      }text-white    text-center w-full mb-2 font-poppins z-10`}
+    >
+      <p className="sm:text-sm text-[13px]">
+        &copy;Copyrights 2023 by Munna Ahmed
+      </p>
     </footer>
   );
 };

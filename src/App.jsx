@@ -6,7 +6,7 @@ import StarCanvas from "./components/canvas/StarCanvas";
 
 const App = () => {
   return (
-    <div className="relative z-0 bg-[#222222]">
+    <div className="relative z-0 ">
       <div>
         <AllProvider>
           <RouterProvider router={routes} />

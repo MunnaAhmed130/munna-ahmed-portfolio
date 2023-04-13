@@ -4,8 +4,9 @@ import StarCanvas from "../components/canvas/StarCanvas";
 
 const Home = () => {
   return (
-    <div className="font-poppins relative z-0 ">
+    <div className="font-poppins relative">
       <Intro />
+      <Footer />
     </div>
   );
 };
