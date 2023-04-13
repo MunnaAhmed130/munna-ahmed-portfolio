@@ -13,6 +13,7 @@ const Projects = () => {
           <div className="max-w-7xl my-20 mt-24">
             <h2 className="text-white lg:text-3xl md:text-2xl text-xl  font-extrabold uppercase text-center mb-5 ">
               Projects
+              <span className="w-2 h-2 ml-[2px]  bg-slate-300 inline-block rounded-full" />
             </h2>
             <div className="grid lg:grid-cols-3 md:grid-cols-2 ">
               {projects.map((project) => (
@@ -44,11 +45,11 @@ const Project = ({ project }) => {
     max: 10, // max tilt rotation (degrees)
     perspective: 1000, // Transform perspective, the lower the more extreme the tilt gets.
     scale: 1, // 2 = 200%, 1.5 = 150%, etc..
-    speed: 100, // Speed of the enter/exit transition
+    speed: 1000, // Speed of the enter/exit transition
     transition: true, // Set a transition on enter/exit.
     axis: null, // What axis should be disabled. Can be X or Y.
     reset: true, // If the tilt effect has to be reset on exit.
-    easing: "cubic-bezier(.03,.98,.52,.99)", // Easing on enter/exit.
+    easing: "cubic-bezier(.1,1,.1,.99)", // Easing on enter/exit.
   };
 
   return (

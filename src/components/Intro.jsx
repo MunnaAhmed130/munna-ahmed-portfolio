@@ -31,9 +31,9 @@ const Intro = () => {
             <span>Hi, I'm Munna Ahmed</span> &nbsp;
             <HiCheckBadge className="text-blue-500 " />
           </div>
-          <span className="text-gray-200 w-full max-w-lg mx-auto block text-sm leading-5 mb-5 ">
+          <span className="text-gray-200 w-full max-w-lg mx-auto block text-sm leading-5 mb-5 tracking-[1px] ">
             I'm a &nbsp;
-            <span className="w-[5.625rem] inline-block text-center ">
+            <span className="w-[6rem] inline-block text-center ">
               <Typewriter
                 options={{ autoStart: true, loop: true, delay: 100 }}
                 onInit={(typewriter) => {
@@ -52,9 +52,8 @@ const Intro = () => {
               />
             </span>
             &nbsp; Developer with one year of experience in web development,
-            designing and developing user interfaces, and debugging. Experienced
-            in developing dynamic and responsive web applications using web
-            technologies like Html, CSS, Bootstrap, and Javascript.
+            designing and developing user interfaces, developing dynamic and
+            responsive web applications using web technologies.
           </span>
           <a href="https://drive.google.com/u/0/uc?id=1RhVvtP6IrrtuftlTtwQZAvgmQVRizMcy&export=download">
             <Ripple className="text-white opacity-90 hover:opacity-100 transition-all border-white border py-2 px-3 rounded-sm">

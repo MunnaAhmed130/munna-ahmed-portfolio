@@ -1,4 +1,5 @@
 import { cameraEssential, travelAgency } from "../assets";
+
 const navLinks = [
   {
     id: "projects",
@@ -18,6 +19,12 @@ const projects = [
     project_demo_2: "https://i.ibb.co/LYRhwSV/project1-demo2.png",
     project_demo_3: "https://i.ibb.co/4sX2CBG/project1-demo3.png",
     title: "Camera Essentials",
+    tags: [
+      { name: "React", color: "" },
+      { name: "mongodb", color: "" },
+      { name: "firebase", color: "" },
+      { name: "", color: "" },
+    ],
     github_client_repo:
       "https://github.com/MunnaAhmed130/camera-essentials-website-client-side",
     github_server_repo:
@@ -36,6 +43,11 @@ const projects = [
     project_demo_2: "https://i.ibb.co/vhNjzpx/project2-demo2.png",
     project_demo_3: "https://i.ibb.co/HgBBbCV/project2-demo3.png",
     title: "Travio",
+    tags: [
+      { name: "React", color: "" },
+      { name: "bootstrap", color: "" },
+      { name: "firebase", color: "" },
+    ],
     github_client_repo:
       "https://github.com/MunnaAhmed130/travio-tourism-website-client-side",
     github_server_repo:
