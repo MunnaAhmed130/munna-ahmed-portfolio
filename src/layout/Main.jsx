@@ -7,7 +7,6 @@ const Main = () => {
   return (
     <>
       <Navbar />
-      {/* <Footer /> */}
       <Outlet />
     </>
   );

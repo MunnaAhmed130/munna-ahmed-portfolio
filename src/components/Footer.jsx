@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import useAll from "../hooks/useAll";
 
 const Footer = () => {
-  const [footerStyle, setFooterStyle] = useState(false);
+  const { footerStyle, setFooterStyle } = useAll();
   const location = useLocation();
   useEffect(() => {
     location.pathname.includes("projects") && setFooterStyle(true);

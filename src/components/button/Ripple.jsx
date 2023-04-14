@@ -4,14 +4,6 @@ const Ripple = ({ children, onClick, className, type, disabled }) => {
   const value = 0;
   const [coords, setCoords] = useState({ x: value, y: value });
   const [isRippling, setIsRippling] = useState(false);
-  // console.log(localCoords);
-
-  // const handleMouseMove = (event) => {
-  //     setLocalCoords({
-  //         x: event.clientX - event.target.offsetLeft,
-  //         y: event.clientY - event.target.offsetTop,
-  //     });
-  // };
 
   useEffect(() => {
     if (coords.x !== value && coords.y !== value) {
@@ -26,20 +18,16 @@ const Ripple = ({ children, onClick, className, type, disabled }) => {
 
   return (
     <button
-      // className="ripple-button"
       className={`overflow-hidden relative cursor-pointer transition-all duration-1000 ${className}`}
       type={type}
       onClick={(e) => {
-        // e.preventDefault();
         const rect = e.target.getBoundingClientRect();
         setCoords({
           x: e.clientX - rect.left - 10,
           y: e.clientY - rect.top - 10,
         });
-        // onClick;
         onClick && onClick(e);
       }}
-      // onMouseMove={handleMouseMove}
       disabled={disabled}
     >
       {isRippling ? (

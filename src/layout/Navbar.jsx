@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { navLinks } from "../constant";
 import { IoMenuOutline, IoCloseOutline } from "react-icons/io5";
@@ -6,10 +6,14 @@ import { motion } from "framer-motion";
 import useAll from "../hooks/useAll";
 
 const Navbar = () => {
+  const [headerStyle, setHeaderStyle] = useState();
   const { toggle, setToggle } = useAll();
-
   const navigate = useNavigate();
-
+  const location = useLocation();
+  useEffect(() => {
+    location.pathname.includes("projects") && setHeaderStyle(true);
+    !location.pathname.includes("projects") && setHeaderStyle(false);
+  }, [location, setHeaderStyle]);
   const variants = {
     open: {
       opacity: 1,
@@ -22,7 +26,11 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="w-full  sm:px-20 px-5 py-4 text-center  fixed top-0  font-poppins  z-10">
+    <nav
+      className={`${
+        headerStyle ? "lg:fixed " : " fixed "
+      } w-full  sm:px-20 px-5 py-4 text-center top-0  font-poppins  z-10`}
+    >
       <div className="max-w-7xl w-full  mx-auto flex justify-between items-center">
         <Link to="/" className=" text-white text-2xl font-bold">
           Munna
