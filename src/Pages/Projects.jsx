@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 
 const Projects = () => {
   const flexCenter = "flex items-center justify-center";
-  const dot = "rounded-full inline-block";
+  const dot = "lg:w-2 lg:h-2 md:w-[6px] md:h-[6px] w-1 h-1 ml-[2px]";
   return (
     <>
       <section id="projects" className={`${flexCenter} font-poppins `}>
@@ -13,7 +13,7 @@ const Projects = () => {
             <h2 className="text-white lg:text-3xl md:text-2xl text-xl  font-extrabold uppercase text-center mb-5 ">
               Projects
               <span
-                className={`${dot} lg:w-2 lg:h-2 md:w-[6px] md:h-[6px] w-1 h-1 ml-[2px]   bg-slate-400 `}
+                className={`${dot} rounded-full inline-block   bg-slate-400 `}
               />
             </h2>
             <div className="grid lg:grid-cols-3 md:grid-cols-2 ">
