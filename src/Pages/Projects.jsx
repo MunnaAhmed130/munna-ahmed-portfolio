@@ -1,6 +1,6 @@
 import { projects } from "../constant";
 import { Tilt } from "react-tilt";
-import Footer from "./Footer";
+import Footer from "../components/Footer";
 
 const Projects = () => {
   const flexCenter = "flex items-center justify-center";
