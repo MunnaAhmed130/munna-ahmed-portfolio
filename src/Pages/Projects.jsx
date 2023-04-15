@@ -1,3 +1,4 @@
+import { BsGithub } from "react-icons/bs";
 import { projects } from "../constant";
 import { Tilt } from "react-tilt";
 import Footer from "../components/Footer";
@@ -8,7 +9,7 @@ const Projects = () => {
   return (
     <>
       <section id="projects" className={`${flexCenter} font-poppins `}>
-        <div className="flex md:items-center items-start sm:px-20 px-5 h-screen md:m-0 mb-5 mt-10">
+        <div className="flex md:items-center items-start sm:px-20 px-5 md:h-screen md:m-0 mb-5 mt-10">
           <div className="max-w-7xl w-full">
             <h2 className="text-white lg:text-3xl md:text-2xl text-xl  font-extrabold uppercase text-center mb-5 ">
               Projects
@@ -48,13 +49,14 @@ const Project = ({ project }) => {
   return (
     <div className="m-2 ">
       <Tilt options={defaultOptions}>
-        <div className="border border-white/30 rounded-sm px-5 pb-5 pt-3 max-w-sm bg-[rgba(34,34,34,0.7)]">
-          <div className="w-full xl:h-56 h-40 object-fit overflow-clip">
+        <div className="border border-white/30 rounded-sm px-5 pb-5 pt-3 max-w-sm bg-[rgba(255,255,255,0.04)]">
+          <div className="w-full xl:h-56 h-40 relative  overflow-hidden">
             <img
-              className="w-full h-auto overflow-hidden"
+              className="w-full h-auto object-cover  overflow-hidden "
               src={project_img}
               alt=""
             />
+            <BsGithub className="absolute top-0 right-0  text-white" />
           </div>
           <div className="mt-3">
             <h4 className="text-white font-semibold text-lg">{title}</h4>

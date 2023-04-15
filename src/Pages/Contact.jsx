@@ -33,7 +33,7 @@ const Contact = () => {
         <div className="sm:max-w-2xl max-w-sm w-full px-2 sm:px-14">
           <h1 className="text-white lg:text-3xl md:text-2xl text-xl uppercase font-extrabold text-center">
             Contact
-            <span className="rounded-full inline-block lg:w-2 lg:h-2 md:w-[6px] md:h-[6px] w-1 h-1 ml-[2px]   bg-slate-400 " />
+            <span className="rounded-full inline-block lg:w-2 lg:h-2 md:w-[6px] md:h-[6px] w-1 h-1 ml-[-2px]   bg-slate-400 " />
           </h1>
           <form
             ref={formRef}

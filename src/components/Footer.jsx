@@ -12,10 +12,10 @@ const Footer = () => {
   return (
     <footer
       className={`${
-        footerStyle ? "lg:fixed static lg:bottom-0 " : "xs:fixed xs:bottom-0"
-      } text-white    text-center w-full mb-2 font-poppins z-10`}
+        footerStyle ? "lg:fixed  lg:bottom-0 " : "fixed bottom-0"
+      }    text-center w-full mb-2 font-poppins z-10`}
     >
-      <p className="sm:text-sm text-[13px]">
+      <p className="sm:text-sm text-[13px] text-white ">
         &copy;Copyrights 2023 by Munna Ahmed
       </p>
     </footer>

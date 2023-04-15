@@ -2,6 +2,8 @@ import React from "react";
 import Typewriter from "typewriter-effect";
 import { profilePic } from "../assets";
 import { HiCheckBadge } from "react-icons/hi2";
+import { SiGmail, SiLinkedin } from "react-icons/si";
+import { FaLinkedin } from "react-icons/fa";
 import Ripple from "./button/Ripple";
 
 const Intro = () => {
@@ -31,9 +33,9 @@ const Intro = () => {
             <span>Hi, I'm Munna Ahmed</span> &nbsp;
             <HiCheckBadge className="text-blue-500 " />
           </div>
-          <span className="text-gray-200 w-full max-w-lg mx-auto block text-sm leading-5 mb-5 tracking-[1px] ">
+          <span className="text-gray-200 w-full max-w-lg mx-auto block sm:text-sm text-[13px] leading-5  tracking-[1px] ">
             I'm a &nbsp;
-            <span className="w-[6rem] inline-block text-center ">
+            <span className="xs:w-[6rem] w-20 inline-block text-center ">
               <Typewriter
                 options={{ autoStart: true, loop: true, delay: 100 }}
                 onInit={(typewriter) => {
@@ -51,10 +53,26 @@ const Intro = () => {
                 }}
               />
             </span>
-            &nbsp; Developer with one year of experience in web development,
-            designing and developing user interfaces, developing dynamic and
-            responsive web applications using web technologies.
+            &nbsp; Developer from Bangladesh. With two years of experience in
+            web development, designing and developing user interfaces,
+            developing dynamic and responsive web applications using web
+            technologies.
           </span>
+          <div
+            className="
+          flex items-center justify-center gap-3 py-4"
+          >
+            {/* <span className="w-6 h-6 bg-black border flex items-center justify-center rounded-full">
+              <SiGmail className="text-white w-4 h-4 bg-slate-600" />
+            </span> */}
+            {/* <span className="w-6 h-6 bg-black border flex items-center justify-center rounded-full"> */}
+            <SiGmail className="text-orange-700 w-5 h-5 bg-white" />
+            {/* </span> */}
+            {/* <span className="w-6 h-6 bg-black  flex items-center justify-center rounded-full">
+              <SiGmail className="text-red w-4 h-4 bg-white" />
+            </span> */}
+            <SiLinkedin />
+          </div>
           <a href="https://drive.google.com/u/0/uc?id=1RhVvtP6IrrtuftlTtwQZAvgmQVRizMcy&export=download">
             <Ripple className="text-white opacity-90 hover:opacity-100 transition-all border-white border py-2 px-3 rounded-sm">
               Download Resume
