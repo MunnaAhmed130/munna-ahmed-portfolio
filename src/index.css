@@ -15,10 +15,16 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background-image: url(../src/assets/the\ background\ image\ space\ blue.png);
+  position: relative;
+  /* background-size: .1; */
+}
+
+.app {
+  background-image: url("/src/assets/space.jpg");
   background-repeat: no-repeat;
+  background-size: 1000px;
   background-position: center;
-  background-size: cover; */
+  opacity: 0.1;
 }
 /* Hide scrollbar for Chrome, Safari and Opera */
 .no-scrollbar::-webkit-scrollbar {

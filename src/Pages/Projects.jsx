@@ -31,7 +31,7 @@ const Projects = () => {
 };
 
 const Project = ({ project }) => {
-  const { description, project_img, title, _id } = project;
+  const { description, project_img, title, _id, client_repo } = project;
   const info = description.slice(0, 170);
 
   const defaultOptions = {
@@ -52,11 +52,13 @@ const Project = ({ project }) => {
         <div className="border border-white/30 rounded-sm px-5 pb-5 pt-3 max-w-sm bg-[rgba(255,255,255,0.04)]">
           <div className="w-full xl:h-56 h-40 relative  overflow-hidden">
             <img
-              className="w-full h-auto object-cover  overflow-hidden "
+              className="w-full h-auto object-cover  overflow-hidden hover:before:content-['Live Site'] hover:before:inset-0"
               src={project_img}
               alt=""
             />
-            <BsGithub className="absolute top-0 right-0  text-white" />
+            <a href={client_repo} target="_blank">
+              <BsGithub className="absolute top-0 right-0  text-white bg-[#222222] w-8 h-8 p-2 m-2 rounded-full" />
+            </a>
           </div>
           <div className="mt-3">
             <h4 className="text-white font-semibold text-lg">{title}</h4>

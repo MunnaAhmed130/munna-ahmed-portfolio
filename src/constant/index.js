@@ -25,9 +25,9 @@ const projects = [
       { name: "firebase", color: "" },
       { name: "", color: "" },
     ],
-    github_client_repo:
+    client_repo:
       "https://github.com/MunnaAhmed130/camera-essentials-website-client-side",
-    github_server_repo:
+    server_repo:
       "https://github.com/MunnaAhmed130/camera-essentials-website-server-side",
     live_link: "https://camera-essentials.web.app/",
     p_1: "It is a niche camera selling website with users and admin dashboard, CRUD operation, and user  Authentication System.",
@@ -48,9 +48,9 @@ const projects = [
       { name: "bootstrap", color: "" },
       { name: "firebase", color: "" },
     ],
-    github_client_repo:
+    client_repo:
       "https://github.com/MunnaAhmed130/travio-tourism-website-client-side",
-    github_server_repo:
+    server_repo:
       "https://github.com/MunnaAhmed130/travio-tourism-website-server-side",
     live_link: "https://travel-agency-e968e.web.app/",
     p_1: "It is a tourism-related website that makes travel safer and more fun. ",
@@ -66,10 +66,8 @@ const projects = [
     project_demo_2: "https://i.ibb.co/3TvzJfm/project-3-dashboard.png",
     project_demo_3: "https://i.ibb.co/D9TX7Rt/project-3-demo-3.png",
     title: "Dental Care",
-    github_client_repo:
-      "https://github.com/MunnaAhmed130/Bicycle-store-client-side",
-    github_server_repo:
-      "https://github.com/MunnaAhmed130/Bicycle-store-server-side",
+    client_repo: "https://github.com/MunnaAhmed130/Bicycle-store-client-side",
+    server_repo: "https://github.com/MunnaAhmed130/Bicycle-store-server-side",
     live_link: "https://bicycle-store-41d3e.web.app/",
     p_1: "Bicycle store is a website fully responsive website that helps its clients to choose and buy cycles.",
     p_2: "User can log in using two different login method.",
