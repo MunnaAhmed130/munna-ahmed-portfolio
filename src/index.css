@@ -64,6 +64,18 @@ code {
   100% {
     border-radius: 60% 40% 60% 40% / 34% 64% 36% 66%;
   }
+  /* 14% {
+    border-radius: 41% 59% 40% 60% / 64% 39% 61% 36%;
+  }
+  15% {
+    border-radius: 60% 40% 60% 40% / 34% 64% 36% 66%;
+  }
+  99% {
+    border-radius: 60% 40% 60% 40% / 34% 64% 36% 66%;
+  }
+  100% {
+    border-radius: 60% 40% 60% 40% / 34% 64% 36% 66%;
+  } */
 }
 
 .typewriter {
@@ -93,7 +105,7 @@ code {
 
 .input,
 .textarea {
-  @apply bg-[rgba(255,255,255,0.03)] sm:py-4 py-2 px-3  text-sm sm:text-base                      placeholder:text-slate-300 border border-white/10  text-white rounded-sm outline-none;
+  @apply bg-[rgba(255,255,255,0.03)] sm:py-4 py-2 px-3  text-sm sm:text-base   placeholder:text-slate-300 border focus:placeholder:opacity-0 border-white/10  text-white rounded-sm outline-none;
 }
 
 /* google autofil  */

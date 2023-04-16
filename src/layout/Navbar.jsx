@@ -70,7 +70,7 @@ const NavList = () => {
   const [active, setActive] = useState("");
   const location = useLocation();
   const path = location.pathname;
-  console.log(location.pathname.length);
+  // console.log(location.pathname.length);
   return (
     <>
       {/* {navLinks.map((link) => (

@@ -22,17 +22,17 @@ const Stars = () => {
   const sphere = random.inSphere(new Float32Array(300), { radius: 1.1 });
 
   useFrame((state, delta) => {
-    ref.current.rotation.x -= delta / 40;
-    ref.current.rotation.y = delta / 30;
+    ref.current.rotation.x = delta / 100;
+    ref.current.rotation.y -= delta / 100;
   });
 
   return (
-    <group rotation={[0, 0, Math.PI / 5]}>
+    <group rotation={[0, 0, Math.PI / 400]}>
       <Points ref={ref} positions={sphere} stride={3} frustumCulled>
         <PointMaterial
           transparent
           color="#ffffff"
-          size={0.002}
+          size={0.003}
           sizeAttenuation={true}
           depthWrite={false}
         />

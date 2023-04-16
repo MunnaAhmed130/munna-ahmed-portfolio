@@ -5,7 +5,7 @@ import { HiCheckBadge } from "react-icons/hi2";
 import { SiGmail, SiLinkedin } from "react-icons/si";
 import { FaLinkedin } from "react-icons/fa";
 import Ripple from "./button/Ripple";
-
+// to-[#77a1fd]  from-[#4b52e4]
 const Intro = () => {
   return (
     <section
@@ -20,11 +20,13 @@ const Intro = () => {
           flex items-center "
         >
           <div className=" hover:w-64 hover:h-64 mx-auto w-[210px] h-[210px] object-cover border-unique flex items-center duration-[400ms] transition-all  border-[white] border-2 p-2 hover:p-0">
-            <img
-              className="bg-gradient-to-t to-[#77a1fd]  from-[#4b52e4] transition-all mx-auto w-full h-full object-cover border-unique    "
-              src={profilePic}
-              alt="Profile-photo"
-            />
+            <span className="bg-gradient-to-t to-[#9b77fd]  from-[#455cc4]  w-full h-full inline-block border-unique transition-all">
+              <img
+                className="mx-auto w-full h-full object-cover border-unique    "
+                src={profilePic}
+                alt="Profile-photo"
+              />
+            </span>
           </div>
         </div>
         {/* info  */}
