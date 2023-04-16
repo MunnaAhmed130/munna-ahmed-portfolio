@@ -9,6 +9,9 @@ export default {
       screens: {
         xs: "450px",
       },
+      backgroundImage: {
+        "space-image": "url('https://i.ibb.co/tQ78SMJ/space.jpg')",
+      },
     },
   },
   plugins: [],

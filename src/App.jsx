@@ -15,14 +15,8 @@ const App = () => {
       </div>
       <StarCanvas />
       <span
-        className="app absolute
-       inset-0 w-full h-auto z-[-2]"
+        className={` absolute inset-0 bg-space-image w-full h-auto z-[-2] bg-no-repeat bg-center opacity-[.12]`}
       ></span>
-      {/* <img
-        className="absolute z-[-2] top-0  opacity-40 object-cover"
-        src={space}
-        alt=""
-      /> */}
     </div>
   );
 };

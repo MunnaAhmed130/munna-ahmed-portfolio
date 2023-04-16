@@ -70,9 +70,10 @@ const NavList = () => {
   const [active, setActive] = useState("");
   const location = useLocation();
   const path = location.pathname;
+  console.log(location.pathname.length);
   return (
     <>
-      {navLinks.map((link) => (
+      {/* {navLinks.map((link) => (
         <li key={link.id}>
           {path.includes(link.id) ? (
             <Link
@@ -100,7 +101,81 @@ const NavList = () => {
             </Link>
           )}
         </li>
-      ))}
+      ))} */}
+      {path.length == 1 && (
+        <li>
+          <Link
+            to="/projects"
+            className={` text-gray-400
+            nav-link`}
+            onClick={() => {
+              setActive("projects");
+              setToggle(!toggle);
+            }}
+          >
+            Projects
+          </Link>
+        </li>
+      )}
+
+      {path.includes("projects") && (
+        <li>
+          <Link
+            to="/"
+            className={` text-gray-400
+            nav-link`}
+            onClick={() => {
+              setToggle(!toggle);
+            }}
+          >
+            Home
+          </Link>
+        </li>
+      )}
+
+      {path.includes("contact") ? (
+        <>
+          <li>
+            <Link
+              to="/"
+              className={` text-gray-400
+       nav-link`}
+              onClick={() => {
+                setToggle(!toggle);
+              }}
+            >
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/projects"
+              className={` text-gray-400
+          nav-link`}
+              onClick={() => {
+                setActive("projects");
+                setToggle(!toggle);
+              }}
+            >
+              Projects
+            </Link>
+          </li>
+        </>
+      ) : (
+        <li>
+          <Link
+            to="contact "
+            className={` text-gray-400
+      nav-link`}
+            onClick={() => {
+              setActive("contact");
+              setToggle(!toggle);
+            }}
+          >
+            Contact
+          </Link>
+        </li>
+      )}
       <li>
         <a
           href="https://drive.google.com/file/d/1RhVvtP6IrrtuftlTtwQZAvgmQVRizMcy/view?usp=sharing"
