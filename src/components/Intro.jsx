@@ -87,10 +87,10 @@ const Intro = () => {
       </div> */}
       <div className="max-w-5xl w-full mx-auto sm:px-20 px-5">
         <div className="">
-          <div className="flex items-center justify-start gap-5">
-            <div className="rounded-full object-cover  flex items-center duration-[400ms] transition-all  border-[#ffffff] ">
+          <div className="flex items-center justify-start xs:gap-5 gap-3">
+            <div className="rounded-full object-cover  flex items-center duration-[400ms] transition-all  border-[#ffffff]">
               <img
-                className="mx-auto bg-gradient-to-t to-[#9b77fd]  from-[#455cc4] sm:w-28 sm:h-28 w-24 h-24 object-cover rounded-full"
+                className="mx-auto bg-gradient-to-t to-[#9b77fd]  from-[#455cc4] sm:w-28 sm:h-28 xs:w-24 xs:h-24 w-20 h-20 object-cover rounded-full"
                 src={profilePic}
                 alt="Profile-photo"
               />
@@ -132,7 +132,7 @@ const Intro = () => {
               </div>
             </div>
           </div>
-          <p className="text-white my-14 tracking-wider max-w-xl">
+          <p className="text-slate-100 xs:text-base text-sm my-14 tracking-wider max-w-xl">
             Hi, I'm a React Developer, self-taught with experience in web
             development, designing and creating responsive and user-friendly
             websites.
@@ -142,11 +142,8 @@ const Intro = () => {
             <div>
               {skills.map((skill) => (
                 <div className=" inline-block mt-5 w-40" key={skill.title}>
-                  <div>
-                    <img
-                      src={skill.icon}
-                      className={`p-1 w-10 h-10 inline-block `}
-                    />
+                  <div className="flex items-center gap-2">
+                    <img src={skill.icon} className={` w-6 h-6 m-0 `} />
                     <span className="text-white">{skill.title}</span>
                   </div>
                 </div>
