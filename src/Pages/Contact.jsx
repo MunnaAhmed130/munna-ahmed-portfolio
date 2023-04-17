@@ -29,7 +29,7 @@ const Contact = () => {
 
   return (
     <>
-      <section className="h-screen w-full flex items-center justify-center font-poppins">
+      <section className="h-[calc(100vh-28px)] w-full flex items-center justify-center font-poppins">
         <div className="sm:max-w-2xl max-w-sm w-full px-2 sm:px-14">
           <h1 className="text-white lg:text-3xl md:text-2xl text-xl uppercase font-extrabold text-center">
             Contact

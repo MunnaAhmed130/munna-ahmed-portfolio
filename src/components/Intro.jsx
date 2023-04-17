@@ -14,36 +14,36 @@ const Intro = () => {
     <section
       id="intro"
       data-section
-      className="h-screen flex items-center   w-full"
+      className="h-[calc(100vh_-_28px)] flex items-center w-full"
     >
-      <div className="max-w-7xl w-full mx-auto ">
-        {/* profile image  */}
+      {/* <div className="max-w-7xl w-full mx-auto ">
         <div
           className=" mx-auto
           flex items-center "
         >
-          <div className="  mx-auto w-[210px] h-[210px] object-cover border-unique flex items-center duration-[400ms] transition-all  border-[white] border-2 p-2 ">
-            <span className="bg-gradient-to-t to-[#9b77fd]  from-[#455cc4]  w-full h-full inline-block border-unique transition-all">
+          <div className="rounded-full  mx-auto w-[210px] h-[210px] object-cover  flex items-center duration-[400ms] transition-all  border-[white] border-2 p-2 ">
+            <span className="bg-gradient-to-t to-[#9b77fd]  from-[#455cc4]  w-full h-full inline-block rounded-full transition-all">
               <img
-                className="mx-auto w-full h-full object-cover border-unique"
+                className="mx-auto w-full h-full object-cover rounded-full"
                 src={profilePic}
                 alt="Profile-photo"
               />
             </span>
           </div>
         </div>
+
         <div className="flex items-center justify-center gap-3 pt-3 pb-2">
-          {/* <SiGmail className="icon" />
-          <SiLinkedin className="icon" />
-          <BsGithub className="icon" /> */}
           {icons.map((Icon) => (
             <Icon className="text-white text-lg mx-1" />
           ))}
         </div>
-        {/* info  */}
+
         <div className="text-center">
-          <div className="text-slate-200 font-semibold text-xl flex items-center justify-center pb-1">
-            <span className="">Hi, I'm Munna Ahmed</span> &nbsp;
+          <div className=" text-xl flex items-center justify-center pb-1">
+            <span className="text-white font-semibold">
+              Hi, I'm Munna Ahmed
+            </span>{" "}
+            &nbsp;
             <HiCheckBadge className="text-blue-500 " />
           </div>
 
@@ -63,9 +63,6 @@ const Intro = () => {
                     .typeString("<span class='typewriter '>React<span/>")
                     .pauseFor(2000)
                     .deleteAll()
-                    // .typeString("<span class='typewriter '>Self-taught<span/>")
-                    // .pauseFor(2000)
-                    // .deleteAll()
                     .start();
                 }}
               />
@@ -81,6 +78,97 @@ const Intro = () => {
             </Ripple>
           </a>
         </div>
+      </div> */}
+      <div className="max-w-7xl w-full  mx-auto px-20">
+        <div
+          className=" 
+          flex items-center justify-start gap-5 "
+        >
+          <div className="rounded-full  w-28 h-28 object-cover  flex items-center duration-[400ms] transition-all  border-[#ffffff]   p-1">
+            <span className="bg-gradient-to-t to-[#9b77fd]  from-[#455cc4]  w-full h-full inline-block rounded-full transition-all">
+              <img
+                className="mx-auto w-full h-full object-cover rounded-full"
+                src={profilePic}
+                alt="Profile-photo"
+              />
+            </span>
+          </div>
+          <div>
+            <div className=" text-2xl flex items-center justify-start ">
+              <p className="text-white inline-block">Hi, I'm Munna Ahmed</p>
+              &nbsp;
+              <HiCheckBadge className="text-blue-500" />
+            </div>
+            <Typewriter
+              options={{ autoStart: true, loop: true, delay: 100 }}
+              onInit={(typewriter) => {
+                typewriter
+                  .typeString(
+                    "<span class='typewriter'>MERN Stack Developer<span/>"
+                  )
+                  .pauseFor(2000)
+                  .deleteAll()
+                  .typeString(
+                    "<span class='typewriter'>Front-End Developer<span/>"
+                  )
+                  .pauseFor(2000)
+                  .deleteAll()
+                  .typeString("<span class='typewriter'>React Developer<span/>")
+                  .pauseFor(2000)
+                  .deleteAll()
+                  .start();
+              }}
+            />
+            <div className=" flex items-start justify-start ">
+              {icons.map((Icon) => (
+                <button>
+                  <Icon className="text-white text-lg mr-3 mt-1" />
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div></div>
+
+        {/* <div className="text-center">
+          <div className=" text-xl flex items-center justify-center pb-1">
+            <p className="text-white font-semibold">Hi, I'm Munna Ahmed</p>
+            &nbsp;
+            <HiCheckBadge className="text-blue-500 " />
+          </div>
+
+          <span className="text-gray-200 w-full max-w-xl mx-auto  xs:text-sm text-[13px] leading-5 block tracking-[1px] pb-4 px-5">
+            I'm a &nbsp;
+            <span className="xs:w-[6rem] w-[5.8rem] inline-block text-center ">
+              <Typewriter
+                options={{ autoStart: true, loop: true, delay: 100 }}
+                onInit={(typewriter) => {
+                  typewriter
+                    .typeString("<span class='typewriter '>MERN Stack<span/>")
+                    .pauseFor(2000)
+                    .deleteAll()
+                    .typeString("<span class='typewriter'>Front-End<span/>")
+                    .pauseFor(2000)
+                    .deleteAll()
+                    .typeString("<span class='typewriter '>React<span/>")
+                    .pauseFor(2000)
+                    .deleteAll()
+                    .start();
+                }}
+              />
+            </span>
+            &nbsp; Developer from Bangladesh. I'm self-taught with experience in
+            web development, designing and creating responsive and user-friendly
+            websites.
+          </span>
+
+          <a href="https://drive.google.com/u/0/uc?id=1RhVvtP6IrrtuftlTtwQZAvgmQVRizMcy&export=download">
+            <Ripple className="text-white opacity-90 hover:opacity-100 transition-all border-white border py-2 px-3 rounded-sm">
+              Download Resume
+            </Ripple>
+          </a>
+        </div> */}
       </div>
     </section>
   );

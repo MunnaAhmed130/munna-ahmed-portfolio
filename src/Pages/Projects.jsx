@@ -54,10 +54,10 @@ const Project = ({ project }) => {
             <img
               className="w-full h-auto object-cover  overflow-hidden hover:before:content-['Live Site'] hover:before:inset-0"
               src={project_img}
-              alt=""
+              alt={`${title}-homepage`}
             />
             <a href={client_repo} target="_blank">
-              <BsGithub className="absolute top-0 right-0  text-white bg-[#222222] w-8 h-8 p-2 m-2 rounded-full" />
+              <BsGithub className="absolute top-0 right-0  text-white bg-[#222222] xl:w-10 xl:h-10 md:w-10 md:h-10 lg:w-9 lg:h-9 w-9 h-9 p-2 xl:m-3 m-2 rounded-full" />
             </a>
           </div>
           <div className="mt-3">
