@@ -4,17 +4,13 @@ import useAll from "../hooks/useAll";
 
 const Footer = () => {
   const { footerStyle, setFooterStyle } = useAll();
-  const location = useLocation();
-  useEffect(() => {
-    // location.pathname.includes("projects") && setFooterStyle(true);
-    // !location.pathname.includes("projects") && setFooterStyle(false);
-  }, [location, setFooterStyle]);
+  // const location = useLocation();
+  // useEffect(() => {
+  //   location.pathname.includes("projects") && setFooterStyle(true);
+  //   !location.pathname.includes("projects") && setFooterStyle(false);
+  // }, [location, setFooterStyle]);
   return (
-    <footer
-      className={`${
-        footerStyle ? "lg:fixed  lg:bottom-0 " : ""
-      }    text-center w-full mb-2 font-poppins z-10`}
-    >
+    <footer className="text-center w-full mb-2 font-poppins z-10">
       <p className="sm:text-sm text-[13px] text-white ">
         &copy; 2023 Portfolio by Munna Ahmed
       </p>

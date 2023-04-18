@@ -6,14 +6,8 @@ import { motion } from "framer-motion";
 import useAll from "../hooks/useAll";
 
 const Navbar = () => {
-  const [headerStyle, setHeaderStyle] = useState(false);
   const { toggle, setToggle } = useAll();
-  const navigate = useNavigate();
-  const location = useLocation();
-  useEffect(() => {
-    // location.pathname.includes("projects") && setHeaderStyle(true);
-    // !location.pathname.includes("projects") && setHeaderStyle(false);
-  }, [location, setHeaderStyle]);
+
   const variants = {
     open: {
       opacity: 1,
@@ -26,15 +20,11 @@ const Navbar = () => {
   };
 
   return (
-    <nav
-      className={`${
-        headerStyle ? "lg:fixed " : "  "
-      }    w-full  sm:px-20 px-5 py-4 text-center top-0  font-poppins  z-10`}
-    >
+    <nav className=" w-full  sm:px-20 px-5 py-4 text-center top-0  font-poppins  z-10">
       <div className="max-w-7xl w-full  mx-auto flex justify-between items-center">
         <Link to="/" className=" text-white text-2xl font-bold">
           Munna
-          <span className="w-1 h-1 bg-gray-400 inline-block rounded-full" />
+          <span className="w-1 h-1 bg-slate-400 inline-block rounded-full" />
         </Link>
         {/* list of links  */}
         <ul className="hidden md:flex flex-row  gap-10">

@@ -7,10 +7,10 @@ const Projects = () => {
   const flexCenter = "flex  items-start justify-center";
   const dot = "lg:w-2 lg:h-2 md:w-[6px] md:h-[6px] w-1 h-1 ml-[2px]";
   return (
-    <div className="md:h-[calc(100vh-64px)] flex flex-col justify-between">
+    <div className=" flex flex-col justify-between">
       <section
         id="projects"
-        className={` font-poppins 2xl:mt-44 xl:mt-36 lg:mt-32 md:mt-28 sm:mt-16 xs:mt-4`}
+        className={` font-poppins flex flex-col justify-around lg:h-[calc(100vh-92px)] `}
       >
         <div className="flex  items-start justify-center sm:px-20 px-5  md:m-0 mb-5 mt-10">
           <div className="max-w-7xl w-full">
