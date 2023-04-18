@@ -52,7 +52,7 @@ code {
 }
 
 .border-unique {
-  border-radius: 58% 42% 60% 40% / 42% 61% 39% 58%;
+  /* border-radius: 58% 42% 60% 40% / 42% 61% 39% 58%; */
   border-radius: 60% 40% 60% 40% / 34% 64% 36% 66%;
   animation: wobble 10s linear alternate-reverse infinite;
 }
@@ -64,18 +64,6 @@ code {
   100% {
     border-radius: 60% 40% 60% 40% / 34% 64% 36% 66%;
   }
-  /* 14% {
-    border-radius: 41% 59% 40% 60% / 64% 39% 61% 36%;
-  }
-  15% {
-    border-radius: 60% 40% 60% 40% / 34% 64% 36% 66%;
-  }
-  99% {
-    border-radius: 60% 40% 60% 40% / 34% 64% 36% 66%;
-  }
-  100% {
-    border-radius: 60% 40% 60% 40% / 34% 64% 36% 66%;
-  } */
 }
 
 .typewriter {

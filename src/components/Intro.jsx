@@ -13,7 +13,7 @@ import {
   tailwindCSS,
 } from "../assets/icons";
 // to-[#77a1fd]  from-[#4b52e4]
-
+// sm:h-[calc(100vh-92px)]
 const Intro = () => {
   const icons = [SiGmail, SiLinkedin, BsGithub];
   const skills = [
@@ -29,7 +29,7 @@ const Intro = () => {
     <section
       id="intro"
       data-section
-      className="sm:h-[calc(100vh_-_28px)] sm:flex sm:items-center items-start w-full"
+      className={` sm:flex sm:items-center items-start w-full 2xl:mt-44 xl:mt-36 lg:mt-32 md:mt-28 sm:mt-16 xs:mt-4`}
     >
       {/* <div className="max-w-7xl w-full mx-auto ">
         <div
@@ -94,12 +94,12 @@ const Intro = () => {
           </a>
         </div>
       </div> */}
-      <div className="max-w-5xl w-full mx-auto sm:px-20 my-20 px-10">
+      <div className="max-w-5xl w-full mx-auto sm:px-20 xs:px-10 my-10 px-5">
         <div className="max-w-2xl">
           <div className="flex items-center justify-start xs:gap-5 gap-3">
             <div className="rounded-full object-cover  flex items-center duration-[400ms] transition-all  border-[#ffffff]">
               <img
-                className="mx-auto bg-gradient-to-t to-[#9b77fd]  from-[#455cc4] sm:w-28 sm:h-28 xs:w-24 xs:h-24 w-20 h-20 object-cover rounded-full"
+                className="mx-auto bg-gradient-to-t to-[#9b77fd]  from-[#455cc4] sm:w-28 sm:h-28 xs:w-24 xs:h-24 w-20 h-20 object-cover rounded-full border-unique"
                 src={profilePic}
                 alt="Profile-photo"
               />
@@ -150,10 +150,12 @@ const Intro = () => {
             <p className="text-white text-xl  uppercase">Skills</p>
             <div>
               {skills.map((skill) => (
-                <div className=" inline-block mt-5 w-40" key={skill.title}>
+                <div className=" inline-block mt-5  w-36" key={skill.title}>
                   <div className="flex items-center gap-2">
                     <img src={skill.icon} className={` w-6 h-6 m-0 `} />
-                    <span className="text-white">{skill.title}</span>
+                    <span className="text-white sm:text-base text-sm">
+                      {skill.title}
+                    </span>
                   </div>
                 </div>
               ))}
