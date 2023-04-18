@@ -6,8 +6,8 @@ const Footer = () => {
   const { footerStyle, setFooterStyle } = useAll();
   const location = useLocation();
   useEffect(() => {
-    location.pathname.includes("projects") && setFooterStyle(true);
-    !location.pathname.includes("projects") && setFooterStyle(false);
+    // location.pathname.includes("projects") && setFooterStyle(true);
+    // !location.pathname.includes("projects") && setFooterStyle(false);
   }, [location, setFooterStyle]);
   return (
     <footer

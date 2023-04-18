@@ -25,11 +25,12 @@ const Intro = () => {
     { icon: express, title: "ExpressJS" },
   ];
 
+  // const introMargin = "2xl:mt-44 xl:mt-36 lg:mt-32 md:mt-28 sm:mt-16 xs:mt-4";
   return (
     <section
       id="intro"
       data-section
-      className={` sm:flex sm:items-center items-start w-full 2xl:mt-44 xl:mt-36 lg:mt-32 md:mt-28 sm:mt-16 xs:mt-4`}
+      className={`mt-section sm:flex sm:items-center items-start w-full `}
     >
       {/* <div className="max-w-7xl w-full mx-auto ">
         <div
