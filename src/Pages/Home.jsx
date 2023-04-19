@@ -3,7 +3,7 @@ import Intro from "../components/Intro";
 
 const Home = () => {
   return (
-    <div className="font-poppins flex flex-col  h-[calc(100vh-64px)] justify-between">
+    <div className="font-poppins flex flex-col  h-[calc(100vh-64px)] ">
       <Intro />
       <Footer />
     </div>

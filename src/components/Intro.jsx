@@ -4,35 +4,30 @@ import { profilePic } from "../assets";
 import { HiCheckBadge } from "react-icons/hi2";
 import { SiGmail, SiLinkedin } from "react-icons/si";
 import { BsGithub } from "react-icons/bs";
-import {
-  css3,
-  express,
-  html5,
-  javascript,
-  react,
-  tailwindCSS,
-} from "../assets/icons";
+import { skills } from "../constant";
+
 // to-[#77a1fd]  from-[#4b52e4]
 // sm:h-[calc(100vh-92px)]
 const Intro = () => {
   const icons = [SiGmail, SiLinkedin, BsGithub];
-  const skills = [
-    { icon: javascript, title: "JavaScript" },
-    { icon: css3, title: "CSS3" },
-    { icon: html5, title: "HTML5" },
-    { icon: tailwindCSS, title: "Tailwind CSS" },
-    { icon: react, title: "ReactJS" },
-    { icon: express, title: "ExpressJS" },
-  ];
+  // const skills = [
+  //   { icon: javascript, title: "JavaScript" },
+  //   { icon: css3, title: "CSS3" },
+  //   { icon: html5, title: "HTML5" },
+  //   { icon: tailwindCSS, title: "Tailwind CSS" },
+  //   { icon: react, title: "ReactJS" },
+  //   { icon: express, title: "ExpressJS" },
+  // ];
 
   // const introMargin = "2xl:mt-44 xl:mt-36 lg:mt-32 md:mt-28 sm:mt-16 xs:mt-4";
+
   return (
     <section
       id="intro"
       data-section
-      className={`mt-section mb-8 sm:flex sm:items-center items-start w-full `}
+      className={` flex  items-center justify-around w-full h-[calc(100vh-92px)] min-h-[500px]`}
     >
-      <div className="max-w-5xl w-full mx-auto sm:px-20 xs:px-10 my-10 px-5">
+      <div className="max-w-5xl w-full mx-auto sm:px-20 xs:px-10 my-10 px-5 ">
         <div className="max-w-2xl">
           <div className="flex items-center justify-start xs:gap-5 gap-3">
             <div className="rounded-full object-cover  flex items-center duration-[400ms] transition-all  border-[#ffffff]">

@@ -2,15 +2,18 @@ import { BsGithub } from "react-icons/bs";
 import { projects } from "../constant";
 import { Tilt } from "react-tilt";
 import Footer from "../components/Footer";
+import { styles } from "../styles";
 
 const Projects = () => {
   const flexCenter = "flex  items-start justify-center";
   const dot = "lg:w-2 lg:h-2 md:w-[6px] md:h-[6px] w-1 h-1 ml-[2px]";
   return (
-    <div className="flex flex-col justify-between lg:h-auto h-[calc(100vh-64px)]">
+    <div
+      className={`flex flex-col justify-between lg:h-auto ${styles.pageHeight}`}
+    >
       <section
         id="projects"
-        className={` font-poppins lg:flex flex-col justify-around lg:h-[calc(100vh-92px)] lg:min-h-[400px] `}
+        className={` font-poppins lg:flex flex-col justify-around lg:${styles.sectionHeight} lg:min-h-[400px] `}
       >
         <div className="flex flex-row items-center justify-center  sm:px-20 px-5   py-10">
           <div className="max-w-7xl w-full ">

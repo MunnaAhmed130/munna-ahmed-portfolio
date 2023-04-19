@@ -94,4 +94,4 @@ const projects = [
   },
 ];
 
-export { navLinks, projects };
+export { navLinks, projects, skills };

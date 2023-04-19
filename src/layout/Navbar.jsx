@@ -57,7 +57,7 @@ const Navbar = () => {
 
 const NavList = () => {
   const { toggle, setToggle } = useAll();
-  const [active, setActive] = useState("");
+  // const [active, setActive] = useState("");
   const location = useLocation();
   const path = location.pathname;
   // console.log(location.pathname.length);
@@ -99,7 +99,7 @@ const NavList = () => {
             className={` text-gray-400
             nav-link`}
             onClick={() => {
-              setActive("projects");
+              // setActive("projects");
               setToggle(!toggle);
             }}
           >
@@ -143,7 +143,7 @@ const NavList = () => {
               className={` text-gray-400
           nav-link`}
               onClick={() => {
-                setActive("projects");
+                // setActive("projects");
                 setToggle(!toggle);
               }}
             >
@@ -158,7 +158,7 @@ const NavList = () => {
             className={` text-gray-400
       nav-link`}
             onClick={() => {
-              setActive("contact");
+              // setActive("contact");
               setToggle(!toggle);
             }}
           >

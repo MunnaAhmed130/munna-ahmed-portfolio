@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import Ripple from "../components/button/Ripple";
 import Footer from "../components/Footer";
+import { styles } from "../styles";
 
 const Contact = () => {
   const formRef = useRef();
@@ -26,10 +27,15 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
   };
+  // const sectionHeight = "h-[calc(100vh-92px)]";
 
   return (
-    <div className="flex flex-col justify-between lg:h-auto h-[calc(100vh-64px)]">
-      <section className="lg:h-[calc(100vh-92px)] min-h-[700px] w-full flex items-center justify-center font-poppins">
+    <div
+      className={`flex flex-col justify-between lg:h-auto ${styles.pageHeight}`}
+    >
+      <section
+        className={`lg:${styles.sectionHeight} min-h-[700px] w-full flex items-center justify-center font-poppins`}
+      >
         <div className="sm:max-w-2xl max-w-sm w-full px-2 sm:px-14">
           <h1 className="text-white lg:text-3xl text-2xl  uppercase font-extrabold text-center">
             Contact
