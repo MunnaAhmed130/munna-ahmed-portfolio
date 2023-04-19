@@ -5,6 +5,7 @@ import { HiCheckBadge } from "react-icons/hi2";
 import { SiGmail, SiLinkedin } from "react-icons/si";
 import { BsGithub } from "react-icons/bs";
 import { skills } from "../constant";
+import { styles } from "../styles";
 
 // to-[#77a1fd]  from-[#4b52e4]
 // sm:h-[calc(100vh-92px)]
@@ -20,12 +21,11 @@ const Intro = () => {
   // ];
 
   // const introMargin = "2xl:mt-44 xl:mt-36 lg:mt-32 md:mt-28 sm:mt-16 xs:mt-4";
-
   return (
     <section
       id="intro"
       data-section
-      className={` flex  items-center justify-around w-full h-[calc(100vh-92px)] min-h-[500px]`}
+      className={` flex  xs:items-center items-start justify-around w-full ${styles.sectionHeight} min-h-[500px] `}
     >
       <div className="max-w-5xl w-full mx-auto sm:px-20 xs:px-10 my-10 px-5 ">
         <div className="max-w-2xl">
@@ -80,10 +80,10 @@ const Intro = () => {
             websites.
           </p>
           <div>
-            <p className="text-white text-xl  uppercase">Skills</p>
-            <div>
+            <p className="text-white text-xl uppercase">Skills</p>
+            <div className="grid xs:grid-cols-3 grid-cols-2 gap-2">
               {skills.map((skill) => (
-                <div className=" inline-block mt-5  w-36" key={skill.title}>
+                <div className=" inline-block mt-5  " key={skill.title}>
                   <div className="flex items-center gap-2">
                     <img src={skill.icon} className={` w-6 h-6 m-0 `} />
                     <span className="text-white sm:text-base text-sm">

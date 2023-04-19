@@ -1,10 +1,6 @@
-import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
-import useAll from "../hooks/useAll";
+import React from "react";
 
 const Footer = () => {
-  const { footerStyle, setFooterStyle } = useAll();
-
   return (
     <footer className="text-center w-full mb-2 font-poppins z-10">
       <p className="sm:text-sm text-[13px] text-white ">
