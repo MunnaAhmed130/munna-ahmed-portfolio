@@ -1,4 +1,12 @@
 import { cameraEssential, travelAgency } from "../assets";
+import {
+  css3,
+  express,
+  html5,
+  javascript,
+  react,
+  tailwindCSS,
+} from "../assets/icons";
 
 const navLinks = [
   {
@@ -9,6 +17,15 @@ const navLinks = [
     id: "contact",
     title: "Contact",
   },
+];
+
+const skills = [
+  { icon: javascript, title: "JavaScript" },
+  { icon: css3, title: "CSS3" },
+  { icon: html5, title: "HTML5" },
+  { icon: tailwindCSS, title: "Tailwind CSS" },
+  { icon: react, title: "ReactJS" },
+  { icon: express, title: "ExpressJS" },
 ];
 
 const projects = [

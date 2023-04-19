@@ -7,20 +7,20 @@ const Projects = () => {
   const flexCenter = "flex  items-start justify-center";
   const dot = "lg:w-2 lg:h-2 md:w-[6px] md:h-[6px] w-1 h-1 ml-[2px]";
   return (
-    <div className=" flex flex-col justify-between">
+    <div className="flex flex-col justify-between lg:h-auto h-[calc(100vh-64px)]">
       <section
         id="projects"
-        className={` font-poppins flex flex-col justify-around lg:h-[calc(100vh-92px)] `}
+        className={` font-poppins lg:flex flex-col justify-around lg:h-[calc(100vh-92px)] lg:min-h-[400px] `}
       >
-        <div className="flex  items-start justify-center sm:px-20 px-5  md:m-0 mb-5 mt-10">
-          <div className="max-w-7xl w-full">
-            <h2 className="text-white lg:text-3xl md:text-2xl text-xl  font-extrabold uppercase text-center mb-5 ">
+        <div className="flex flex-row items-center justify-center  sm:px-20 px-5   py-10">
+          <div className="max-w-7xl w-full ">
+            <h2 className="text-white lg:text-3xl text-2xl  font-extrabold uppercase text-center mb-5 ">
               Projects
               <span
                 className={`${dot} rounded-full inline-block   bg-slate-400 `}
               />
             </h2>
-            <div className="grid lg:grid-cols-3 md:grid-cols-2 ">
+            <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-4">
               {projects.map((project) => (
                 <Project project={project} key={project._id}></Project>
               ))}
@@ -50,7 +50,7 @@ const Project = ({ project }) => {
   };
 
   return (
-    <div className="m-2 ">
+    <div className=" mx-auto">
       <Tilt options={defaultOptions}>
         <div className="border border-white/30 rounded-sm px-5 pb-5 pt-3 max-w-sm bg-[rgba(255,255,255,0.04)]">
           <div className="w-full xl:h-56 h-40 relative  overflow-hidden">

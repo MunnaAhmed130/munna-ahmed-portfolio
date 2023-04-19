@@ -31,7 +31,7 @@ const Navbar = () => {
           <NavList />
         </ul>
 
-        <div className="md:hidden relative flex items-center justify-end">
+        <div className="md:hidden relative flex flex-row items-center justify-end">
           <button
             onClick={() => setToggle(!toggle)}
             className="text-3xl text-slate-400"

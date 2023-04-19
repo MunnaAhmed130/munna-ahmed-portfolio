@@ -28,10 +28,10 @@ const Contact = () => {
   };
 
   return (
-    <>
-      <section className="h-[calc(100vh-28px)] w-full flex items-center justify-center font-poppins">
+    <div className="flex flex-col justify-between lg:h-auto h-[calc(100vh-64px)]">
+      <section className="lg:h-[calc(100vh-92px)] min-h-[700px] w-full flex items-center justify-center font-poppins">
         <div className="sm:max-w-2xl max-w-sm w-full px-2 sm:px-14">
-          <h1 className="text-white lg:text-3xl md:text-2xl text-xl uppercase font-extrabold text-center">
+          <h1 className="text-white lg:text-3xl text-2xl  uppercase font-extrabold text-center">
             Contact
             <span className="rounded-full inline-block lg:w-2 lg:h-2 md:w-[6px] md:h-[6px] w-1 h-1 ml-[-2px]   bg-slate-400 " />
           </h1>
@@ -84,7 +84,7 @@ const Contact = () => {
         </div>
       </section>
       <Footer />
-    </>
+    </div>
   );
 };
 
