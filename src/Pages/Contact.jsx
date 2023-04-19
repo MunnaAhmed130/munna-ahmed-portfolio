@@ -30,11 +30,9 @@ const Contact = () => {
   // const sectionHeight = "h-[calc(100vh-92px)]";
 
   return (
-    <div
-      className={`flex flex-col justify-between lg:h-auto ${styles.pageHeight}`}
-    >
+    <div className={`flex flex-col justify-between ${styles.pageHeight}`}>
       <section
-        className={`lg:${styles.sectionHeight} min-h-[700px] w-full flex items-center justify-center font-poppins`}
+        className={`${styles.sectionHeight} min-h-[700px] w-full flex items-center justify-center font-poppins`}
       >
         <div className="sm:max-w-2xl max-w-sm w-full px-2 sm:px-14">
           <h1 className="text-white lg:text-3xl text-2xl  uppercase font-extrabold text-center">
@@ -44,21 +42,21 @@ const Contact = () => {
           <form
             ref={formRef}
             onSubmit={handleSubmit}
-            className="mt-1 flex flex-col gap-8 bg-[#22222200] p-5 rounded-sm"
+            className=" flex flex-col lg:gap-8 gap-5  p-5 rounded-sm"
           >
             <label className="flex flex-col">
-              <span className="text-white font-medium mb-4">Your Name</span>
+              <span className="label">Your Name</span>
               <input
                 type="text"
                 name="name"
                 value={form.name}
                 onChange={handleChange}
                 placeholder="Enter your name"
-                className="input autofill:bg-black"
+                className="input "
               />
             </label>
             <label className="flex flex-col">
-              <span className="text-white font-medium mb-4">Your email</span>
+              <span className="label">Your email</span>
               <input
                 type="email"
                 name="email"
@@ -69,7 +67,7 @@ const Contact = () => {
               />
             </label>
             <label className="flex flex-col">
-              <span className="text-white font-medium mb-4">Your Message</span>
+              <span className="label">Your Message</span>
               <textarea
                 rows={7}
                 name="message"
@@ -82,7 +80,7 @@ const Contact = () => {
 
             <Ripple
               type="submit"
-              className="bg-[rgba(255,255,255,0.04)] border border-white/20 rounded-sm sm:py-3 py-2 px-6  outline-none w-fit text-gray-300 font-bold shadow-md shadow-primary"
+              className="bg-[rgba(255,255,255,0.1)] border border-white/0 rounded-sm sm:py-3 py-2 px-6  outline-none w-fit text-gray-300 font-semibold"
             >
               {loading ? "Sending..." : "Send"}
             </Ripple>
