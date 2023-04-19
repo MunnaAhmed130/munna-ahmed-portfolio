@@ -11,14 +11,6 @@ import { styles } from "../styles";
 // sm:h-[calc(100vh-92px)]
 const Intro = () => {
   const icons = [SiGmail, SiLinkedin, BsGithub];
-  // const skills = [
-  //   { icon: javascript, title: "JavaScript" },
-  //   { icon: css3, title: "CSS3" },
-  //   { icon: html5, title: "HTML5" },
-  //   { icon: tailwindCSS, title: "Tailwind CSS" },
-  //   { icon: react, title: "ReactJS" },
-  //   { icon: express, title: "ExpressJS" },
-  // ];
 
   // const introMargin = "2xl:mt-44 xl:mt-36 lg:mt-32 md:mt-28 sm:mt-16 xs:mt-4";
   return (
@@ -75,16 +67,16 @@ const Intro = () => {
             </div>
           </div>
           <p className="text-slate-100 xs:text-base text-sm my-14 tracking-wider max-w-lg">
-            Hi, I'm a React Developer, self-taught with experience in web
-            development, designing and creating responsive and user-friendly
+            Hi, I'm a React Developer. I'm Self-taught and passionate about web
+            development, designing, and creating responsive and user-friendly
             websites.
           </p>
           <div>
             <p className="text-white text-xl uppercase">Skills</p>
-            <div className="grid xs:grid-cols-3 grid-cols-2 gap-2">
+            <div className="grid xs:grid-cols-3 grid-cols-2 gap-5 mt-4">
               {skills.map((skill) => (
-                <div className=" inline-block mt-5  " key={skill.title}>
-                  <div className="flex items-center gap-2">
+                <div className=" inline-block  " key={skill.title}>
+                  <div className="flex flex-row items-center gap-2 h-full">
                     <img src={skill.icon} className={` w-6 h-6 m-0 `} />
                     <span className="text-white sm:text-base text-sm">
                       {skill.title}
