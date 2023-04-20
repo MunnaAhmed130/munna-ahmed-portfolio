@@ -13,9 +13,9 @@ const Projects = () => {
     <div className={`flex flex-col justify-between ${styles.pageHeight}`}>
       <section
         id="projects"
-        className={` font-poppins flex flex-col items-center justify-around lg:h-[calc(100vh-92px)]  lg:min-h-[400px] `}
+        className={` font-poppins xs:flex flex-col items-center justify-around lg:h-[calc(100vh-92px)]  lg:min-h-[400px] `}
       >
-        <div className="flex flex-row items-center justify-center sm:px-20 px-5 py-10">
+        <div className={` ${styles.flexCenter} sm:px-20 px-5 py-10`}>
           <div className="max-w-7xl w-full ">
             <h2 className="text-white lg:text-3xl text-2xl font-extrabold uppercase text-center mb-5 ">
               Projects
@@ -76,7 +76,6 @@ const Project = ({ project }) => {
             <div className="absolute inset-0 w-full h-full hover:bg-black/70 transition-all duration-300 text-white flex items-center justify-center opacity-0 hover:opacity-100 font-bold">
               Live Site
             </div>
-            {/* <div className="project-img"></div> */}
           </a>
           {/* <a href={client_repo} target="_blank">
             <BsGithub className="absolute top-0 right-0  text-white bg-[#222222] xl:w-10 xl:h-10 md:w-10 md:h-10 lg:w-9 lg:h-9 w-9 h-9 p-2 xl:m-3 m-2 rounded-full z-10" />
@@ -89,13 +88,13 @@ const Project = ({ project }) => {
             <button className="mb-3 text-white">Explore</button>
           </Link> */}
           <div className="flex flex-row items-center justify-center gap-5 mt-4">
-            <a href={client_repo}>
-              <Ripple className="text-white uppercase text-sm tracking-widest px-4 py-2 border border-white/5 rounded-sm bg-white/10">
+            <a href={client_repo} target="_blank">
+              <Ripple className="text-white uppercase text-xs tracking-widest px-4 py-2 border border-white/5 rounded-sm bg-white/10">
                 client
               </Ripple>
             </a>
-            <a href={server_repo}>
-              <Ripple className="text-white uppercase text-sm tracking-widest px-4 py-2 border border-white/5 rounded-sm bg-white/10">
+            <a href={server_repo} target="_blank">
+              <Ripple className="text-white uppercase text-xs tracking-widest px-4 py-2 border border-white/5 rounded-sm bg-white/10">
                 server
               </Ripple>
             </a>
