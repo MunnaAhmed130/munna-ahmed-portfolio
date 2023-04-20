@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import Ripple from "../components/button/Ripple";
 import Footer from "../components/Footer";
 import { styles } from "../styles";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const formRef = useRef();
@@ -26,13 +27,43 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
+    emailjs
+      .send(
+        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+        {
+          from_name: form.name,
+          to_name: "Munna",
+          from_email: form.email,
+          to_email: "munnaahmed2025@gmail.com",
+          message: form.message,
+        },
+        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        () => {
+          setLoading(false);
+          alert("Thank you. I will get back to you as soon as possible");
+
+          setForm({
+            name: "",
+            email: "",
+            message: "",
+          });
+        },
+        (error) => {
+          setLoading(false);
+          console.log(error);
+          alert("something went wrong");
+        }
+      );
   };
   // const sectionHeight = "h-[calc(100vh-92px)]";
 
   return (
     <div className={`flex flex-col justify-between ${styles.pageHeight}`}>
       <section
-        className={`${styles.sectionHeight} min-h-[700px] w-full flex items-center justify-center font-poppins`}
+        className={`${styles.sectionHeight} md:min-h-[700px] min-h-[500px] w-full ${styles.flexCenter} font-poppins`}
       >
         <div className="sm:max-w-2xl max-w-sm w-full px-2 sm:px-14">
           <h1 className="text-white lg:text-3xl text-2xl  uppercase font-extrabold text-center">
@@ -42,7 +73,7 @@ const Contact = () => {
           <form
             ref={formRef}
             onSubmit={handleSubmit}
-            className=" flex flex-col lg:gap-8 gap-5  p-5 rounded-sm"
+            className="flex flex-col lg:gap-8 gap-5 p-5 rounded-sm"
           >
             <label className="flex flex-col">
               <span className="label">Your Name</span>
