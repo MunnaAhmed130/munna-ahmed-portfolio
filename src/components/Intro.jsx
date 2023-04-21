@@ -10,7 +10,11 @@ import { styles } from "../styles";
 // to-[#77a1fd]  from-[#4b52e4]
 // sm:h-[calc(100vh-92px)]
 const Intro = () => {
-  const icons = [SiGmail, SiLinkedin, BsGithub];
+  const icons = [
+    { icon: SiGmail, link: "mailto:munnaahmed2025@gmail.com" },
+    { icon: SiLinkedin, link: "https://www.linkedin.com/in/munnaahmed01/" },
+    { icon: BsGithub, link: "https://github.com/MunnaAhmed130" },
+  ];
 
   // const introMargin = "2xl:mt-44 xl:mt-36 lg:mt-32 md:mt-28 sm:mt-16 xs:mt-4";
   return (
@@ -58,10 +62,10 @@ const Intro = () => {
                 }}
               />
               <div className=" flex items-start justify-start ">
-                {icons.map((Icon) => (
-                  <button key={Icon}>
-                    <Icon className="text-white text-lg mr-3 mt-1" />
-                  </button>
+                {icons.map((Social) => (
+                  <a key={Social} href={Social.link} target="_blank">
+                    <Social.icon className="text-white text-lg mr-3 mt-1" />
+                  </a>
                 ))}
               </div>
             </div>
