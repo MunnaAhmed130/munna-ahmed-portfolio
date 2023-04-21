@@ -88,7 +88,7 @@ const projects = [
     project_demo_3: "https://i.ibb.co/D9TX7Rt/project-3-demo-3.png",
     title: "Dental Care",
     client_repo: "https://github.com/MunnaAhmed130/Bicycle-store-client-side",
-    // server_repo: "https://github.com/MunnaAhmed130/Bicycle-store-server-side",
+    server_repo: "https://github.com/MunnaAhmed130/Bicycle-store-server-side",
     live_link: "https://bicycle-store-41d3e.web.app/",
     p_1: "Bicycle store is a website fully responsive website that helps its clients to choose and buy cycles.",
     p_2: "User can log in using two different login method.",

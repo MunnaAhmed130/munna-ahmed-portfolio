@@ -83,11 +83,12 @@ const Contact = () => {
                 value={form.name}
                 onChange={handleChange}
                 placeholder="Enter your name"
-                className="input "
+                className="input"
+                required
               />
             </label>
             <label className="flex flex-col">
-              <span className="label">Your email</span>
+              <span className="label">Your Email</span>
               <input
                 type="email"
                 name="email"
@@ -95,6 +96,7 @@ const Contact = () => {
                 onChange={handleChange}
                 placeholder="Enter your web address"
                 className="input"
+                required
               />
             </label>
             <label className="flex flex-col">
@@ -106,12 +108,13 @@ const Contact = () => {
                 onChange={handleChange}
                 placeholder="Enter you message"
                 className="textarea"
+                required
               />
             </label>
 
             <Ripple
               type="submit"
-              className="bg-[rgba(255,255,255,0.1)] border border-white/0 rounded-sm sm:py-3 py-2 px-6  outline-none w-fit text-gray-300 font-semibold"
+              className="bg-[rgba(255,255,255,0.1)] border border-white/0 rounded-sm sm:py-3 py-2 px-6  outline-none w-fit text-white tracking-widest sm:text-base text-sm "
             >
               {loading ? "Sending..." : "Send"}
             </Ripple>

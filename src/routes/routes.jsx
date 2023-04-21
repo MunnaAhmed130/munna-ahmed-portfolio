@@ -4,6 +4,7 @@ import Main from "../layout/Main";
 import Contact from "../Pages/Contact";
 import Projects from "../Pages/Projects";
 import ErrorPage from "../Pages/ErrorPage";
+import { projects } from "../constant";
 
 const routes = createBrowserRouter([
   {
@@ -18,6 +19,7 @@ const routes = createBrowserRouter([
       {
         path: "/projects",
         element: <Projects />,
+        // loader: () => projects,
       },
       {
         path: "/contact",

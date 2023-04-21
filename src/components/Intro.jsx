@@ -59,7 +59,7 @@ const Intro = () => {
               />
               <div className=" flex items-start justify-start ">
                 {icons.map((Icon) => (
-                  <button>
+                  <button key={Icon}>
                     <Icon className="text-white text-lg mr-3 mt-1" />
                   </button>
                 ))}
