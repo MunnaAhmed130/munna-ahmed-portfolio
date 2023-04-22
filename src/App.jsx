@@ -7,7 +7,7 @@ import { profilePic, space } from "./assets";
 
 const App = () => {
   return (
-    <div className="relative z-0 ">
+    <div className="relative z-0 bg-[url('https://i.ibb.co/fdcwStL/gradient-Bd.jpg')]/1">
       <div>
         <AllProvider>
           <RouterProvider router={routes} />

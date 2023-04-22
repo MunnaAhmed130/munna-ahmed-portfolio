@@ -18,7 +18,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="w-full   sm:px-20 px-5 py-4 text-center top-0 font-poppins z-20">
+    <nav className="w-full relative  sm:px-20 px-5 py-4 text-center top-0 font-poppins z-20">
       <div className="max-w-7xl w-full mx-auto flex justify-between items-center">
         <Link to="/" className=" text-white text-2xl font-bold">
           Munna

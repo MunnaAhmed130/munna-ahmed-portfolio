@@ -12,7 +12,7 @@ const Projects = () => {
     <div className={`flex flex-col justify-between ${styles.pageHeight}`}>
       <section
         id="projects"
-        className={` font-poppins xs:flex flex-col items-center justify-around lg:h-[calc(100vh-92px)]  lg:min-h-[400px] `}
+        className={` font-poppins n xs:flex flex-col items-center justify-around lg:h-[calc(100vh-92px)]  lg:min-h-[400px] `}
       >
         <div className={` ${styles.flexCenter} sm:px-20 px-5 py-10`}>
           <div className="max-w-7xl w-full ">
@@ -29,6 +29,9 @@ const Projects = () => {
             </div>
           </div>
         </div>
+        <div
+          className={`absolute inset-0 bg-[url('https://i.ibb.co/pnXwFgR/ales-nesetril-Im7l-Zjxe-Lhg-unsplash.jpg')]   w-full h-auto  z-[-1] bg-no-repeat  bg-cover bg-center xs:inline-block  transition-all duration-300 `}
+        />
       </section>
       <Footer />
     </div>
@@ -67,10 +70,12 @@ const Project = ({ project }) => {
   };
   const imgBefore =
     "before:content-[''] before:inset-0 before:absolute before:w-full before:h-full before:bg-white before:z-10 hover:before:";
+
+  // const bgImg = `bg-[url(${project_img})]`;
   return (
     <div className="mx-auto">
       <Tilt options={defaultOptions}>
-        <div className="relative border border-white/[0] rounded-sm px-5 pb-5 pt-3 md:max-w-full max-w-sm   bg-[rgba(255,255,255,0.1)]">
+        <div className=" border border-white/[0] rounded-sm px-5 pb-5 pt-5 md:max-w-full max-w-sm bg-[rgba(255,255,255,0.1)]">
           <div className="w-full  relative  overflow-hidden">
             <a href={live_link} target="_blank" className="relative">
               <img
@@ -94,18 +99,23 @@ const Project = ({ project }) => {
           </Link> */}
             <div className="flex flex-row items-center justify-center gap-5 mt-4">
               <a target="_blank" onClick={() => handleClient(client_repo, 200)}>
-                <Ripple className="text-white uppercase text-xs tracking-widest px-4 py-2 border border-white/5 rounded-sm bg-white/10 hover:shadow-md hover:shadow-black transition-shadow duration-300 ease-out">
+                <Ripple className="text-white uppercase text-xs tracking-widest px-4 py-2 border border-white/5 rounded-sm bg-[#080808] hover:shadow-md hover:shadow-white transition-shadow duration-300 ease-out">
                   client
                 </Ripple>
               </a>
               <a target="_blank" onClick={() => handleClient(server_repo, 200)}>
-                <Ripple className="text-white uppercase text-xs tracking-widest px-4 py-2 border border-white/5 rounded-sm bg-white/10 hover:shadow-md hover:shadow-black transition-shadow duration-300 ease-out ">
+                <Ripple className="text-white uppercase text-xs tracking-widest px-4 py-2 border border-white/5 rounded-sm bg-black hover:shadow-md hover:shadow-black transition-shadow duration-300 ease-out ">
                   server
                 </Ripple>
               </a>
             </div>
           </div>
-          <div className="absolute inset-0 bg-[url('https://i.ibb.co/gt5Stzd/paper-on-bg.jpg')] bg-cover opacity-[.1] z-[-1]"></div>
+
+          {/* <img
+            src={project_img}
+            className={`absolute inset-0 w-full h-full bg-cover opacity-20 grayscale z-[-1]`}
+            alt=""
+          /> */}
         </div>
       </Tilt>
     </div>

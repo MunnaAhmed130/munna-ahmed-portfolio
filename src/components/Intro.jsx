@@ -24,10 +24,10 @@ const Intro = () => {
     <section
       id="intro"
       data-section
-      className={` flex  xs:items-center items-start justify-around w-full ${styles.sectionHeight} min-h-[500px] `}
+      className={`relative overflow-hidden flex  xs:items-center items-start justify-around w-full ${styles.sectionHeight} min-h-[500px] `}
     >
       <div className="max-w-7xl w-full flex flex-row mx-auto ">
-        <div className="max-w-2xl w-full  m-10">
+        <div className="max-w-2xl w-full  my-10 sm:mx-10 sm:px-10 px-0 mx-5">
           <div className="flex items-center justify-start xs:gap-5 gap-3">
             <div className="rounded-full object-cover  flex items-center duration-[400ms] transition-all  border-[#ffffff]">
               <img
@@ -38,7 +38,9 @@ const Intro = () => {
             </div>
             <div>
               <div className="sm:text-2xl xs:text-xl text-base flex items-center justify-start ">
-                <p className="text-white inline-block">Munna Ahmed</p>
+                <p className="text-white inline-block font-semibold">
+                  Munna Ahmed
+                </p>
                 &nbsp;
                 <HiCheckBadge className="text-blue-500" />
               </div>
@@ -94,10 +96,10 @@ const Intro = () => {
             </div>
           </div>
         </div>
-        <div
-          className={`absolute inset-0 bg-[url('https://i.ibb.co/pnXwFgR/ales-nesetril-Im7l-Zjxe-Lhg-unsplash.jpg')] xl:w-3/4 w-full  h-auto  z-[-2] bg-no-repeat lg:bg-left  bg-center ml-auto  lg:opacity-100 opacity-40  xs:inline-block hidden transition-all duration-300 `}
-        />
       </div>
+      <div
+        className={`absolute  inset-0 bg-[url('https://i.ibb.co/pnXwFgR/ales-nesetril-Im7l-Zjxe-Lhg-unsplash.jpg')] w-full h-full z-[-1] bg-no-repeat bg-cover xl lg:bg-[center_left_300px] md:scale-110 bg-[top_10px_center] lg:opacity-100 opacity-40 transition-all duration-300 `}
+      />
     </section>
   );
 };
