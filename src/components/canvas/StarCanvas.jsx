@@ -19,7 +19,7 @@ const StarCanvas = () => {
 const Stars = () => {
   const ref = useRef();
 
-  const sphere = random.inSphere(new Float32Array(75), { radius: 1.5 });
+  const sphere = random.inSphere(new Float32Array(100), { radius: 1.5 });
 
   useFrame((state, delta) => {
     ref.current.rotation.x -= delta / 100;

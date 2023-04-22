@@ -1,4 +1,4 @@
-import { BsGithub } from "react-icons/bs";
+// import { BsGithub } from "react-icons/bs";
 import { projects } from "../constant";
 import { Tilt } from "react-tilt";
 import Footer from "../components/Footer";
@@ -19,7 +19,7 @@ const Projects = () => {
             <h2 className="text-white lg:text-3xl text-2xl font-extrabold uppercase text-center mb-5 ">
               Projects
               <span
-                className={`${dot} rounded-full inline-block bg-slate-400 `}
+                className={`${dot} rounded-full inline-block bg-[#26bee4] `}
               />
             </h2>
             <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-4">
@@ -70,7 +70,7 @@ const Project = ({ project }) => {
   return (
     <div className="mx-auto">
       <Tilt options={defaultOptions}>
-        <div className="border border-white/[0] rounded-sm px-5 pb-5 pt-3 md:max-w-full max-w-sm bg-[rgba(255,255,255,0.1)]">
+        <div className="relative border border-white/[0] rounded-sm px-5 pb-5 pt-3 md:max-w-full max-w-sm   bg-[rgba(255,255,255,0.1)]">
           <div className="w-full  relative  overflow-hidden">
             <a href={live_link} target="_blank" className="relative">
               <img
@@ -105,6 +105,7 @@ const Project = ({ project }) => {
               </a>
             </div>
           </div>
+          <div className="absolute inset-0 bg-[url('https://i.ibb.co/gt5Stzd/paper-on-bg.jpg')] bg-cover opacity-[.1] z-[-1]"></div>
         </div>
       </Tilt>
     </div>

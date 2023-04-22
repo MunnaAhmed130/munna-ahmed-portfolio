@@ -1,6 +1,4 @@
-import { useEffect, useState } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
-import { navLinks } from "../constant";
+import { Link, useLocation } from "react-router-dom";
 import { IoMenuOutline, IoCloseOutline } from "react-icons/io5";
 import { motion } from "framer-motion";
 import useAll from "../hooks/useAll";
@@ -20,11 +18,11 @@ const Navbar = () => {
   };
 
   return (
-    <nav className=" w-full  sm:px-20 px-5 py-4 text-center top-0  font-poppins  z-10">
-      <div className="max-w-7xl w-full  mx-auto flex justify-between items-center">
+    <nav className="w-full   sm:px-20 px-5 py-4 text-center top-0 font-poppins z-20">
+      <div className="max-w-7xl w-full mx-auto flex justify-between items-center">
         <Link to="/" className=" text-white text-2xl font-bold">
           Munna
-          <span className="w-1 h-1 bg-slate-400 inline-block rounded-full" />
+          <span className="sm:w-1.5 sm:h-1.5 w-1 h-1 bg-[#26bee4] inline-block rounded-full" />
         </Link>
         {/* list of links  */}
         <ul className="hidden md:flex flex-row  gap-10">
@@ -45,7 +43,7 @@ const Navbar = () => {
             className={`${toggle ? "absolute" : "hidden"}  top-10 `}
           >
             {/* list of links  */}
-            <ul className="   flex flex-col items-center justify-end gap-2">
+            <ul className="flex flex-col items-center justify-end gap-2">
               <NavList />
             </ul>
           </motion.div>
@@ -154,7 +152,7 @@ const NavList = () => {
       ) : (
         <li>
           <Link
-            to="contact "
+            to="/contact"
             className={` text-gray-400
       nav-link`}
             onClick={() => {
