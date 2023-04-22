@@ -17,24 +17,25 @@ const Intro = () => {
   ];
 
   // const introMargin = "2xl:mt-44 xl:mt-36 lg:mt-32 md:mt-28 sm:mt-16 xs:mt-4";
+  const px = "sm:px-20 xs:px-10  px-5";
   return (
     <section
       id="intro"
       data-section
       className={` flex  xs:items-center items-start justify-around w-full ${styles.sectionHeight} min-h-[500px] `}
     >
-      <div className="max-w-5xl w-full mx-auto sm:px-20 xs:px-10 my-10 px-5 ">
-        <div className="max-w-2xl">
+      <div className="max-w-7xl w-full flex flex-row mx-auto ">
+        <div className="max-w-3xl w-full  m-10">
           <div className="flex items-center justify-start xs:gap-5 gap-3">
             <div className="rounded-full object-cover  flex items-center duration-[400ms] transition-all  border-[#ffffff]">
               <img
-                className="mx-auto bg-gradient-to-t to-[#9b77fd]  from-[#455cc4] sm:w-28 sm:h-28 xs:w-24 xs:h-24 w-20 h-20 object-cover rounded-full border-unique"
+                className="mx-auto bg-gradient-to-t to-[#45e3ff]  from-[#9217ca] sm:w-28 sm:h-28 xs:w-24 xs:h-24 w-20 h-20 object-cover rounded-full "
                 src={profilePic}
                 alt="Profile-photo"
               />
             </div>
             <div>
-              <div className=" sm:text-2xl xs:text-xl text-base flex items-center justify-start ">
+              <div className="sm:text-2xl xs:text-xl text-base flex items-center justify-start ">
                 <p className="text-white inline-block">Munna Ahmed</p>
                 &nbsp;
                 <HiCheckBadge className="text-blue-500" />
@@ -91,6 +92,16 @@ const Intro = () => {
             </div>
           </div>
         </div>
+        {/* <div className=" max-w-xl w-full"> */}
+        {/* <div
+          className={` bg-[url('https://i.ibb.co/pnXwFgR/ales-nesetril-Im7l-Zjxe-Lhg-unsplash.jpg')] w-full  h-auto z-[-2] bg-no-repeat bg-center   opacity-[1] `}
+        /> */}
+        {/* <img
+            src="https://i.ibb.co/pnXwFgR/ales-nesetril-Im7l-Zjxe-Lhg-unsplash.jpg"
+            className=" inset-0 w-full object-cover  z-[-2] opacity-[.3] "
+            alt=""
+          /> */}
+        {/* </div> */}
       </div>
     </section>
   );

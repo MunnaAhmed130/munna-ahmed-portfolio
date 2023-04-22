@@ -19,11 +19,11 @@ const StarCanvas = () => {
 const Stars = () => {
   const ref = useRef();
 
-  const sphere = random.inSphere(new Float32Array(50), { radius: 1 });
+  const sphere = random.inSphere(new Float32Array(75), { radius: 1.5 });
 
   useFrame((state, delta) => {
-    ref.current.rotation.x = delta / 100;
-    ref.current.rotation.y -= delta / 15;
+    ref.current.rotation.x -= delta / 100;
+    ref.current.rotation.y -= delta / 100;
   });
 
   return (
@@ -31,8 +31,8 @@ const Stars = () => {
       <Points ref={ref} positions={sphere} stride={3} frustumCulled>
         <PointMaterial
           transparent
-          color="#ffffff"
-          size={0.003}
+          color="#D1D1D1"
+          size={0.005}
           sizeAttenuation={true}
           depthWrite={false}
         />
