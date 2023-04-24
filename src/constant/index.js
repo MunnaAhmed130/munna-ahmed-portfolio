@@ -2,6 +2,7 @@ import { cameraEssential, travelAgency } from "../assets";
 import {
   css3,
   express,
+  express2,
   firebase,
   html5,
   javascript,
@@ -27,7 +28,7 @@ const skills = [
   { icon: html5, title: "HTML5" },
   { icon: tailwindCSS, title: "Tailwind CSS" },
   { icon: react, title: "ReactJS" },
-  { icon: express, title: "ExpressJS" },
+  { icon: express2, title: "ExpressJS" },
   { icon: firebase, title: "Firebase" },
   { icon: mongodb, title: "MongoDB" },
 ];
