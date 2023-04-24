@@ -63,7 +63,7 @@ const Contact = () => {
   return (
     <div className={`flex flex-col justify-between ${styles.pageHeight}`}>
       <section
-        className={`${styles.sectionHeight} md:min-h-[700px] min-h-[500px] w-full ${styles.flexCenter} font-poppins`}
+        className={`${styles.sectionHeight} relative md:min-h-[700px] min-h-[500px] w-full ${styles.flexCenter} font-poppins`}
       >
         <div className="sm:max-w-2xl max-w-sm w-full px-2 sm:px-14">
           <h1 className="text-white lg:text-3xl text-2xl  uppercase font-extrabold text-center">
@@ -114,13 +114,16 @@ const Contact = () => {
 
             <Ripple
               type="submit"
-              className="bg-[rgba(255,255,255,0.1)] border border-white/0 rounded-sm sm:py-3 py-2 px-6  outline-none w-fit text-white tracking-widest sm:text-base text-sm "
+              className="form-btn sm:py-3 py-2 px-6 w-fit tracking-widest sm:text-base text-sm "
             >
               {loading ? "Sending..." : "Send"}
             </Ripple>
           </form>
         </div>
       </section>
+      <div
+        className={`absolute  inset-0 bg-[url('https://i.ibb.co/pnXwFgR/ales-nesetril-Im7l-Zjxe-Lhg-unsplash.jpg')] w-full h-full z-[-1] bg-no-repeat bg-cover  bg-center opacity-60 transition-all duration-300 `}
+      />
       <Footer />
     </div>
   );

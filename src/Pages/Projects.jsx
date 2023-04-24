@@ -30,7 +30,7 @@ const Projects = () => {
           </div>
         </div>
         <div
-          className={`absolute inset-0 bg-[url('https://i.ibb.co/pnXwFgR/ales-nesetril-Im7l-Zjxe-Lhg-unsplash.jpg')]   w-full h-auto  z-[-1] bg-no-repeat  bg-cover bg-center xs:inline-block  transition-all duration-300 `}
+          className={`absolute inset-0 bg-[url('https://i.ibb.co/pnXwFgR/ales-nesetril-Im7l-Zjxe-Lhg-unsplash.jpg')]   w-full h-auto  z-[-1] bg-no-repeat opacity-50  bg-[length:2000px] sm:bg-center bg-top xs:inline-block  transition-all duration-300 `}
         />
       </section>
       <Footer />
@@ -75,7 +75,7 @@ const Project = ({ project }) => {
   return (
     <div className="mx-auto">
       <Tilt options={defaultOptions}>
-        <div className=" border border-white/[0] rounded-sm px-5 pb-5 pt-5 md:max-w-full max-w-sm bg-[rgba(255,255,255,0.1)]">
+        <div className=" border border-white/[0] rounded-sm p-3 md:max-w-full max-w-sm bg-[rgba(255,255,255,0.15)]">
           <div className="w-full  relative  overflow-hidden">
             <a href={live_link} target="_blank" className="relative">
               <img

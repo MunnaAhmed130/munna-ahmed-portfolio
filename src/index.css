@@ -111,7 +111,13 @@ code {
 
 .input,
 .textarea {
-  @apply bg-[rgba(255,255,255,0.1)] sm:py-4 py-3 px-3  text-sm sm:text-base placeholder:text-sm md:placeholder:text-base   placeholder:text-slate-300 border focus:placeholder:opacity-0 border-white/0  text-white rounded-sm outline-none;
+  @apply sm:py-4 py-3 px-3  text-sm sm:text-base placeholder:text-sm md:placeholder:text-base placeholder:text-slate-300 focus:placeholder:opacity-0 outline-none;
+}
+
+.input,
+.textarea,
+.form-btn {
+  @apply bg-[rgba(255,255,255,0.1)] border border-white/10 text-white rounded-sm;
 }
 
 /* google autofil  */
