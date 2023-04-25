@@ -84,7 +84,7 @@ const Intro = () => {
             <p className="text-white text-xl uppercase">Skills</p>
             <div className="grid xs:grid-cols-3 grid-cols-2 gap-5 mt-4">
               {skills.map((skill) => (
-                <div className=" inline-block  " key={skill.title}>
+                <div className="inline-block" key={skill.title}>
                   <div className="flex flex-row items-center gap-2 h-full">
                     <img src={skill.icon} className={` w-6 h-6 m-0 `} />
                     <span className="text-white sm:text-base text-sm">

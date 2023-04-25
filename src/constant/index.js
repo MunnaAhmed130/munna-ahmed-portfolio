@@ -13,6 +13,10 @@ import {
 
 const navLinks = [
   {
+    id: "/",
+    title: "Home",
+  },
+  {
     id: "projects",
     title: "Projects",
   },

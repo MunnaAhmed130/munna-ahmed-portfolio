@@ -12,7 +12,7 @@ const Projects = () => {
     <div className={`flex flex-col justify-between ${styles.pageHeight}`}>
       <section
         id="projects"
-        className={` font-poppins n xs:flex flex-col items-center justify-around lg:h-[calc(100vh-92px)]  lg:min-h-[400px] `}
+        className={`relative font-poppins n xs:flex flex-col items-center justify-around lg:h-[calc(100vh-92px)]  lg:min-h-[400px] `}
       >
         <div className={` ${styles.flexCenter} sm:px-20 px-5 py-10`}>
           <div className="max-w-7xl w-full ">
@@ -29,10 +29,14 @@ const Projects = () => {
             </div>
           </div>
         </div>
-        <div
-          className={`absolute inset-0 bg-[url('https://i.ibb.co/pnXwFgR/ales-nesetril-Im7l-Zjxe-Lhg-unsplash.jpg')]   w-full h-auto  z-[-1] bg-no-repeat opacity-50  bg-[length:2000px] sm:bg-center bg-top xs:inline-block  transition-all duration-300 `}
-        />
+
+        {/* <div
+          className={`absolute inset-0 bg-[url('https://i.ibb.co/fdSPwVx/gradience-1.jpg')]   w-full h-full  z-[-2] bg-repeat opacity-30  bg-cover bg-center   transition-all duration-300 `}
+        /> */}
       </section>
+      <div
+        className={`absolute inset-0 bg-[url('https://i.ibb.co/pnXwFgR/ales-nesetril-Im7l-Zjxe-Lhg-unsplash.jpg')]   w-full h-full  z-[-1] bg-no-repeat opacity-70  bg-[length:2000px] sm:bg-center  bg-top  hiddensm:inline-block  transition-all duration-300 `}
+      />
       <Footer />
     </div>
   );
@@ -75,7 +79,7 @@ const Project = ({ project }) => {
   return (
     <div className="mx-auto">
       <Tilt options={defaultOptions}>
-        <div className=" border border-white/[0] rounded-sm p-3 md:max-w-full max-w-sm bg-[rgba(255,255,255,0.15)]">
+        <div className="relative border border-white/[0] rounded-sm p-3 md:max-w-full max-w-sm bg-[rgba(255,255,255,0.15)]">
           <div className="w-full  relative  overflow-hidden">
             <a href={live_link} target="_blank" className="relative">
               <img
@@ -115,6 +119,9 @@ const Project = ({ project }) => {
             src={project_img}
             className={`absolute inset-0 w-full h-full bg-cover opacity-20 grayscale z-[-1]`}
             alt=""
+          /> */}
+          {/* <div
+            className={`absolute inset-0  bg-[url('https://img.freepik.com/free-photo/background-gradient-lights_23-2149304983.jpg?w=740&t=st=1682414541~exp=1682415141~hmac=ee6c407f763145ed1a5087fadfc29cf8eeddbbc5f03295c207b562f5642dacfd')]   w-full   z-[-1]t  `}
           /> */}
         </div>
       </Tilt>
