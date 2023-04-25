@@ -1,0 +1,12 @@
+import React from "react";
+
+const SkillsList = ({ skill }) => {
+  return (
+    <div className="flex flex-row items-center gap-2 h-full">
+      <img src={skill.icon} className={` w-6 h-6 m-0 `} />
+      <span className="text-white sm:text-base text-sm">{skill.title}</span>
+    </div>
+  );
+};
+
+export default SkillsList;

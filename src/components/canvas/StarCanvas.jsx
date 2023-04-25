@@ -6,7 +6,7 @@ import { PointMaterial, Points, Preload } from "@react-three/drei";
 const StarCanvas = () => {
   return (
     <div className="w-full h-auto absolute inset-0 z-[-1] ">
-      <Canvas camera={{ position: [0, 1, -1] }}>
+      <Canvas camera={{ position: [0, 0, 1] }}>
         <Suspense fallback={null}>
           <Stars />
         </Suspense>
@@ -27,12 +27,12 @@ const Stars = () => {
   });
 
   return (
-    <group rotation={[0, 0, Math.PI / 400]}>
+    <group rotation={[0, 0, Math.PI / 40]}>
       <Points ref={ref} positions={sphere} stride={3} frustumCulled>
         <PointMaterial
           transparent
           color="#D1D1D1"
-          size={0.005}
+          size={0.0075}
           sizeAttenuation={true}
           depthWrite={false}
         />

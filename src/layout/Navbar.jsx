@@ -58,9 +58,23 @@ const NavList = () => {
   const { toggle, setToggle } = useAll();
   const location = useLocation();
   const path = location.pathname;
-  // console.log(location.pathname.length);
+  console.log(location);
+
   return (
     <>
+      {/* {!path.match("home") && (
+        <li>
+          <NavLink
+            to="/home"
+            className={`text-gray-400 nav-link`}
+            onClick={() => {
+              setToggle(!toggle);
+            }}
+          >
+            Home
+          </NavLink>
+        </li>
+      )} */}
       {navLinks.map((link) => (
         <li key={link.id}>
           <NavLink

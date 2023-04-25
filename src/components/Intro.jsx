@@ -6,7 +6,8 @@ import { SiGmail, SiLinkedin } from "react-icons/si";
 import { BsGithub } from "react-icons/bs";
 import { skills } from "../constant";
 import { styles } from "../styles";
-
+import SkillsList from "./SkillsList";
+import SocialLink from "./SocialLink";
 // to-[#77a1fd]  from-[#4b52e4]
 // sm:h-[calc(100vh-92px)]
 
@@ -18,7 +19,6 @@ const Intro = () => {
   ];
 
   // const introMargin = "2xl:mt-44 xl:mt-36 lg:mt-32 md:mt-28 sm:mt-16 xs:mt-4";
-
   const px = "sm:px-20 xs:px-10 px-5";
   return (
     <section
@@ -31,7 +31,7 @@ const Intro = () => {
           <div className="flex items-center justify-start xs:gap-5 gap-3">
             <div className="rounded-full object-cover  flex items-center duration-[400ms] transition-all  border-[#ffffff]">
               <img
-                className="mx-auto bg-gradient-to-t to-[#45e3ff]  from-[#784ddb] sm:w-28 sm:h-28 xs:w-24 xs:h-24 w-20 h-20 object-cover rounded-full "
+                className="mx-auto bg-gradient-to-t to-[#668fff] via-[#8f79f0]  from-[#6b4cf1] sm:w-28 sm:h-28 xs:w-24 xs:h-24 w-20 h-20 object-cover rounded-full "
                 src={profilePic}
                 alt="Profile-photo"
               />
@@ -68,9 +68,7 @@ const Intro = () => {
               />
               <div className=" flex items-start justify-start ">
                 {icons.map((Social) => (
-                  <a key={Social} href={Social.link} target="_blank">
-                    <Social.icon className="text-white text-lg mr-3 mt-1" />
-                  </a>
+                  <SocialLink Social={Social} key={Social.link} />
                 ))}
               </div>
             </div>
@@ -84,21 +82,14 @@ const Intro = () => {
             <p className="text-white text-xl uppercase">Skills</p>
             <div className="grid xs:grid-cols-3 grid-cols-2 gap-5 mt-4">
               {skills.map((skill) => (
-                <div className="inline-block" key={skill.title}>
-                  <div className="flex flex-row items-center gap-2 h-full">
-                    <img src={skill.icon} className={` w-6 h-6 m-0 `} />
-                    <span className="text-white sm:text-base text-sm">
-                      {skill.title}
-                    </span>
-                  </div>
-                </div>
+                <SkillsList skill={skill} key={skill.title} />
               ))}
             </div>
           </div>
         </div>
       </div>
       <div
-        className={`absolute  inset-0 bg-[url('https://i.ibb.co/pnXwFgR/ales-nesetril-Im7l-Zjxe-Lhg-unsplash.jpg')] w-full h-full z-[-1] bg-no-repeat bg-cover xl lg:bg-[center_left_300px] md:scale-110 bg-[top_10px_center] lg:opacity-100 opacity-40 transition-all duration-300 `}
+        className={`absolute inset-0 bg-[url('https://i.ibb.co/pnXwFgR/ales-nesetril-Im7l-Zjxe-Lhg-unsplash.jpg')] w-full h-full z-[-1] bg-no-repeat bg-cover xl lg:bg-[center_left_300px] md:scale-110 bg-[top_10px_center] lg:opacity-100 opacity-40 transition-all duration-300 `}
       />
     </section>
   );
