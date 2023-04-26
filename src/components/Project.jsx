@@ -43,15 +43,11 @@ const Project = ({ project }) => {
         <div className="relative border border-white/[0] rounded-sm p-3 md:max-w-full max-w-sm bg-[rgba(255,255,255,0.15)]">
           <div className="w-full  relative  overflow-hidden">
             <a href={live_link} target="_blank" className="relative">
-              {/* <img
-                className="project-img  w-full xl:h-56 h-56 object-cover object-top  overflow-hidden "
-                loading="lazy"
-                src={project_img}
-                alt={`${title}-homepage`}
-              /> */}
               <ImageLoading image={project_img} className="overflow-hidden" />
-              <div className="absolute inset-0 w-full h-full hover:bg-black/70 transition-all duration-300 text-white flex items-center justify-center opacity-0 hover:opacity-100 font-bold z-10">
-                Live Site
+              <div className="absolute  inset-0 w-full h-full bg-black hover:bg-black/60 transition-all duration-300  flex items-center justify-center opacity-0 hover:opacity-100 font-bold z-10">
+                <span className="uppercase text-white tracking-widest">
+                  Live Site
+                </span>
               </div>
             </a>
             {/* <a href={client_repo} target="_blank">
