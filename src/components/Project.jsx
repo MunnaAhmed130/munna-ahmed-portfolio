@@ -50,7 +50,7 @@ const Project = ({ project }) => {
                 alt={`${title}-homepage`}
               /> */}
               <ImageLoading image={project_img} className="overflow-hidden" />
-              <div className="absolute inset-0 w-full h-auto hover:bg-black/70 transition-all duration-300 text-white flex items-center justify-center opacity-0 hover:opacity-100 font-bold z-10">
+              <div className="absolute inset-0 w-full h-full hover:bg-black/70 transition-all duration-300 text-white flex items-center justify-center opacity-0 hover:opacity-100 font-bold z-10">
                 Live Site
               </div>
             </a>

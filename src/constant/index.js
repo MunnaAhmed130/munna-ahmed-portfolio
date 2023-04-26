@@ -40,7 +40,10 @@ const skills = [
 // const projects = [
 //   {
 //     _id: 1,
-//     project_img: cameraEssential,
+//        "project_img": {
+//   "src": "https://i.ibb.co/By4bRvR/camera-essentials-cropped-resized.png",
+//   "blurHash": "L297w[o#00Mx00kC~pMyIoV@?bRi"
+// },
 //     project_demo_1: "https://i.ibb.co/ryvjR8m/project1-demo1.png",
 //     project_demo_2: "https://i.ibb.co/LYRhwSV/project1-demo2.png",
 //     project_demo_3: "https://i.ibb.co/4sX2CBG/project1-demo3.png",
@@ -64,7 +67,10 @@ const skills = [
 //   },
 //   {
 //     _id: 2,
-//     project_img: travelAgency,
+// project_img: {
+//   src: "https://i.ibb.co/qB789Vb/travel-agency-cropped-resized.png",
+//   blurHash: "LDHo2oaf~WkC00WE4oay%2WCx[fl"
+// },
 //     project_demo_1: "https://i.ibb.co/Tw402bD/project2-demo1.png",
 //     project_demo_2: "https://i.ibb.co/vhNjzpx/project2-demo2.png",
 //     project_demo_3: "https://i.ibb.co/HgBBbCV/project2-demo3.png",
@@ -87,7 +93,10 @@ const skills = [
 //   },
 //   {
 //     _id: 3,
-//     project_img: "https://i.ibb.co/2j8qfYL/project3-1.png",
+// "project_img": {
+//   "src": "https://i.ibb.co/2j8qfYL/project3-1.png",
+//   "blurHash": "LDHo2oaf~WkC00WE4oay%2WCx[fl"
+// },
 //     project_demo_1: "https://i.ibb.co/5GgVdLH/project-3-demo-1.png",
 //     project_demo_2: "https://i.ibb.co/3TvzJfm/project-3-dashboard.png",
 //     project_demo_3: "https://i.ibb.co/D9TX7Rt/project-3-demo-3.png",
