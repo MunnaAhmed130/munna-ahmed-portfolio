@@ -18,7 +18,7 @@ const Projects = () => {
             <h2 className="text-white lg:text-3xl text-2xl font-extrabold uppercase text-center mb-5 ">
               Projects
               <span
-                className={`${dot} rounded-full inline-block bg-[#26bee4] `}
+                className={`${dot} rounded-full color-dot inline-block bg-[#26bee4] `}
               />
             </h2>
             <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-4">

@@ -88,9 +88,6 @@ const Intro = () => {
           </div>
         </div>
       </div>
-      <div
-        className={`absolute inset-0 bg-[url('https://i.ibb.co/pnXwFgR/ales-nesetril-Im7l-Zjxe-Lhg-unsplash.jpg')] w-full h-full z-[-1] bg-no-repeat bg-cover xl lg:bg-[center_left_300px] md:scale-110 bg-[top_10px_center] lg:opacity-100 opacity-40 transition-all duration-300 `}
-      />
     </section>
   );
 };

@@ -33,7 +33,7 @@ const ImageLoading = ({ image }) => {
       <img
         className={`${
           imageLoading ? "hidden" : ""
-        } project-img w-full  h-52 object-cover object-top overflow-hidden`}
+        }  w-full  h-52 object-cover object-top overflow-hidden`}
         src={image.src}
         alt={image.blurHash}
       />

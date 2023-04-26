@@ -1,8 +1,10 @@
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { IoMenuOutline, IoCloseOutline } from "react-icons/io5";
 import { motion } from "framer-motion";
-import useAll from "../hooks/useAll";
-import { navLinks } from "../constant";
+import useAll from "../../hooks/useAll";
+import { navLinks } from "../../constant";
+import NavList from "./NavList";
+import "./Navbar.css";
 
 const Navbar = () => {
   const { toggle, setToggle } = useAll();
@@ -23,7 +25,7 @@ const Navbar = () => {
       <div className="max-w-7xl w-full mx-auto flex justify-between items-center">
         <Link to="/" className=" text-white text-2xl font-bold">
           Munna
-          <span className="sm:w-1.5 sm:h-1.5 w-1 h-1 bg-blue-500 inline-block rounded-full" />
+          <span className="sm:w-1.5 sm:h-1.5 w-1 h-1 color-dot inline-block rounded-full" />
         </Link>
         {/* list of links  */}
         <ul className="hidden md:flex flex-row  gap-10">
@@ -51,56 +53,6 @@ const Navbar = () => {
         </div>
       </div>
     </nav>
-  );
-};
-
-const NavList = () => {
-  const { toggle, setToggle } = useAll();
-  const location = useLocation();
-  const path = location.pathname;
-  console.log(location);
-
-  return (
-    <>
-      {/* {!path.match("home") && (
-        <li>
-          <NavLink
-            to="/home"
-            className={`text-gray-400 nav-link`}
-            onClick={() => {
-              setToggle(!toggle);
-            }}
-          >
-            Home
-          </NavLink>
-        </li>
-      )} */}
-      {navLinks.map((link) => (
-        <li key={link.id}>
-          <NavLink
-            to={`${link.id}`}
-            className={({ isActive }) =>
-              isActive ? `text-gray-300 nav-link` : `text-gray-400 nav-link`
-            }
-            onClick={() => {
-              setToggle(!toggle);
-            }}
-          >
-            {link.title}
-          </NavLink>
-        </li>
-      ))}
-      <li>
-        <a
-          href="https://drive.google.com/file/d/1RhVvtP6IrrtuftlTtwQZAvgmQVRizMcy/view?usp=sharing"
-          target="_blank"
-          rel="noreferrer noopener"
-          className={`nav-link hover:text-slate-300 text-gray-400`}
-        >
-          Resume
-        </a>
-      </li>
-    </>
   );
 };
 
