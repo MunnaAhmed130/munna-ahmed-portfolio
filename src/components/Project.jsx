@@ -59,12 +59,12 @@ const Project = ({ project }) => {
             <p className="text-slate-200 text-sm tracking-wider">{info}...</p>
             <div className="flex flex-row items-center justify-center gap-5 mt-4">
               <a target="_blank" onClick={() => handleClient(client_repo, 200)}>
-                <Ripple className="text-white uppercase text-xs tracking-widest px-4 py-2 border border-white/5 rounded-sm bg-[#080808] hover:shadow-md hover:shadow-white transition-shadow duration-300 ease-out">
+                <Ripple className="text-white uppercase text-xs tracking-widest px-4 py-2 border border-white/5 rounded-sm bg-[#080808] hover:shadow-lg hover:shadow-black/40 transition-shadow duration-300 ease-out">
                   client
                 </Ripple>
               </a>
               <a target="_blank" onClick={() => handleClient(server_repo, 200)}>
-                <Ripple className="text-white uppercase text-xs tracking-widest px-4 py-2 border border-white/5 rounded-sm bg-black hover:shadow-md hover:shadow-black transition-shadow duration-300 ease-out ">
+                <Ripple className="text-white uppercase text-xs tracking-widest px-4 py-2 border border-white/5 rounded-sm bg-black hover:shadow-lg hover:shadow-black/40  transition-shadow duration-300 ease-out ">
                   server
                 </Ripple>
               </a>

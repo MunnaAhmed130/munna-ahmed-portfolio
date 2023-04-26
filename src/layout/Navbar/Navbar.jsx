@@ -46,7 +46,7 @@ const Navbar = () => {
             className={`${toggle ? "absolute" : "hidden"}  top-10 `}
           >
             {/* list of links  */}
-            <ul className="flex flex-col items-center justify-end gap-2">
+            <ul className="flex flex-col items-center justify-end gap-2 bg-white/0 py-1 px-2 rounded-sm">
               <NavList />
             </ul>
           </motion.div>

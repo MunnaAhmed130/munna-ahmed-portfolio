@@ -1,13 +1,13 @@
 import React from "react";
 import { navLinks } from "../../constant";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import useAll from "../../hooks/useAll";
 
 const NavList = () => {
   const { toggle, setToggle } = useAll();
-  //   const location = useLocation();
-  //   const path = location.pathname;
-  //   console.log(location);
+  const location = useLocation();
+  const path = location.pathname;
+  console.log(location);
 
   return (
     <>
@@ -39,6 +39,7 @@ const NavList = () => {
           </NavLink>
         </li>
       ))}
+      {/* {path.length == 1 && ( */}
       <li>
         <a
           href="https://drive.google.com/file/d/1RhVvtP6IrrtuftlTtwQZAvgmQVRizMcy/view?usp=sharing"
@@ -49,6 +50,7 @@ const NavList = () => {
           Resume
         </a>
       </li>
+      {/* )} */}
     </>
   );
 };
