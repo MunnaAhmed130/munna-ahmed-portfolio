@@ -10,7 +10,6 @@ const Projects = () => {
   return (
     <div className={`flex flex-col justify-between ${styles.pageHeight}`}>
       <section
-        id="projects"
         className={`relative font-poppins n xs:flex flex-col items-center justify-around lg:h-[calc(100vh-92px)]  lg:min-h-[400px] `}
       >
         <div className={` ${styles.flexCenter} sm:px-20 px-5 py-10`}>

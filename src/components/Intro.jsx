@@ -22,9 +22,7 @@ const Intro = () => {
   const px = "sm:px-20 xs:px-10 px-5";
   return (
     <section
-      id="intro"
-      data-section
-      className={`relative overflow-hidden flex  xs:items-center items-start justify-around w-full ${styles.sectionHeight} min-h-[500px] `}
+      className={`overflow-hidden flex  xs:items-center items-start justify-around w-full ${styles.sectionHeight} min-h-[500px] `}
     >
       <div className="max-w-7xl w-full flex flex-row mx-auto ">
         <div className="max-w-2xl w-full  my-10 sm:mx-10 sm:px-10 px-0 mx-5">
