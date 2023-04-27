@@ -32,7 +32,7 @@ const Ripple = ({ children, onClick, className, type, disabled }) => {
     >
       {isRippling ? (
         <span
-          className="w-5 h-5 bg-slate-400 absolute block rounded-full opacity-0 ripple"
+          className="w-5 h-5 bg-slate-400 absolute block rounded-full opacity-0 animate-ripple"
           style={{
             left: coords.x,
             top: coords.y,

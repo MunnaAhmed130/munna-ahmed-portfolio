@@ -3,6 +3,7 @@ import Ripple from "../components/button/Ripple";
 import Footer from "../components/shared/Footer";
 import { styles } from "../styles";
 import emailjs from "@emailjs/browser";
+import Dot from "../components/shared/Dot";
 
 const Contact = () => {
   const formRef = useRef();
@@ -66,9 +67,10 @@ const Contact = () => {
         className={`${styles.sectionHeight} relative md:min-h-[700px] min-h-[500px] w-full ${styles.flexCenter} font-poppins`}
       >
         <div className="sm:max-w-2xl max-w-sm w-full px-2 sm:px-14">
+          <h3 className="sub-title">Get in touch</h3>
           <h1 className="text-white lg:text-3xl text-2xl  uppercase font-extrabold text-center">
             Contact
-            <span className="rounded-full inline-block lg:w-2 lg:h-2 md:w-[6px] md:h-[6px] w-1 h-1 ml-[-2px]  color-dot" />
+            <Dot />
           </h1>
           <form
             ref={formRef}

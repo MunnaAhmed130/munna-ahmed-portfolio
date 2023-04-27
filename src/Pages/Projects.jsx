@@ -2,6 +2,7 @@ import Footer from "../components/shared/Footer";
 import Project from "../components/project/Project";
 import { styles } from "../styles";
 import { useLoaderData } from "react-router-dom";
+import Dot from "../components/shared/Dot";
 
 const Projects = () => {
   const projects = useLoaderData();
@@ -16,11 +17,10 @@ const Projects = () => {
       >
         <div className={` ${styles.flexCenter} sm:px-20 px-5 py-10`}>
           <div className="max-w-7xl w-full ">
+            <h3 className="sub-title">My work</h3>
             <h2 className="text-white lg:text-3xl text-2xl font-extrabold uppercase text-center mb-5 ">
               Projects
-              <span
-                className={`lg:w-2 lg:h-2 md:w-[6px] md:h-[6px] w-1 h-1 ml-[2px] rounded-full color-dot inline-block  `}
-              />
+              {/* <Dot /> */}
             </h2>
             <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-4">
               {projects.map((project) => (
