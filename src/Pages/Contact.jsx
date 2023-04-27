@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import Ripple from "../components/button/Ripple";
-import Footer from "../components/Footer";
+import Footer from "../components/shared/Footer";
 import { styles } from "../styles";
 import emailjs from "@emailjs/browser";
 

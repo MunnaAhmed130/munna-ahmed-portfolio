@@ -1,5 +1,5 @@
-import Footer from "../components/Footer";
-import Intro from "../components/Intro";
+import Footer from "../components/shared/Footer";
+import Intro from "../components/intro/Intro";
 import { styles } from "../styles";
 // sm:bg-cover
 const Home = () => {

@@ -1,11 +1,11 @@
-import Footer from "../components/Footer";
-import Project from "../components/Project";
+import Footer from "../components/shared/Footer";
+import Project from "../components/project/Project";
 import { styles } from "../styles";
 import { useLoaderData } from "react-router-dom";
 
 const Projects = () => {
   const projects = useLoaderData();
-  const dot = "lg:w-2 lg:h-2 md:w-[6px] md:h-[6px] w-1 h-1 ml-[2px]";
+  const dot = "";
 
   return (
     <div
@@ -19,7 +19,7 @@ const Projects = () => {
             <h2 className="text-white lg:text-3xl text-2xl font-extrabold uppercase text-center mb-5 ">
               Projects
               <span
-                className={`${dot} rounded-full color-dot inline-block bg-[#26bee4] `}
+                className={`lg:w-2 lg:h-2 md:w-[6px] md:h-[6px] w-1 h-1 ml-[2px] rounded-full color-dot inline-block  `}
               />
             </h2>
             <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-4">

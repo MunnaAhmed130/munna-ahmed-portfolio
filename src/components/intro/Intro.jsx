@@ -1,11 +1,11 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
-import { profilePic } from "../assets";
+import { profilePic } from "../../assets";
 import { HiCheckBadge } from "react-icons/hi2";
 import { SiGmail, SiLinkedin } from "react-icons/si";
 import { BsGithub } from "react-icons/bs";
-import { skills } from "../utils/constant";
-import { styles } from "../styles";
+import { skills } from "../../utils/constant";
+import { styles } from "../../styles";
 import Skill from "./Skill";
 import SocialLink from "./SocialLink";
 // to-[#77a1fd]  from-[#4b52e4]

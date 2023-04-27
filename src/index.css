@@ -28,7 +28,7 @@ code {
 }
 
 .color-dot {
-  @apply bg-blue-500;
+  @apply bg-[#ffffff];
 }
 .text-fill-transparent {
   -webkit-text-fill-color: transparent;
