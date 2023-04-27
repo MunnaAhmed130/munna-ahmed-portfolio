@@ -1,6 +1,6 @@
 import React from "react";
 
-const SkillsList = ({ skill }) => {
+const Skill = ({ skill }) => {
   return (
     <div className="flex flex-row items-center gap-2 h-full">
       <img src={skill.icon} className={` w-6 h-6 m-0 `} />
@@ -9,4 +9,4 @@ const SkillsList = ({ skill }) => {
   );
 };
 
-export default SkillsList;
+export default Skill;

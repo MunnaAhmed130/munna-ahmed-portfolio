@@ -4,9 +4,9 @@ import { profilePic } from "../assets";
 import { HiCheckBadge } from "react-icons/hi2";
 import { SiGmail, SiLinkedin } from "react-icons/si";
 import { BsGithub } from "react-icons/bs";
-import { skills } from "../constant";
+import { skills } from "../utils/constant";
 import { styles } from "../styles";
-import SkillsList from "./SkillsList";
+import Skill from "./Skill";
 import SocialLink from "./SocialLink";
 // to-[#77a1fd]  from-[#4b52e4]
 // sm:h-[calc(100vh-92px)]
@@ -80,7 +80,7 @@ const Intro = () => {
             <p className="text-white text-xl uppercase">Skills</p>
             <div className="grid xs:grid-cols-3 grid-cols-2 gap-5 mt-4">
               {skills.map((skill) => (
-                <SkillsList skill={skill} key={skill.title} />
+                <Skill skill={skill} key={skill.title} />
               ))}
             </div>
           </div>

@@ -1,8 +1,7 @@
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { IoMenuOutline, IoCloseOutline } from "react-icons/io5";
 import { motion } from "framer-motion";
 import useAll from "../../hooks/useAll";
-import { navLinks } from "../../constant";
 import NavList from "./NavList";
 import "./Navbar.css";
 

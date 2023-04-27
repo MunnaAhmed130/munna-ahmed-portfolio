@@ -1,5 +1,5 @@
 import React from "react";
-import { navLinks } from "../../constant";
+import { navLinks } from "../../utils/constant";
 import { NavLink, useLocation } from "react-router-dom";
 import useAll from "../../hooks/useAll";
 
@@ -7,23 +7,10 @@ const NavList = () => {
   const { toggle, setToggle } = useAll();
   const location = useLocation();
   const path = location.pathname;
-  console.log(location);
+  // console.log(location);
 
   return (
     <>
-      {/* {!path.match("home") && (
-          <li>
-            <NavLink
-              to="/home"
-              className={`text-gray-400 nav-link`}
-              onClick={() => {
-                setToggle(!toggle);
-              }}
-            >
-              Home
-            </NavLink>
-          </li>
-        )} */}
       {navLinks.map((link) => (
         <li key={link.id}>
           <NavLink

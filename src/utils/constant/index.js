@@ -1,4 +1,4 @@
-import { cameraEssential, travelAgency } from "../assets";
+// import { cameraEssential, travelAgency } from "../assets";
 import {
   css3,
   express,
@@ -9,7 +9,7 @@ import {
   mongodb,
   react,
   tailwindCSS,
-} from "../assets/icons";
+} from "../../assets/icons";
 
 const navLinks = [
   {
