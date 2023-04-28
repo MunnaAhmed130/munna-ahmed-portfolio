@@ -22,9 +22,12 @@ const Navbar = () => {
   return (
     <nav className="w-full relative  sm:px-20 px-5 py-4 text-center top-0 font-poppins z-20">
       <div className="max-w-7xl w-full mx-auto flex justify-between items-center">
-        <Link to="/" className=" text-white text-2xl font-bold">
+        <Link
+          to="/"
+          className=" text-white lg:text-[1.75rem] text-2xl font-bold"
+        >
           Munna
-          <span className="sm:w-1.5 sm:h-1.5 w-1 h-1 color-dot inline-block rounded-full" />
+          <span className="w-1.5 h-1.5  color-dot inline-block rounded-full bg-white" />
         </Link>
         {/* list of links  */}
         <ul className="hidden md:flex flex-row  gap-10">

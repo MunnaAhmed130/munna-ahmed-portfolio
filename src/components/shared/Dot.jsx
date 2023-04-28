@@ -1,9 +1,9 @@
 import React from "react";
 
-const Dot = () => {
+const Dot = ({ className }) => {
   return (
     <span
-      className={`lg:w-2 lg:h-2 md:w-[6px] md:h-[6px] w-1 h-1 ml-[2px] rounded-full bg-white hidden `}
+      className={` ${className} xl:w-2 xl:h-2 lg:w-[7px] lg:h-[7px] md:w-1.5 md:h-1.5 w-[5px] h-[5px]  inline-block rounded-full bg-[white]  text-blue`}
     />
   );
 };

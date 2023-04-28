@@ -36,7 +36,7 @@ const Intro = () => {
             </div>
             <div>
               <div className="sm:text-2xl xs:text-xl text-base flex items-center justify-start ">
-                <p className="text-white inline-block font-semibold">
+                <p className="text-white inline-block font-semibold tracking-wide">
                   Munna Ahmed
                 </p>
                 &nbsp;
@@ -77,7 +77,9 @@ const Intro = () => {
             websites.
           </p>
           <div>
-            <p className="text-white text-xl uppercase">Skills</p>
+            <p className="text-white sm:text-lg xs:text-lg text-base uppercase tracking-wider font-semibold">
+              Skills
+            </p>
             <div className="grid xs:grid-cols-3 grid-cols-2 gap-5 mt-4">
               {skills.map((skill) => (
                 <Skill skill={skill} key={skill.title} />

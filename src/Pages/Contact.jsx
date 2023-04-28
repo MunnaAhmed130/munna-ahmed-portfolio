@@ -4,6 +4,7 @@ import Footer from "../components/shared/Footer";
 import { styles } from "../styles";
 import emailjs from "@emailjs/browser";
 import Dot from "../components/shared/Dot";
+import { Tilt } from "react-tilt";
 
 const Contact = () => {
   const formRef = useRef();
@@ -59,18 +60,34 @@ const Contact = () => {
         }
       );
   };
+
+  const formOptions = {
+    reverse: false,
+    max: 5,
+    perspective: 1000,
+    scale: 1,
+    speed: 100,
+    transition: true,
+    axis: null,
+    reset: true,
+    easing: "cubic-bezier(.1,1,.1,.99)",
+  };
+
   // const sectionHeight = "h-[calc(100vh-92px)]";
+  // ${styles.flexCenter}
+  // flex flex-col   justify-between
 
   return (
-    <div className={`flex flex-col justify-between ${styles.pageHeight}`}>
+    <div className={` relative overflow-hidden ${styles.pageHeight}`}>
       <section
-        className={`${styles.sectionHeight} relative md:min-h-[700px] min-h-[500px] w-full ${styles.flexCenter} font-poppins`}
+        className={`${styles.sectionHeight}  md:min-h-[700px] min-h-[500px]  font-poppins flex flex-col  justify-evenly items-center max-w-7xl w-full mx-auto overflow-hidden`}
       >
-        <div className="sm:max-w-2xl max-w-sm w-full px-2 sm:px-14">
+        <div className="2xl:max-w-2xl lg:max-w-[40rem] md:max-w-xl sm:max-w-lg max-w-sm w-full px-2 sm:px-14">
+          {/* <Tilt options={formOptions}> */}
           <h3 className="sub-title">Get in touch</h3>
-          <h1 className="text-white lg:text-3xl text-2xl  uppercase font-extrabold text-center">
+          <h1 className="text-white lg:text-3xl text-2xl  uppercase font-extrabold text-center ">
             Contact
-            <Dot />
+            <Dot className="ml-[-2px] " />
           </h1>
           <form
             ref={formRef}
@@ -121,12 +138,17 @@ const Contact = () => {
               {loading ? "Sending..." : "Send"}
             </Ripple>
           </form>
+          {/* </Tilt> */}
         </div>
       </section>
-      <div
-        className={`absolute  inset-0 bg-[url('https://i.ibb.co/pnXwFgR/ales-nesetril-Im7l-Zjxe-Lhg-unsplash.jpg')] w-full h-full z-[-1] bg-no-repeat bg-cover  bg-center opacity-60 transition-all duration-300 `}
-      />
+
       <Footer />
+      {/* <div
+        className={`absolute inset-0 bg-[url('https://i.ibb.co/pnXwFgR/ales-nesetril-Im7l-Zjxe-Lhg-unsplash.jpg')] w-full h-auto z-[-1] bg-no-repeat 2xl:bg-[center_left_300px] xl:bg-[center_left_200px]  lg:bg-[center_left_150px]  sm:bg-[left_100px_center] xl:scale-125 lg:scale-150 sm:scale-150 scale-[2] sm:bg-cover bg-contain bg-[center_top_50%] sm:opacity-100 opacity-60 transition-all duration-300 `}
+      /> */}
+      {/* <div
+        className={`absolute  inset-0 bg-[url('https://i.ibb.co/pnXwFgR/ales-nesetril-Im7l-Zjxe-Lhg-unsplash.jpg')] w-full h-full z-[-1] bg-no-repeat bg-cover scale-[1.5]  bg-center opacity-80 transition-all duration-300 `}
+      /> */}
     </div>
   );
 };
