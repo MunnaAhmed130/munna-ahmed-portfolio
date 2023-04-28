@@ -9,9 +9,7 @@ const Projects = () => {
   const dot = "";
 
   return (
-    <div
-      className={`relative  flex flex-col justify-between ${styles.pageHeight}`}
-    >
+    <div className={`relative  flex flex-col justify-between `}>
       <section
         className={` font-poppins n xs:flex flex-col items-center justify-around lg:h-[calc(100vh-92px)]  lg:min-h-[400px] `}
       >
@@ -33,19 +31,13 @@ const Projects = () => {
         </div>
       </section>
       <Footer />
-      {/* <div
-        className={`absolute inset-0 bg-[url('https://i.ibb.co/pnXwFgR/ales-nesetril-Im7l-Zjxe-Lhg-unsplash.jpg')]   w-full h-full  z-[-1] bg-no-repeat opacity-70  bg-[length:2000px] sm:bg-center  bg-top  hiddensm:inline-block  transition-all duration-300 `}
-      /> */}
-      {/* <div
-        className={`absolute inset-0 bg-[url('https://i.ibb.co/fdSPwVx/gradience-1.jpg')]   w-full h-full  z-[-2] bg-repeat opacity-30  bg-cover bg-center   transition-all duration-300 `}
-      /> */}
-      {/* <div
-        className={`absolute inset-0 bg-[url('https://i.ibb.co/gt5Stzd/paper-on-bg.jpg')]   w-full h-full  z-[-1] bg-no-repeat opacity-10 bg-cover  sm:bg-center  bg-center      transition-all duration-300 `}
-      /> */}
 
-      {/* <div
-        className={`absolute  inset-0 bg-[url('https://i.ibb.co/pnXwFgR/ales-nesetril-Im7l-Zjxe-Lhg-unsplash.jpg')] w-full h-full z-[-1] bg-no-repeat   lg:bg-[length:3000px] bg-cover sm:bg-center bg-[top_100px_center] opacity-80 transition-all duration-300 `}
-      /> */}
+      {/* https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80 */}
+      {/* https://i.ibb.co/LhnpYXk/laptop-keyboard-tiny.jpg */}
+      {/* https://i.ibb.co/6bR5Bc4/laptop-y-tiny.jpg */}
+      <div
+        className={`absolute  inset-0 md:bg-[url('https://i.ibb.co/LhnpYXk/laptop-keyboard-tiny.jpg')] bg-[url('https://i.ibb.co/6bR5Bc4/laptop-y-tiny.jpg')] w-full h-full z-[-1] bg-no-repeat   bg-cover md:bg-center bg-top opacity-40  transition-all duration-300 `}
+      />
     </div>
   );
 };

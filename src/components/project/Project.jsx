@@ -17,26 +17,26 @@ const Project = ({ project }) => {
   const info = description.slice(0, 120);
 
   const imgOptions = {
-    reverse: true, // reverse the tilt direction
-    max: 20, // max tilt rotation (degrees)
-    perspective: 1000, // Transform perspective, the lower the more extreme the tilt gets.
-    scale: 1, // 2 = 200%, 1.5 = 150%, etc..
-    speed: 100, // Speed of the enter/exit transition
-    transition: true, // Set a transition on enter/exit.
-    axis: null, // What axis should be disabled. Can be X or Y.
-    reset: true, // If the tilt effect has to be reset on exit.
-    easing: "cubic-bezier(.1,1,.1,.99)", // Easing on enter/exit.
+    reverse: true,
+    max: 20,
+    perspective: 1000,
+    scale: 1,
+    speed: 100,
+    transition: true,
+    axis: null,
+    reset: true,
+    easing: "cubic-bezier(.1,1,.1,.99)",
   };
   const cardOptions = {
-    reverse: true, // reverse the tilt direction
-    max: 10, // max tilt rotation (degrees)
-    perspective: 1000, // Transform perspective, the lower the more extreme the tilt gets.
-    scale: 1, // 2 = 200%, 1.5 = 150%, etc..
-    speed: 100, // Speed of the enter/exit transition
-    transition: true, // Set a transition on enter/exit.
-    axis: null, // What axis should be disabled. Can be X or Y.
-    reset: true, // If the tilt effect has to be reset on exit.
-    easing: "cubic-bezier(.1,1,.1,.99)", // Easing on enter/exit.
+    reverse: true,
+    max: 10,
+    perspective: 1000,
+    scale: 1,
+    speed: 100,
+    transition: true,
+    axis: null,
+    reset: true,
+    easing: "cubic-bezier(.1,1,.1,.99)",
   };
 
   const handleClient = (repo, time) => {
@@ -51,12 +51,12 @@ const Project = ({ project }) => {
   return (
     <div className="mx-auto">
       <Tilt options={cardOptions}>
-        <div className="relative border border-white/[0] rounded-sm p-3 md:max-w-full max-w-sm bg-[rgba(255,255,255,0.15)]">
+        <div className="relative border border-white/[0] rounded-sm p-3 md:max-w-full max-w-sm bg-[rgba(255,255,255,0.2)]">
           <Tilt options={imgOptions}>
             <div className="w-full  relative  overflow-hidden">
               <a href={live_link} target="_blank" className="relative">
                 <ImageLoading image={project_img} className="overflow-hidden" />
-                <div className="absolute  inset-0 w-full h-full bg-black hover:bg-black/60 transition-all duration-300  flex items-center justify-center opacity-0 hover:opacity-100 font-bold z-10">
+                <div className="absolute  inset-0 w-full h-full bg-black hover:bg-black/50 transition-all duration-300  flex items-center justify-center opacity-0 hover:opacity-100 font-bold z-10">
                   <span className="uppercase text-white tracking-widest">
                     Live Site
                   </span>
@@ -84,12 +84,12 @@ const Project = ({ project }) => {
             </div>
           </div>
 
-          <img
+          {/* <img
             src={project_img.src}
             // src="https://i.ibb.co/fdSPwVx/gradience-1.jpg"
             className={`absolute inset-0 w-full h-full  opacity-60 grayscale z-[-1]`}
             alt=""
-          />
+          /> */}
           {/* <div
             className={`absolute inset-0  bg-[url('https://img.freepik.com/free-photo/background-gradient-lights_23-2149304983.jpg?w=740&t=st=1682414541~exp=1682415141~hmac=ee6c407f763145ed1a5087fadfc29cf8eeddbbc5f03295c207b562f5642dacfd')]   w-full   z-[-1]t  `}
           /> */}

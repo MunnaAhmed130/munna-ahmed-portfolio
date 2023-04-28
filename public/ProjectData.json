@@ -6,8 +6,8 @@
       "blurHash": "i47n5s^%9FIo%2NGt7t7n%~7-oaeRje.WBj[ofof5[I?xuoLWVs.RjWCa}00Ip-;kBNFayRjjukC-=aeM{fjWBWBofofaz"
     },
     "title": "Camera Essentials",
-    "github_client_repo": "https://github.com/MunnaAhmed130/camera-essentials-website-client-side",
-    "github_server_repo": "https://github.com/MunnaAhmed130/camera-essentials-website-server-side",
+    "client_repo": "https://github.com/MunnaAhmed130/camera-essentials-website-client-side",
+    "server_repo": "https://github.com/MunnaAhmed130/camera-essentials-website-server-side",
     "live_link": "https://camera-essentials.web.app/",
     "p_1": "It is a niche camera selling website with users and admin dashboard, CRUD operation, and user  Authentication System.",
     "p_2": "Users can place orders, purchase or delete orders, and review when logged in.",
@@ -21,10 +21,10 @@
       "blurHash": "i37nF3KkL##6TLofMdr;tR1n-5XnEmwHRkkAW?s,0rM|%gxuIAngo|W=M},.Ntt9ska^NfbJNHf#,,nMbckDt7WBIpxVoe"
     },
     "title": "Travio",
-    "github_client_repo": "https://github.com/MunnaAhmed130/travio-tourism-website-client-side",
-    "github_server_repo": "https://github.com/MunnaAhmed130/travio-tourism-website-server-side",
+    "server_repo": "https://github.com/MunnaAhmed130/travio-tourism-website-server-side",
+    "client_repo": "https://github.com/MunnaAhmed130/travio-tourism-website-client-side",
     "live_link": "https://travel-agency-e968e.web.app/",
-    "p_1": "It is a tourism-related website that makes travel safer and more fun. ",
+    "p_1": "It is a tourated website that makes travel safer and more fun. ",
     "p_2": "Users can log in using the Google login system. Users cannot place orders until they log in.",
     "p_3": "After login users can place an order by clicking on the buy now button and delete orders by clicking  the delete button on the My Order page.",
     "description": " It is a tourism-related website that makes travel safer and more fun. Users need to log in to receive various services or plans. user can place order and delete their order if they want to. some pages dont show until the user log in with their account"
@@ -35,13 +35,13 @@
       "src": "https://i.ibb.co/Pj4ghy0/bicycle-store-landing-page-optimized.png",
       "blurHash": "i25r6{_3009FxuV@RPWVtQ00D%-;%MWBs:f6WBWBxYs.%Mt7M{NGtRofRjIVR+V@WAWBbHRjaexa~pxtE1RkxuofaeRjWB"
     },
-    "title": "Dental Care",
-    "github_client_repo": "https://github.com/MunnaAhmed130/Bicycle-store-client-side",
-    "github_server_repo": "https://github.com/MunnaAhmed130/Bicycle-store-server-side",
+    "title": "Bicycle Store",
+    "client_repo": "https://github.com/MunnaAhmed130/Bicycle-store-client-side",
+    "server_repo": "https://github.com/MunnaAhmed130/Bicycle-store-server-side",
     "live_link": "https://bicycle-store-41d3e.web.app/",
     "p_1": "Bicycle store is a website fully responsive website that helps its clients to choose and buy cycles.",
     "p_2": "User can log in using two different login method.",
     "p_3": "It is a simple website using firebase authentication and dashboard",
-    "description": " Dental Care is a website that helps in providing dental health care. It provides various health services such as teeth whitening, wisdom teeth removal and dental emergency . User can contact via mail also."
+    "description": "Bicycle store is a modern shop where they sell all kinds of bicycles. Users will find a vast variety of bicycles for all ages and needs. From professional to hobbiest, we have products for all"
   }
 ]
