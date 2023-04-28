@@ -31,7 +31,6 @@ const Projects = () => {
         </div>
       </section>
       <Footer />
-
       {/* https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80 */}
       {/* https://i.ibb.co/LhnpYXk/laptop-keyboard-tiny.jpg */}
       {/* https://i.ibb.co/6bR5Bc4/laptop-y-tiny.jpg */}

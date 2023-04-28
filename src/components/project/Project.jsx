@@ -54,9 +54,9 @@ const Project = ({ project }) => {
         <div className="relative border border-white/[0] rounded-sm p-3 md:max-w-full max-w-sm bg-[rgba(255,255,255,0.2)]">
           <Tilt options={imgOptions}>
             <div className="w-full  relative  overflow-hidden">
-              <a href={live_link} target="_blank" className="relative">
+              <a href={live_link} target="_blank" className="relative block">
                 <ImageLoading image={project_img} className="overflow-hidden" />
-                <div className="absolute  inset-0 w-full h-full bg-black hover:bg-black/50 transition-all duration-300  flex items-center justify-center opacity-0 hover:opacity-100 font-bold z-10">
+                <div className="absolute inset-0 w-full h-auto hover:bg-black/50 transition-all duration-300 flex items-center justify-center opacity-0 hover:opacity-100 font-bold z-10">
                   <span className="uppercase text-white tracking-widest">
                     Live Site
                   </span>
