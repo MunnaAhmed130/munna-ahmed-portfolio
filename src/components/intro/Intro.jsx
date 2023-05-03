@@ -1,18 +1,13 @@
 import React from "react";
-import Typewriter from "typewriter-effect";
 import { profilePic } from "../../assets";
 import { HiCheckBadge } from "react-icons/hi2";
-
 import { icons, skills } from "../../utils/constant";
 import { styles } from "../../styles";
 import Skill from "./Skill";
 import SocialLink from "./SocialLink";
-// to-[#77a1fd]  from-[#4b52e4]
-// sm:h-[calc(100vh-92px)]
+import TypeWriter from "./TypeWriter";
 
 const Intro = () => {
-  // const introMargin = "2xl:mt-44 xl:mt-36 lg:mt-32 md:mt-28 sm:mt-16 xs:mt-4";
-  const px = "sm:px-20 xs:px-10 px-5";
   return (
     <section
       className={`overflow-hidden flex  xs:items-center items-start justify-around w-full ${styles.sectionHeight} min-h-[500px] `}
@@ -35,28 +30,9 @@ const Intro = () => {
                 &nbsp;
                 <HiCheckBadge className="text-blue-500" />
               </div>
-              <Typewriter
-                options={{ autoStart: true, loop: true, delay: 100 }}
-                onInit={(typewriter) => {
-                  typewriter
-                    .typeString(
-                      "<span class='typewriter'>MERN Stack Developer<span/>"
-                    )
-                    .pauseFor(2000)
-                    .deleteAll()
-                    .typeString(
-                      "<span class='typewriter'>Front-End Developer<span/>"
-                    )
-                    .pauseFor(2000)
-                    .deleteAll()
-                    .typeString(
-                      "<span class='typewriter'>React Developer<span/>"
-                    )
-                    .pauseFor(2000)
-                    .deleteAll()
-                    .start();
-                }}
-              />
+
+              <TypeWriter />
+
               <div className=" flex items-start justify-start ">
                 {icons.map((Social) => (
                   <SocialLink Social={Social} key={Social.link} />
