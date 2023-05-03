@@ -2,9 +2,8 @@ import React from "react";
 import Typewriter from "typewriter-effect";
 import { profilePic } from "../../assets";
 import { HiCheckBadge } from "react-icons/hi2";
-import { SiGmail, SiLinkedin } from "react-icons/si";
-import { BsGithub } from "react-icons/bs";
-import { skills } from "../../utils/constant";
+
+import { icons, skills } from "../../utils/constant";
 import { styles } from "../../styles";
 import Skill from "./Skill";
 import SocialLink from "./SocialLink";
@@ -12,12 +11,6 @@ import SocialLink from "./SocialLink";
 // sm:h-[calc(100vh-92px)]
 
 const Intro = () => {
-  const icons = [
-    { icon: SiGmail, link: "mailto:munnaahmed2025@gmail.com" },
-    { icon: SiLinkedin, link: "https://www.linkedin.com/in/munnaahmed01/" },
-    { icon: BsGithub, link: "https://github.com/MunnaAhmed130" },
-  ];
-
   // const introMargin = "2xl:mt-44 xl:mt-36 lg:mt-32 md:mt-28 sm:mt-16 xs:mt-4";
   const px = "sm:px-20 xs:px-10 px-5";
   return (

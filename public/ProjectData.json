@@ -5,6 +5,11 @@
       "src": "https://i.ibb.co/tCbxDKw/cam-ess-homepage-optimized.png",
       "blurHash": "i47n5s^%9FIo%2NGt7t7n%~7-oaeRje.WBj[ofof5[I?xuoLWVs.RjWCa}00Ip-;kBNFayRjjukC-=aeM{fjWBWBofofaz"
     },
+    "tags": [
+      { "title": "React", "color": "text-[#5ED3F3]" },
+      { "title": "Bootstrap", "color": "text-[#8d4ee0]" },
+      { "title": "Firebase", "color": "text-[#ffde82]" }
+    ],
     "title": "Camera Essentials",
     "client_repo": "https://github.com/MunnaAhmed130/camera-essentials-website-client-side",
     "server_repo": "https://github.com/MunnaAhmed130/camera-essentials-website-server-side",
