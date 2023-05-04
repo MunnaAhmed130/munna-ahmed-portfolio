@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const Skill = ({ skill, index }) => {
-  console.log(skill, index);
+  // console.log(skill, index);
   const skillVariants = {
     hidden: { y: 50, opacity: 0 },
     visible: {

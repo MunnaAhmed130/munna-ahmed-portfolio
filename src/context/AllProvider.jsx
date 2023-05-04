@@ -1,5 +1,4 @@
 import { createContext, useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
 
 export const ALL_CONTEXT = createContext(null);
 

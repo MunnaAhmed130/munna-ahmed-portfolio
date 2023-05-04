@@ -1,8 +1,9 @@
 import React, { useRef, useState } from "react";
+import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
 import Ripple from "../components/button/Ripple";
 import Footer from "../components/shared/Footer";
 import { styles } from "../styles";
-import emailjs from "@emailjs/browser";
 import Dot from "../components/shared/Dot";
 
 const Contact = () => {
@@ -14,6 +15,14 @@ const Contact = () => {
     message: "",
   });
 
+  const [error, setError] = useState("");
+
+  // const [error, setError] = useState({
+  //   nameError: "",
+  //   emailError: "",
+  //   messageError: "",
+  // });
+  console.log(error);
   const handleChange = (e) => {
     const { target } = e;
     const { name, value } = target;
@@ -26,6 +35,11 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    // console.log(formRef);
+    if (form.name) {
+      console.log(form.name);
+    }
+
     setLoading(true);
     emailjs
       .send(
@@ -59,25 +73,51 @@ const Contact = () => {
       );
   };
 
+  const formVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.1, delayChildren: 0 },
+    },
+  };
+
+  const inputVariants = {
+    hidden: { y: 100, opacity: 0 },
+    visible: { y: 0, opacity: 1 },
+  };
   return (
     <div className={` relative overflow-hidden ${styles.pageHeight}`}>
       <section
         className={`${styles.sectionHeight}  md:min-h-[700px] min-h-[500px]  font-poppins flex flex-col  justify-evenly items-center max-w-7xl w-full mx-auto overflow-hidden`}
       >
         <div className="2xl:max-w-2xl lg:max-w-[40rem] md:max-w-xl sm:max-w-lg max-w-sm w-full px-2 sm:px-14">
-          <h3 className="sub-title">Get in touch</h3>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.1 }}
+          >
+            <h3 className="sub-title">Get in touch</h3>
 
-          <h1 className="text-white lg:text-3xl text-2xl  uppercase font-extrabold text-center ">
-            Contact
-            <Dot className="ml-[-2px] " />
-          </h1>
+            <h1 className="text-white lg:text-3xl text-2xl  uppercase font-extrabold text-center ">
+              Contact
+              <Dot className="ml-[-3px] " />
+            </h1>
+          </motion.div>
 
-          <form
+          <motion.form
+            variants={formVariants}
+            initial="hidden"
+            animate="visible"
             ref={formRef}
             onSubmit={handleSubmit}
             className="flex flex-col lg:gap-8 gap-5 p-5 rounded-sm"
           >
-            <label className="flex flex-col">
+            <motion.label
+              variants={inputVariants}
+              // initial="hidden"
+              // animate="visible"
+              className="flex flex-col"
+            >
               <span className="label">Your Name</span>
               <input
                 type="text"
@@ -88,9 +128,13 @@ const Contact = () => {
                 className="input"
                 required
               />
-            </label>
-
-            <label className="flex flex-col">
+            </motion.label>
+            <motion.label
+              variants={inputVariants}
+              // initial="hidden"
+              // animate="visible"
+              className="flex flex-col"
+            >
               <span className="label">Your Email</span>
               <input
                 type="email"
@@ -101,9 +145,8 @@ const Contact = () => {
                 className="input"
                 required
               />
-            </label>
-
-            <label className="flex flex-col">
+            </motion.label>
+            <motion.label variants={inputVariants} className="flex flex-col">
               <span className="label">Your Message</span>
               <textarea
                 rows={7}
@@ -114,15 +157,16 @@ const Contact = () => {
                 className="textarea"
                 required
               />
-            </label>
-
-            <Ripple
-              type="submit"
-              className="form-btn sm:py-3 py-2 px-6 w-fit tracking-widest sm:text-base text-sm "
-            >
-              {loading ? "Sending..." : "Send"}
-            </Ripple>
-          </form>
+            </motion.label>
+            <motion.div variants={inputVariants}>
+              <Ripple
+                type="submit"
+                className="form-btn sm:py-3 py-2 px-6 w-fit tracking-widest sm:text-base text-sm "
+              >
+                {loading ? "Sending..." : "Send"}
+              </Ripple>
+            </motion.div>
+          </motion.form>
         </div>
       </section>
       <Footer />

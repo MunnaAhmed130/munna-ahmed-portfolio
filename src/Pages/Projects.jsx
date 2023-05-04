@@ -3,6 +3,7 @@ import Project from "../components/project/Project";
 import { styles } from "../styles";
 import { useLoaderData } from "react-router-dom";
 import Dot from "../components/shared/Dot";
+import { motion } from "framer-motion";
 
 const Projects = () => {
   const projects = useLoaderData();
@@ -15,13 +16,19 @@ const Projects = () => {
       >
         <div className={` ${styles.flexCenter} sm:px-20 px-5 py-10`}>
           <div className="max-w-7xl w-full ">
-            <h3 className="uppercase text-gray-200 text-center  sm:text-sm text-xs tracking-widest  mb-2">
-              My work
-            </h3>
-            <h2 className="text-white lg:text-3xl sm:text-[1.625rem] text-2xl font-extrabold uppercase text-center mb-5 ">
-              Projects
-              <Dot className="" />
-            </h2>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.1 }}
+            >
+              <h3 className="uppercase text-gray-200 text-center  sm:text-sm text-xs tracking-widest  mb-2">
+                My work
+              </h3>
+              <h2 className="text-white lg:text-3xl sm:text-[1.625rem] text-2xl font-extrabold uppercase text-center mb-5 ">
+                Projects
+                <Dot />
+              </h2>
+            </motion.div>
             <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-4">
               {projects.map((project, index) => (
                 <Project project={project} index={index} key={project._id} />

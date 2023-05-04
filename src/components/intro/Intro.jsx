@@ -15,12 +15,12 @@ const Intro = () => {
     >
       <div className="max-w-7xl w-full flex flex-row mx-auto ">
         <div className="max-w-2xl w-full  my-10 sm:mx-10 sm:px-10 px-0 mx-5">
-          <motion.div className="flex items-center justify-start xs:gap-5 gap-3">
+          <div className="flex items-center justify-start xs:gap-5 gap-3">
             <motion.div
-              initial={{ x: -100, opacity: 0 }}
+              initial={{ x: -60, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
-              transition={{ type: "spring", duration: 0.05, delay: 0.2 }}
-              className="rounded-full object-cover  flex items-center duration-[400ms] transition-all  border-[#ffffff]"
+              transition={{ type: "spring", duration: 0, delay: 0.2 }}
+              className="rounded-full object-cover  flex items-center duration-[400ms] transition-all  border-[#ffffff] "
             >
               <img
                 className="mx-auto bg-gradient-to-t to-[#668fff] via-[#8f79f0]  from-[#6b4cf1] sm:w-28 sm:h-28 xs:w-24 xs:h-24 w-20 h-20 object-cover rounded-full "
@@ -54,7 +54,7 @@ const Intro = () => {
                 ))}
               </motion.div>
             </motion.div>
-          </motion.div>
+          </div>
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
