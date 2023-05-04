@@ -36,9 +36,9 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // console.log(formRef);
-    if (form.name) {
-      console.log(form.name);
-    }
+    // if (form.name) {
+    //   console.log(form.name);
+    // }
 
     setLoading(true);
     emailjs
@@ -85,6 +85,7 @@ const Contact = () => {
     hidden: { y: 100, opacity: 0 },
     visible: { y: 0, opacity: 1 },
   };
+
   return (
     <div className={` relative overflow-hidden ${styles.pageHeight}`}>
       <section
@@ -92,9 +93,9 @@ const Contact = () => {
       >
         <div className="2xl:max-w-2xl lg:max-w-[40rem] md:max-w-xl sm:max-w-lg max-w-sm w-full px-2 sm:px-14">
           <motion.div
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.1 }}
+            initial={{ opacity: 0, scale: 1, y: -25 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ delay: 0.1, type: "spring", duration: 0.5 }}
           >
             <h3 className="sub-title">Get in touch</h3>
 

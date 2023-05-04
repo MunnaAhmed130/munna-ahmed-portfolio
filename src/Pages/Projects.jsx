@@ -17,9 +17,9 @@ const Projects = () => {
         <div className={` ${styles.flexCenter} sm:px-20 px-5 py-10`}>
           <div className="max-w-7xl w-full ">
             <motion.div
-              initial={{ opacity: 0, scale: 0.5 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.1 }}
+              initial={{ opacity: 0, scale: 1, y: -25 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              transition={{ delay: 0.1, type: "spring", duration: 0.75 }}
             >
               <h3 className="uppercase text-gray-200 text-center  sm:text-sm text-xs tracking-widest  mb-2">
                 My work
