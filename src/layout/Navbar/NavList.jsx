@@ -26,7 +26,6 @@ const NavList = () => {
           </NavLink>
         </li>
       ))}
-      {/* {path.length == 1 && ( */}
       <li>
         <a
           href="https://drive.google.com/file/d/1RhVvtP6IrrtuftlTtwQZAvgmQVRizMcy/view?usp=sharing"
@@ -37,7 +36,6 @@ const NavList = () => {
           Resume
         </a>
       </li>
-      {/* )} */}
     </>
   );
 };

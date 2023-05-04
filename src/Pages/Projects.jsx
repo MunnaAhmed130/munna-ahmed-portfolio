@@ -23,8 +23,8 @@ const Projects = () => {
               <Dot className="" />
             </h2>
             <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-4">
-              {projects.map((project) => (
-                <Project project={project} key={project._id} />
+              {projects.map((project, index) => (
+                <Project project={project} index={index} key={project._id} />
               ))}
             </div>
           </div>

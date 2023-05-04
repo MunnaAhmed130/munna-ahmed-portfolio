@@ -2,8 +2,9 @@ import React from "react";
 import { Tilt } from "react-tilt";
 import ImageLoading from "./ImageLoading";
 import ProjectButton from "./ProjectButton";
+import { motion } from "framer-motion";
 
-const Project = ({ project }) => {
+const Project = ({ project, index }) => {
   const {
     description,
     project_img,
@@ -44,7 +45,12 @@ const Project = ({ project }) => {
 
   // const bgImg = `bg-[url(${project_img})]`;
   return (
-    <div className="mx-auto">
+    <motion.div
+      initial={{ y: 50, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ delay: index * 0.2 }}
+      className="mx-auto"
+    >
       <Tilt options={cardOptions}>
         <div className="relative border border-white/[0] rounded-sm p-3 md:max-w-full max-w-sm bg-[rgba(255,255,255,0.2)]">
           <Tilt options={imgOptions}>
@@ -72,7 +78,7 @@ const Project = ({ project }) => {
           </div>
         </div>
       </Tilt>
-    </div>
+    </motion.div>
   );
 };
 
