@@ -14,7 +14,7 @@ const Intro = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2,
+        staggerChildren: 0.1,
         delayChildren: 0,
         when: "beforeChildren",
       },
@@ -35,27 +35,23 @@ const Intro = () => {
     visible: {
       opacity: 1,
       transition: {
-        // delay: -1,
-        // staggerChildren: 0.5,
-        delayChildren: 0.2,
-        when: "beforeChildren",
+        // delay: 3,
+        staggerChildren: 0.4,
+        delayChildren: 0.1,
+        // when: "beforeChildren",
       },
     },
   };
 
-  // const skillsChildVariant = {
-  //   hidden: { opacity: 0 },
-  //   visible: {
-  //     opacity: 1,
-  //   },
-  //   // hidden: {},
-  //   // visible: {},
-  //   transition: {
-  //     // staggerChildren: 0.5,
-  //     delayChildren: 1,
-  //     // when: "afterChildren",
-  //   },
-  // };
+  const skillsChildVariant = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+    },
+    transition: {
+      delayChildren: 1,
+    },
+  };
 
   return (
     <section
@@ -67,7 +63,7 @@ const Intro = () => {
             <motion.div
               initial={{ x: -60, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
-              transition={{ type: "spring", delay: 0.4 }}
+              transition={{ type: "spring", delay: 0.3 }}
             >
               <div className="rounded-full object-cover flex items-center duration-[400ms] transition-all border-[#ffffff]">
                 <img
@@ -110,7 +106,7 @@ const Intro = () => {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{
-              delay: 0.5,
+              delay: 0.3,
               transition: "spring",
             }}
             className="text-slate-100 xs:text-base text-sm my-14 tracking-wider max-w-lg"
@@ -120,21 +116,22 @@ const Intro = () => {
             websites.
           </motion.div>
           <motion.div
-          // variants={skillsVariant}
-          // initial="hidden"
-          // animate="visible"
+            variants={skillsVariant}
+            initial="hidden"
+            animate="visible"
           >
             <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.55 }}
+              // initial={{ opacity: 0 }}
+              // animate={{ opacity: 1 }}
+              // transition={{ delay: 0.25 }}
+              variants={skillsChildVariant}
               className="text-white sm:text-lg xs:text-lg text-base uppercase tracking-wider font-semibold"
             >
               Skills
             </motion.p>
             <motion.div
-              variants={skillsVariant}
-              // variants={skillsChildVariant}
+              // variants={skillsVariant}
+              variants={skillsChildVariant}
               className="grid xs:grid-cols-3 grid-cols-2 gap-5 mt-4"
             >
               {skills.map((skill, index) => (

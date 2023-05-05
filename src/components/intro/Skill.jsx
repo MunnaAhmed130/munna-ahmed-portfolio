@@ -10,7 +10,7 @@ const Skill = ({ skill, index }) => {
       opacity: 1,
       transition: {
         type: "spring",
-        delay: index * 0.15,
+        delay: index * 0.2,
         // when: ""
         // delayChildren: 2,
       },
