@@ -1,14 +1,20 @@
-import Footer from "../components/shared/Footer";
-import Project from "../components/project/Project";
+import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { useLoaderData } from "react-router-dom";
+import Footer from "../components/shared/Footer";
+import Project from "../components/project/Project";
 import Dot from "../components/shared/Dot";
-import { motion } from "framer-motion";
 
 const Projects = () => {
   const projects = useLoaderData();
-  const dot = "";
 
+  const bgVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { delay: 0.3, duration: 1 },
+    },
+  };
   return (
     <div className={`relative  flex flex-col justify-between `}>
       <section
@@ -41,9 +47,16 @@ const Projects = () => {
       {/* https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80 */}
       {/* https://i.ibb.co/LhnpYXk/laptop-keyboard-tiny.jpg */}
       {/* https://i.ibb.co/6bR5Bc4/laptop-y-tiny.jpg */}
-      <div
-        className={`absolute  inset-0 md:bg-[url('https://i.ibb.co/LhnpYXk/laptop-keyboard-tiny.jpg')] bg-[url('https://i.ibb.co/6bR5Bc4/laptop-y-tiny.jpg')] w-full h-full z-[-1] bg-no-repeat   bg-cover md:bg-center bg-top opacity-40  transition-all duration-300 `}
-      />
+      <motion.div
+        variants={bgVariants}
+        initial="hidden"
+        animate="visible"
+        className={`absolute inset-0 z-[-1] font-poppins   `}
+      >
+        <div
+          className={`absolute  inset-0 md:bg-[url('https://i.ibb.co/LhnpYXk/laptop-keyboard-tiny.jpg')] bg-[url('https://i.ibb.co/6bR5Bc4/laptop-y-tiny.jpg')] w-full h-full z-[-1] bg-no-repeat   bg-cover md:bg-center bg-top opacity-40  transition-all duration-300 `}
+        />
+      </motion.div>
     </div>
   );
 };

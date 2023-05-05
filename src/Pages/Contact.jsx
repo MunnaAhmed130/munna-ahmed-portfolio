@@ -74,6 +74,7 @@ const Contact = () => {
       );
   };
 
+  // variants
   const formVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -93,6 +94,14 @@ const Contact = () => {
         // duration: 0.15,
         delay: 0.6,
       },
+    },
+  };
+
+  const bgVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { delay: 0.3, duration: 0.5 },
     },
   };
 
@@ -193,9 +202,16 @@ const Contact = () => {
         </div>
       </section>
       <Footer />
-      <div
-        className={`absolute  inset-0 bg-[url('https://i.ibb.co/Qdmz74y/laptop-half-closed-tiny.jpg')] w-full h-full z-[-1] bg-no-repeat bg-cover   bg-center opacity-40 transition-all duration-300 `}
-      />
+      <motion.div
+        variants={bgVariants}
+        initial="hidden"
+        animate="visible"
+        className={`absolute inset-0 z-[-1] font-poppins  ${styles.pageHeight} `}
+      >
+        <div
+          className={`absolute  inset-0 bg-[url('https://i.ibb.co/Qdmz74y/laptop-half-closed-tiny.jpg')] w-full h-full z-[-1] bg-no-repeat bg-cover   bg-center opacity-40 transition-all duration-300 `}
+        />
+      </motion.div>
     </div>
   );
 };
