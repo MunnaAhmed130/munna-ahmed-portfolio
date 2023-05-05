@@ -29,28 +29,40 @@ const Intro = () => {
               />
             </motion.div>
             <motion.div
-              initial={{ x: 150, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{
-                type: "spring",
-                // delay: 0.1,
-                staggerChildren: 1,
-                delayChildren: 0.5,
-              }}
+            // initial={{ x: 150, opacity: 0 }}
+            // animate={{ x: 0, opacity: 1 }}
+            // transition={{
+            //   type: "spring",
+            // }}
             >
-              <motion.div className="sm:text-2xl xs:text-xl text-base flex items-center justify-start ">
+              <motion.div
+                initial={{ x: 150, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{
+                  type: "spring",
+                }}
+                className="sm:text-2xl xs:text-xl text-base flex items-center justify-start "
+              >
                 <p className="text-white inline-block font-semibold tracking-wide">
                   Munna Ahmed
                 </p>
                 &nbsp;
                 <HiCheckBadge className="text-blue-500" />
               </motion.div>
-
-              <TypeWriter />
+              <motion.div
+                initial={{ x: 150, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{
+                  type: "spring",
+                  delay: 0.15,
+                }}
+              >
+                <TypeWriter />
+              </motion.div>
 
               <motion.div className="flex items-start justify-start ">
-                {icons.map((Social) => (
-                  <SocialLink Social={Social} key={Social.link} />
+                {icons.map((Social, index) => (
+                  <SocialLink Social={Social} index={index} key={Social.link} />
                 ))}
               </motion.div>
             </motion.div>
@@ -58,7 +70,7 @@ const Intro = () => {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.1 }}
+            transition={{ delay: 0.15 }}
             className="text-slate-100 xs:text-base text-sm my-14 tracking-wider max-w-lg"
           >
             Hi, I'm a React Developer. I'm Self-taught and passionate about web

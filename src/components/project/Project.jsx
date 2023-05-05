@@ -54,7 +54,12 @@ const Project = ({ project, index }) => {
       <Tilt options={cardOptions}>
         <div className="relative border border-white/[0] rounded-sm p-3 md:max-w-full max-w-sm bg-[rgba(255,255,255,0.2)]">
           <Tilt options={imgOptions}>
-            <div className="w-full  relative  overflow-hidden mb-2">
+            <motion.div
+              initial={{ y: 40, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: index * 0.2 }}
+              className="w-full  relative  overflow-hidden mb-2"
+            >
               <a href={live_link} target="_blank" className="relative block">
                 <ImageLoading image={project_img} className="overflow-hidden" />
                 <div className="absolute inset-0 w-full h-auto hover:bg-black/50 transition-all duration-300 flex items-center justify-center opacity-0 hover:opacity-100 font-bold z-10">
@@ -63,7 +68,7 @@ const Project = ({ project, index }) => {
                   </span>
                 </div>
               </a>
-            </div>
+            </motion.div>
           </Tilt>
           {/* {tags?.map((tag) => (
             <span className={` text-sm mr-2 ${tag.color}`}>#{tag.title}</span>

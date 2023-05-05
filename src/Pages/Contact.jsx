@@ -22,6 +22,7 @@ const Contact = () => {
   //   emailError: "",
   //   messageError: "",
   // });
+
   console.log(error);
   const handleChange = (e) => {
     const { target } = e;
@@ -77,13 +78,23 @@ const Contact = () => {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: { staggerChildren: 0.1, delayChildren: 0 },
+      transition: { staggerChildren: 1, delayChildren: 0 },
     },
   };
 
-  const inputVariants = {
-    hidden: { y: 100, opacity: 0 },
-    visible: { y: 0, opacity: 1 },
+  const buttonVariants = {
+    hidden: { rotate: -20, y: 10, opacity: 0 },
+    visible: {
+      rotate: 0,
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: "string",
+        // stiffness: 1000,
+        duration: 0.15,
+        delay: 0.75,
+      },
+    },
   };
 
   return (
@@ -114,7 +125,10 @@ const Contact = () => {
             className="flex flex-col lg:gap-8 gap-5 p-5 rounded-sm"
           >
             <motion.label
-              variants={inputVariants}
+              initial={{ rotate: 10, y: 50, opacity: 0 }}
+              animate={{ rotate: 0, y: 0, opacity: 1 }}
+              transition={{ delay: 0.15 }}
+              // variants={inputVariants}
               // initial="hidden"
               // animate="visible"
               className="flex flex-col"
@@ -131,7 +145,10 @@ const Contact = () => {
               />
             </motion.label>
             <motion.label
-              variants={inputVariants}
+              initial={{ rotate: -20, y: 50, opacity: 0 }}
+              animate={{ rotate: 0, y: 0, opacity: 1 }}
+              transition={{ delay: 0.25 }}
+              // variants={inputVariants}
               // initial="hidden"
               // animate="visible"
               className="flex flex-col"
@@ -147,7 +164,13 @@ const Contact = () => {
                 required
               />
             </motion.label>
-            <motion.label variants={inputVariants} className="flex flex-col">
+            <motion.label
+              initial={{ rotate: 10, y: 50, opacity: 0 }}
+              animate={{ rotate: 0, y: 0, opacity: 1 }}
+              transition={{ delay: 0.5 }}
+              // variants={inputVariants}
+              className="flex flex-col"
+            >
               <span className="label">Your Message</span>
               <textarea
                 rows={7}
@@ -159,14 +182,14 @@ const Contact = () => {
                 required
               />
             </motion.label>
-            <motion.div variants={inputVariants}>
+            <motion.span variants={buttonVariants} className="inline-block">
               <Ripple
                 type="submit"
                 className="form-btn sm:py-3 py-2 px-6 w-fit tracking-widest sm:text-base text-sm "
               >
                 {loading ? "Sending..." : "Send"}
               </Ripple>
-            </motion.div>
+            </motion.span>
           </motion.form>
         </div>
       </section>
