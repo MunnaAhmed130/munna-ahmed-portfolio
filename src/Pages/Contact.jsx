@@ -89,10 +89,9 @@ const Contact = () => {
       y: 0,
       opacity: 1,
       transition: {
-        type: "string",
         // stiffness: 1000,
-        duration: 0.15,
-        delay: 0.75,
+        // duration: 0.15,
+        delay: 0.6,
       },
     },
   };

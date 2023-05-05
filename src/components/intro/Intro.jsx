@@ -29,17 +29,19 @@ const Intro = () => {
               />
             </motion.div>
             <motion.div
-            // initial={{ x: 150, opacity: 0 }}
-            // animate={{ x: 0, opacity: 1 }}
-            // transition={{
-            //   type: "spring",
-            // }}
+              transition={{}}
+              // initial={{ x: 150, opacity: 0 }}
+              // animate={{ x: 0, opacity: 1 }}
+              // transition={{
+              //   type: "spring",
+              // }}
             >
               <motion.div
                 initial={{ x: 150, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{
                   type: "spring",
+                  delay: 0.2,
                 }}
                 className="sm:text-2xl xs:text-xl text-base flex items-center justify-start "
               >
@@ -54,13 +56,19 @@ const Intro = () => {
                 animate={{ x: 0, opacity: 1 }}
                 transition={{
                   type: "spring",
+                  stiffness: 50,
                   delay: 0.15,
                 }}
               >
                 <TypeWriter />
               </motion.div>
 
-              <motion.div className="flex items-start justify-start ">
+              <motion.div
+                initial={{ x: 150, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ delay: 0.4, delayChildren: 0.6 }}
+                className="flex items-start justify-start "
+              >
                 {icons.map((Social, index) => (
                   <SocialLink Social={Social} index={index} key={Social.link} />
                 ))}
@@ -70,28 +78,38 @@ const Intro = () => {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.15 }}
+            transition={{
+              delay: 0.25,
+            }}
             className="text-slate-100 xs:text-base text-sm my-14 tracking-wider max-w-lg"
           >
             Hi, I'm a React Developer. I'm Self-taught and passionate about web
             development, designing, and creating responsive and user-friendly
             websites.
           </motion.div>
-          <div>
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{
+              delay: 0.1,
+              staggerChildren: 0.5,
+              delayChildren: 0.5,
+            }}
+          >
+            <p
+              // initial={{ opacity: 0 }}
+              // animate={{ opacity: 1 }}
               // transition={{ delay: 0.1 }}
               className="text-white sm:text-lg xs:text-lg text-base uppercase tracking-wider font-semibold"
             >
               Skills
-            </motion.p>
+            </p>
             <div className="grid xs:grid-cols-3 grid-cols-2 gap-5 mt-4">
               {skills.map((skill, index) => (
                 <Skill skill={skill} index={index} key={skill.title} />
               ))}
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
