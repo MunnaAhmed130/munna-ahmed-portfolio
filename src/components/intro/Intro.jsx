@@ -36,8 +36,8 @@ const Intro = () => {
       opacity: 1,
       transition: {
         // delay: 3,
-        staggerChildren: 0.4,
-        delayChildren: 0.1,
+        staggerChildren: 0.5,
+        delayChildren: 0.5,
         // when: "beforeChildren",
       },
     },
@@ -49,7 +49,7 @@ const Intro = () => {
       opacity: 1,
     },
     transition: {
-      delayChildren: 1,
+      // delayChildren: 1,
     },
   };
 
