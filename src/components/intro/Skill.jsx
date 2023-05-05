@@ -8,13 +8,15 @@ const Skill = ({ skill, index }) => {
     visible: {
       y: 0,
       opacity: 1,
-      delay: 5,
       transition: {
         type: "spring",
         delay: index * 0.15,
+        // when: ""
+        // delayChildren: 2,
       },
     },
   };
+
   return (
     <motion.div
       variants={skillVariants}

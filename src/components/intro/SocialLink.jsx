@@ -10,21 +10,16 @@ const SocialLink = ({ Social, index }) => {
       transition: {
         type: "spring",
         stiffness: 50,
-        delay: index * 0.1,
-        duration: 0.2,
+        delay: index * 0.25,
       },
     },
   };
   return (
-    <motion.a
-      variants={socialVariant}
-      initial="hidden"
-      animate="visible"
-      href={Social.link}
-      target="_blank"
-    >
-      <Social.icon className="text-white text-lg mr-3 mt-1" />
-    </motion.a>
+    <motion.div variants={socialVariant}>
+      <a href={Social.link} target="_blank">
+        <Social.icon className="text-white text-lg mr-3 mt-1" />
+      </a>
+    </motion.div>
   );
 };
 

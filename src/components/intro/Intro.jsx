@@ -9,6 +9,54 @@ import TypeWriter from "./TypeWriter";
 import { motion } from "framer-motion";
 
 const Intro = () => {
+  const infoVariant = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0,
+        when: "beforeChildren",
+      },
+    },
+  };
+
+  const infoChildVariant = {
+    hidden: { x: 150, opacity: 0 },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: { type: "spring", stiffness: 70 },
+    },
+  };
+
+  const skillsVariant = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        // delay: -1,
+        // staggerChildren: 0.5,
+        delayChildren: 0.2,
+        when: "beforeChildren",
+      },
+    },
+  };
+
+  // const skillsChildVariant = {
+  //   hidden: { opacity: 0 },
+  //   visible: {
+  //     opacity: 1,
+  //   },
+  //   // hidden: {},
+  //   // visible: {},
+  //   transition: {
+  //     // staggerChildren: 0.5,
+  //     delayChildren: 1,
+  //     // when: "afterChildren",
+  //   },
+  // };
+
   return (
     <section
       className={`overflow-hidden flex  xs:items-center items-start justify-around w-full ${styles.sectionHeight} min-h-[500px] `}
@@ -19,30 +67,23 @@ const Intro = () => {
             <motion.div
               initial={{ x: -60, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
-              transition={{ type: "spring", duration: 0, delay: 0.2 }}
-              className="rounded-full object-cover  flex items-center duration-[400ms] transition-all  border-[#ffffff] "
+              transition={{ type: "spring", delay: 0.4 }}
             >
-              <img
-                className="mx-auto bg-gradient-to-t to-[#668fff] via-[#8f79f0]  from-[#6b4cf1] sm:w-28 sm:h-28 xs:w-24 xs:h-24 w-20 h-20 object-cover rounded-full "
-                src={profilePic}
-                alt="Profile-photo"
-              />
+              <div className="rounded-full object-cover flex items-center duration-[400ms] transition-all border-[#ffffff]">
+                <img
+                  className="mx-auto bg-gradient-to-t to-[#668fff] via-[#8f79f0]  from-[#6b4cf1] sm:w-28 sm:h-28 xs:w-24 xs:h-24 w-20 h-20 object-cover rounded-full "
+                  src={profilePic}
+                  alt="Profile-photo"
+                />
+              </div>
             </motion.div>
             <motion.div
-              transition={{}}
-              // initial={{ x: 150, opacity: 0 }}
-              // animate={{ x: 0, opacity: 1 }}
-              // transition={{
-              //   type: "spring",
-              // }}
+              variants={infoVariant}
+              initial="hidden"
+              animate="visible"
             >
               <motion.div
-                initial={{ x: 150, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{
-                  type: "spring",
-                  delay: 0.2,
-                }}
+                variants={infoChildVariant}
                 className="sm:text-2xl xs:text-xl text-base flex items-center justify-start "
               >
                 <p className="text-white inline-block font-semibold tracking-wide">
@@ -51,22 +92,12 @@ const Intro = () => {
                 &nbsp;
                 <HiCheckBadge className="text-blue-500" />
               </motion.div>
-              <motion.div
-                initial={{ x: 150, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{
-                  type: "spring",
-                  stiffness: 50,
-                  delay: 0.15,
-                }}
-              >
+              <motion.div variants={infoChildVariant}>
                 <TypeWriter />
               </motion.div>
 
               <motion.div
-                initial={{ x: 150, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ delay: 0.4, delayChildren: 0.6 }}
+                variants={infoChildVariant}
                 className="flex items-start justify-start "
               >
                 {icons.map((Social, index) => (
@@ -76,10 +107,11 @@ const Intro = () => {
             </motion.div>
           </div>
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{
-              delay: 0.25,
+              delay: 0.5,
+              transition: "spring",
             }}
             className="text-slate-100 xs:text-base text-sm my-14 tracking-wider max-w-lg"
           >
@@ -88,27 +120,27 @@ const Intro = () => {
             websites.
           </motion.div>
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{
-              delay: 0.1,
-              staggerChildren: 0.5,
-              delayChildren: 0.5,
-            }}
+          // variants={skillsVariant}
+          // initial="hidden"
+          // animate="visible"
           >
-            <p
-              // initial={{ opacity: 0 }}
-              // animate={{ opacity: 1 }}
-              // transition={{ delay: 0.1 }}
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.55 }}
               className="text-white sm:text-lg xs:text-lg text-base uppercase tracking-wider font-semibold"
             >
               Skills
-            </p>
-            <div className="grid xs:grid-cols-3 grid-cols-2 gap-5 mt-4">
+            </motion.p>
+            <motion.div
+              variants={skillsVariant}
+              // variants={skillsChildVariant}
+              className="grid xs:grid-cols-3 grid-cols-2 gap-5 mt-4"
+            >
               {skills.map((skill, index) => (
                 <Skill skill={skill} index={index} key={skill.title} />
               ))}
-            </div>
+            </motion.div>
           </motion.div>
         </div>
       </div>
